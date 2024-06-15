@@ -1,5 +1,5 @@
 import axios from "axios";
 
-axios.defaults.baseURL = 'https://trihub-e2e28f386783.herokuapp.com/'
+axios.defaults.baseURL = 'https://trihub-api-0d6dd53f4e6b.herokuapp.com/'
 axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
 axios.defaults.withCredentials = true
