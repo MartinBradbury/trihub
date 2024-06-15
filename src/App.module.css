@@ -1,6 +1,6 @@
 .App {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
   font-size: 15px;
   background-color: #f8f8f8d2;
@@ -24,6 +24,10 @@
 
 a:hover {
   text-decoration: none;
+}
+
+a {
+  color: green;
 }
 
 a:hover {

@@ -14,6 +14,12 @@
   color: #085e0d;
 }
 
+.Active {
+  color: #085e0d;
+}
+
+
+
 /* Burger Menu styling */
 .Toggle {
   border-color: #ed4300!important;
