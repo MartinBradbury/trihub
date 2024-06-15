@@ -1,24 +1,14 @@
 .App {
-  font-family: "DM Sans", sans-serif;
-  background-color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  background-color: #f8f8f8d2;
   min-height: 100vh;
 }
 
 .Main {
-  padding-top: 81px;
-}
-
-.Content {
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 2px;
-  border: 1px solid #dadadf;
-}
-
-.FillerImage {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+  padding-top: 100px;
 }
 
 .Image {
@@ -31,17 +21,12 @@
   box-sizing: border-box;
 }
 
-a {
-  color: #555555;
-  transition: color ease-in-out 0.3s;
-}
-
 a:hover {
   text-decoration: none;
 }
 
-a:hover i {
-  color: #2142b2;
+a:hover {
+  color: #085e0d;
   transition: color ease-in-out 0.3s;
 }
 
@@ -50,21 +35,10 @@ input[type="file"] {
 }
 
 i {
-  color: #cfced3;
-  font-size: 1.6rem;
-  padding: 7px;
+  color: #ed4300;
+  font-size: 1rem;
+  padding: 17px;
   vertical-align: middle;
-}
-
-i:hover {
-  cursor: pointer;
-  transition: color ease-in-out 0.3s;
-  color: #2142b2;
-}
-
-figure {
-  text-align: center;
-  display: inline-block;
 }
 
 /* scrollbar */
