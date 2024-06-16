@@ -26,30 +26,30 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
-    <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
-    >
-      <i className="far fa-plus-square"></i>Add post
-    </NavLink>
-  );
+  // const addPostIcon = (
+  //   <NavLink
+  //     className={styles.NavLink}
+  //     activeClassName={styles.Active}
+  //     to="/posts/create"
+  //   >
+  //     <i className="far fa-plus-square"></i>Add post
+  //   </NavLink>
+  // );
   const loggedInIcons = (
     <>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/feed"
+        to="/community"
       >
-        <i className="fas fa-stream"></i>Feed
+        <i className="fas fa-users"></i>Community
       </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/liked"
+        to="/plans"
       >
-        <i className="fas fa-heart"></i>Liked
+        <i className="fas fa-map"></i>My Plan
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
@@ -94,7 +94,7 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="80" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
+        {/* {currentUser && addPostIcon} */}
         <Navbar.Toggle
           ref={ref}
           onClick={() => setExpanded(!expanded)}
