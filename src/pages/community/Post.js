@@ -2,8 +2,9 @@ import React from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
   /* Destructure the data from the props sent from post page request. */
@@ -21,7 +22,61 @@ const Post = (props) => {
     updated_at,
     /* postPage prop comes from prop set in post page that will return true if no value assigned */
     postPage,
+    /* setPost function passed from parent  */
+    setPosts,
   } = props;
+
+  /* handleLike async function so users can like posts */
+  // const handleLike = async () => {
+  //   try {
+  //     {
+  //       /* pass in post:id so the api know which post user is trying to like */
+  //     }
+  //     const { data } = await axiosRes.post("/likes/", { post: id });
+  //     setPosts((prevPosts) => ({
+  //       ...prevPosts,
+  //       results: prevPosts.results.map((post) => {
+  //         return post.id === id
+  //           ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+  //           : post;
+  //       }),
+  //     }));
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // };
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   /* define current user vairbale using the useCurrentUser hook as it will behave dif depending if user or not */
   const currentUser = useCurrentUser();
@@ -68,13 +123,13 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : /* If current user isnt owner of post, ternary will now check if like id exists. If it does it means user has already liked post*/
           like_id ? (
-            <span onClick={() => {}}>
+            <span onClick={handleUnlike}>
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : /* Check if current user is logged in */
           currentUser ? (
             /* if they are they will be able to like post */
-            <span onClick={() => {}}>
+            <span onClick={handleLike}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
           ) : (
