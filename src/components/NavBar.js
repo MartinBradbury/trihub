@@ -40,7 +40,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/community/create"
+        to="/community"
       >
         <i className="fas fa-users"></i>Community
       </NavLink>
@@ -48,7 +48,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/community/feed"
+        to="/feed"
       >
         <i className="fas fa-stream"></i>Feed
       </NavLink>
@@ -56,7 +56,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/community/liked"
+        to="/liked"
       >
         <i className="fas fa-heart"></i>Liked
       </NavLink>

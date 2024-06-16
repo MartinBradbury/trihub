@@ -34,6 +34,14 @@ function App() {
           <Route exact path="/community/:id" render={() => <PostPage />} />
           <Route
             exact
+            path="/community/:id"
+            render={() => (
+              <CommunityPosts message="No results found. Adjust the search keyword." />
+            )}
+          />
+          <Route exact path="/community" render={() => <CommunityPosts />} />
+          <Route
+            exact
             path="/community"
             render={() => (
               <CommunityPosts message="No results found. Adjust the search keyword." />
@@ -41,7 +49,7 @@ function App() {
           />
           <Route
             exact
-            path="/community/feed"
+            path="/feed"
             render={() => (
               <CommunityPosts
                 message="No results found. Adjust the search keyword or follow a user."
@@ -51,7 +59,7 @@ function App() {
           />
           <Route
             exact
-            path="/community/liked"
+            path="/liked"
             render={() => (
               <CommunityPosts
                 message="no results found. Adjust the search keyword or like a post."
