@@ -6,6 +6,7 @@ import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import BackgroundVideo from "./components/BackgroundVideo";
+import Home from "./pages/home/Home";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <BackgroundVideo />
           <Container className={styles.Main}>
             <Switch>
-              <Route exact path="/" render={() => <p>home</p>} />
+              <Route exact path="/" render={() => <Home />} />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route render={() => <p>Page not found!</p>} />
