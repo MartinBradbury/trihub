@@ -9,24 +9,60 @@ import BackgroundVideo from "./components/BackgroundVideo";
 import Home from "./pages/home/Home";
 import PostCreateForm from "./pages/community/PostCreateForm";
 import PostPage from "./pages/community/PostPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
+import CommunityPosts from "./pages/community/CommunityPosts"
 
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
+
   return (
-        <div className={styles.App}>
-          <NavBar />
-          <BackgroundVideo />
-          <Container className={styles.Main}>
-            <Switch>
-              <Route exact path="/" render={() => <Home />} />
-              <Route exact path="/signin" render={() => <SignInForm />} />
-              <Route exact path="/signup" render={() => <SignUpForm />} />
-              <Route exact path="/community/create" render={() => <PostCreateForm />} />
-              <Route exact path="/community/:id" render={() => <PostPage />} />
-              <Route render={() => <p>Page not found!</p>} />
-            </Switch>
-          </Container>
-        </div>
+    <div className={styles.App}>
+      <NavBar />
+      <BackgroundVideo />
+      <Container className={styles.Main}>
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/signin" render={() => <SignInForm />} />
+          <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route
+            exact
+            path="/community/create"
+            render={() => <PostCreateForm />}
+          />
+          <Route exact path="/community/:id" render={() => <PostPage />} />
+          <Route
+            exact
+            path="/community"
+            render={() => (
+              <CommunityPosts message="No results found. Adjust the search keyword." />
+            )}
+          />
+          <Route
+            exact
+            path="/community/feed"
+            render={() => (
+              <CommunityPosts
+                message="No results found. Adjust the search keyword or follow a user."
+                filter={`owner__followed__owner__profile=${profile_id}&`}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/community/liked"
+            render={() => (
+              <CommunityPosts
+                message="no results found. Adjust the search keyword or like a post."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+              />
+            )}
+          />
+          <Route render={() => <p>Page not found!</p>} />
+        </Switch>
+      </Container>
+    </div>
   );
 }
 
