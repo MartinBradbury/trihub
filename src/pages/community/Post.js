@@ -26,7 +26,9 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-/* handleLike async function so users can like posts */
+  console.log("Inside Post component, likes_count:", likes_count);
+  console.log(props);
+  /* handleLike async function so users can like posts */
   const handleLike = async () => {
     try {
       /* pass in post:id so the api know which post user is trying to like */
@@ -34,9 +36,15 @@ const Post = (props) => {
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
-            : post;
+          if (post.id === id) {
+            // Increment likes_count and set like_id
+            return {
+              ...post,
+              likes_count: post.likes_count + 1,
+              like_id: data.id,
+            };
+          }
+          return post; // Return the post unchanged if it's not the current post
         }),
       }));
     } catch (err) {
@@ -50,9 +58,15 @@ const Post = (props) => {
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
-            : post;
+          if (post.id === id) {
+            // Decrement likes_count and reset like_id to null
+            return {
+              ...post,
+              likes_count: post.likes_count - 1,
+              like_id: null,
+            };
+          }
+          return post; // Return the post unchanged if it's not the current post
         }),
       }));
     } catch (err) {
