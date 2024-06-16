@@ -11,6 +11,7 @@ import PostCreateForm from "./pages/community/PostCreateForm";
 import PostPage from "./pages/community/PostPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import CommunityPosts from "./pages/community/CommunityPosts"
+import Performances from "./pages/performances/Performances";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/performances" render={() => <Performances />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route
