@@ -7,6 +7,7 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import BackgroundVideo from "./components/BackgroundVideo";
 import Home from "./pages/home/Home";
+import PostCreateForm from "./pages/community/PostCreateForm";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route exact path="/" render={() => <Home />} />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
+              <Route exact path="/community/create" render={() => <PostCreateForm />} />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
           </Container>

@@ -7,6 +7,13 @@
   min-height: 100vh;
 }
 
+.Content {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #dadadf;
+}
+
 .Main {
   padding-top: 120px;
 
@@ -44,6 +51,11 @@ i {
   font-size: 1rem;
   padding: 17px;
   vertical-align: middle;
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
 }
 
 /* scrollbar */
