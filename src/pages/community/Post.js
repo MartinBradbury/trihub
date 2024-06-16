@@ -26,28 +26,10 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-  /* handleLike async function so users can like posts */
-  // const handleLike = async () => {
-  //   try {
-  //     {
-  //       /* pass in post:id so the api know which post user is trying to like */
-  //     }
-  //     const { data } = await axiosRes.post("/likes/", { post: id });
-  //     setPosts((prevPosts) => ({
-  //       ...prevPosts,
-  //       results: prevPosts.results.map((post) => {
-  //         return post.id === id
-  //           ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
-  //           : post;
-  //       }),
-  //     }));
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // };
-
+/* handleLike async function so users can like posts */
   const handleLike = async () => {
     try {
+      /* pass in post:id so the api know which post user is trying to like */
       const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
