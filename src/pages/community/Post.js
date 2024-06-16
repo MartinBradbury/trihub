@@ -13,7 +13,7 @@ const Post = (props) => {
     profile_image,
     profile_id,
     comment_count,
-    Likes_count,
+    likes_count,
     like_id,
     title,
     content,
@@ -87,7 +87,7 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {/* DIsplay number of likes and comments.  */}
-          {Likes_count}
+          {likes_count}
           {/*Comment component links to post ID so wrap in link set to post id */}
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
