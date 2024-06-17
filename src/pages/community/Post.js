@@ -5,6 +5,9 @@ import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropdown";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Post = (props) => {
   /* Destructure the data from the props sent from post page request. */
@@ -26,8 +29,25 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-  console.log("Inside Post component, likes_count:", likes_count);
-  console.log(props);
+  const history = useHistory();
+
+  /* Handle edit function and delete for editing posts */
+  const handleEdit = () => {
+    history.push(`/community/posts/${id}/edit`)
+  }
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack()
+    } catch(err) {
+      console.log(err)
+    }
+
+  }
+
+
+
   /* handleLike async function so users can like posts */
   const handleLike = async () => {
     try {
@@ -94,12 +114,12 @@ const Post = (props) => {
             <span>{updated_at}</span>
             {/*Check if currently logged in user is the owner and postPage exists */}
             {/* if they both exist we want an edit / delete option on post, placeholder ... atm, */}
-            {is_owner && postPage && "..."}
+            {is_owner && postPage && <MoreDropdown handleEdit={handleEdit} handleDelete={handleDelete}/>}
           </div>
         </Media>
       </Card.Body>
       {/* Display post image and wrap in a link using its id for the url*/}
-      <Link to={`/posts/${id}`}>
+      <Link to={`/community/posts/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
       {/* DIsplay the title and content only if the props have been passed before they render*/}

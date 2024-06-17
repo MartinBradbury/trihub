@@ -33,7 +33,7 @@ function App() {
             path="/community/create"
             render={() => <PostCreateForm />}
           />
-          <Route exact path="/community/:id" render={() => <PostPage />} />
+          <Route exact path="/community/posts/:id" render={() => <PostPage />} />
           <Route
             exact
             path="/community/:id"
@@ -41,7 +41,6 @@ function App() {
               <CommunityPosts message="No results found. Adjust the search keyword." />
             )}
           />
-          <Route exact path="/community" render={() => <CommunityPosts />} />
           <Route
             exact
             path="/community"
