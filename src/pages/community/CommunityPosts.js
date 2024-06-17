@@ -12,6 +12,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import Asset from "../../components/Asset";
 import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 /* Destructure message and filter props in place from appjs?? */
 function PostsPage({ message, filter = "" }) {
@@ -98,12 +100,26 @@ const [query, setQuery] = useState("");
           <>
             {/*check if the results array has any posts in it */}
             {posts.results.length ? (
-              /*show posts here and render each one*/
-              /* map over the posts array and for each we will return post component and give each a key spread post object and pass the setPosts
-            so users can like or unlike a post.*/
-              posts.results.map((post) => (
-                <Post key={post.id} {...post} setPosts={setPosts} />
-              ))
+
+              /* Infinite scrolling import */
+              <InfiniteScroll 
+                children={
+                  /*show posts here and render each one*/
+                  /* map over the posts array and for each we will return post component and give each a key spread post object and pass the setPosts
+                  so users can like or unlike a post.*/
+                  posts.results.map((post) => (
+                    <Post key={post.id} {...post} setPosts={setPosts} />
+                  ))
+                }
+              
+              dataLength={posts.results.length}
+              loader={<Asset spinner/>}
+              hasMore={!!posts.next}
+              next={() => fetchMoreData(posts, setPosts)}
+              
+              
+              />
+              
             ) : (
               /* show no results message */
               <Container className={appStyles.Content}>
