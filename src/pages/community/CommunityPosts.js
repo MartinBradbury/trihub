@@ -15,19 +15,35 @@ import NoResults from "../../assets/no-results.png";
 
 /* Destructure message and filter props in place from appjs?? */
 function PostsPage({ message, filter = "" }) {
-  {/* Store posts in an object inside a results array initially empty */}
+  {
+    /* Store posts in an object inside a results array initially empty */
+  }
   const [posts, setPosts] = useState({ results: [] });
-  {/* keep track of posts if fetched or not and use to display spinner initial false*/}
+  {
+    /* keep track of posts if fetched or not and use to display spinner initial false*/
+  }
   const [hasLoaded, setHasLoaded] = useState(false);
-  {/* refetch posts again when the user clicks between community, liked and feed pages. useLocation hook */}
+  {
+    /* refetch posts again when the user clicks between community, liked and feed pages. useLocation hook */
+  }
   const { pathname } = useLocation();
-  
-  {/* API request to fetch post and only show filter for specific page, feed / liked. useEffect Hook*/}
+
+
+{/* TO handle query value in the search bar destructure */}
+
+const [query, setQuery] = useState("");
+
+
+
+
+  {
+    /* API request to fetch post and only show filter for specific page, feed / liked. useEffect Hook*/
+  }
   useEffect(() => {
     const fetchPosts = async () => {
-      try{
+      try {
         /* request contains filter prop set in routes. */
-        const { data } = await axiosReq.get(`/posts/?${filter}`);
+        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -35,39 +51,66 @@ function PostsPage({ message, filter = "" }) {
       }
     };
     setHasLoaded(false);
-    /*Call the fetch post function */
-    fetchPosts();
-    /* we want the fetch post to run every time the url changes or filter changes */
-  }, [filter, pathname]);
 
-  
+    /*Setting a timer in the search bar */
+    const timer = setTimeout(() => {
+      /*Call the fetch post function */
+      fetchPosts();
+    }, 1000)
+    /* CLear timeout function so none left behind */
+    return () => {
+      clearTimeout(timer)
+    }
+    
+    /* we want the fetch post to run every time the url changes or filter changes */
+  }, [filter, query, pathname]);
+
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
+        
+        
+        {/* Adding search bar */}
+        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        {/* Creating search input field using react bootstrap search component */}
+        <Form
+          className={styles.SearchBar}
+          /* Pass in event to prevent page reloading if hit enter */
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search Posts"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </Form>
+
+
+
+
         {/* nested ternary to display posts */}
         {/* FIrst check if data has been loaded */}
         {hasLoaded ? (
           /* if it has loaded we create a second ternary display our posts or a message */
           <>
-          {/*check if the results array has any posts in it */}
-          {posts.results.length ? (
-            /*show posts here and render each one*/
-            /* map over the posts array and for each we will return post component and give each a key spread post object and pass the setPosts
+            {/*check if the results array has any posts in it */}
+            {posts.results.length ? (
+              /*show posts here and render each one*/
+              /* map over the posts array and for each we will return post component and give each a key spread post object and pass the setPosts
             so users can like or unlike a post.*/
-            posts.results.map((post) => (
-              <Post key={post.id} {...post} setPosts={setPosts} />
-              
-              
-            ))
-          ) : (
-            /* show no results message */
-            <Container className={appStyles.Content}>
+              posts.results.map((post) => (
+                <Post key={post.id} {...post} setPosts={setPosts} />
+              ))
+            ) : (
+              /* show no results message */
+              <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
-            </Container>
-          )}
+              </Container>
+            )}
           </>
-
         ) : (
           /* not loaded show spinner */
           <Container className={appStyles.Content}>
