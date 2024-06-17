@@ -12,6 +12,7 @@ import PostPage from "./pages/community/PostPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import CommunityPosts from "./pages/community/CommunityPosts"
 import Performances from "./pages/performances/Performances";
+import PostEditForm from "./pages/community/PostEditForm";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             path="/community/create"
             render={() => <PostCreateForm />}
           />
+          <Route exact path="/community/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/community/posts/:id" render={() => <PostPage />} />
           <Route
             exact

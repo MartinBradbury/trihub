@@ -10,7 +10,7 @@ const Performances = () => {
         const fetchPerformance = async () => {
             try {
                 // Adjust the destructuring based on the actual structure of the response
-                const response = await axiosReq.get(`/profiles`);
+                const response = await axiosReq.get(`/performances`);
                 // Assuming the response data is under a property named 'data' or similar
                 const performances = response.data; // Adjust this line based on the actual response structure
                 setPerformance(performances);
