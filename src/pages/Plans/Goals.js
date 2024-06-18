@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Card, Container } from 'react-bootstrap'
 import { axiosReq } from '../../api/axiosDefaults';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Goals = () => {
 

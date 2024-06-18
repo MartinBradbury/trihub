@@ -18,30 +18,30 @@ import PopularProfiles from "../profiles/PopularProfiles";
 
 /* Destructure message and filter props in place from appjs?? */
 function PostsPage({ message, filter = "" }) {
-  {
-    /* Store posts in an object inside a results array initially empty */
-  }
+  // {
+  //   /* Store posts in an object inside a results array initially empty */
+  // }
   const [posts, setPosts] = useState({ results: [] });
-  {
-    /* keep track of posts if fetched or not and use to display spinner initial false*/
-  }
+  // {
+  //   /* keep track of posts if fetched or not and use to display spinner initial false*/
+  // }
   const [hasLoaded, setHasLoaded] = useState(false);
-  {
-    /* refetch posts again when the user clicks between community, liked and feed pages. useLocation hook */
-  }
+  // {
+  //   /* refetch posts again when the user clicks between community, liked and feed pages. useLocation hook */
+  // }
   const { pathname } = useLocation();
 
 
-{/* TO handle query value in the search bar destructure */}
+// {/* TO handle query value in the search bar destructure */}
 
 const [query, setQuery] = useState("");
 
 
 
 
-  {
-    /* API request to fetch post and only show filter for specific page, feed / liked. useEffect Hook*/
-  }
+  // {
+  //   /* API request to fetch post and only show filter for specific page, feed / liked. useEffect Hook*/
+  // }
   useEffect(() => {
     const fetchPosts = async () => {
       try {
