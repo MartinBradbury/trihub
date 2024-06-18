@@ -14,6 +14,7 @@ import Asset from "../../components/Asset";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 /* Destructure message and filter props in place from appjs?? */
 function PostsPage({ message, filter = "" }) {
@@ -135,7 +136,7 @@ const [query, setQuery] = useState("");
         )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
+        <PopularProfiles />
       </Col>
     </Row>
   );
