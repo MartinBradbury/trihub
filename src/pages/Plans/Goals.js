@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Card, Container } from 'react-bootstrap'
 import { axiosReq } from '../../api/axiosDefaults';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Goals = () => {
 
@@ -14,7 +15,7 @@ const Goals = () => {
     useEffect(() => {
         const handleMount = async () => {
             try{
-                const {data} = await axiosReq.get('/goals/')
+                const {data} = await axiosReq.get(`/goals/?userId=${currentUser.id}`);
                 setGoalData(prevState => ({
                     ...prevState,
                     userGoals: data,
@@ -30,14 +31,16 @@ const Goals = () => {
 
   return (
     <Container>
-        <p>Users Goals</p>
+        <h1>Users Goals</h1>
         {userGoals.results.map(goal => (
+            <Card>
             <p key={goal.id}>
                 <span>Owner: {goal.owner}</span>
                 <span>Event date: {goal.event_date}</span>
                 <span>Hours per week: {goal.hours_per_week}</span>
                 <span>is Owner: {goal.is_owner}</span>
             </p>
+            </Card>
         ))}
     </Container>
   )
