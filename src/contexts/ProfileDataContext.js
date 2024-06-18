@@ -1,18 +1,20 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { axiosReq } from "../api/axiosDefaults";
-import { useCurrentUser } from "./CurrentUserContext";
-export const ProfileDataContext = createContext();
-export const SetProfileDataContext = createContext();
+import { useCurrentUser } from "../contexts/CurrentUserContext";
+
+const ProfileDataContext = createContext();
+const SetProfileDataContext = createContext();
 
 export const useProfileData = () => useContext(ProfileDataContext);
 export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
   const [profileData, setProfileData] = useState({
-    // we will use the pageProfile later
+    // we will use the pageProfile later!
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
   });
+
   const currentUser = useCurrentUser();
 
   useEffect(() => {
@@ -29,8 +31,10 @@ export const ProfileDataProvider = ({ children }) => {
         console.log(err);
       }
     };
+
     handleMount();
   }, [currentUser]);
+
   return (
     <ProfileDataContext.Provider value={profileData}>
       <SetProfileDataContext.Provider value={setProfileData}>
@@ -39,5 +43,3 @@ export const ProfileDataProvider = ({ children }) => {
     </ProfileDataContext.Provider>
   );
 };
-
-

@@ -14,6 +14,7 @@ import CommunityPosts from "./pages/community/CommunityPosts"
 import PerformanceCreateForm from "./pages/performances/PerformanceCreateForm";
 import PostEditForm from "./pages/community/PostEditForm";
 import Goals from "./pages/Plans/Goals";
+import ProfilePage from "./pages/profiles/ProfilePage";
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/performances" render={() => <PerformanceCreateForm />} />
-          <Route exact path="/myplan" render={() => <Goals />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/myplan/" render={() => <Goals />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route
