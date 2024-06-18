@@ -27,10 +27,24 @@ const ProfileEditForm = () => {
 
   const [profileData, setProfileData] = useState({
     first_name: "",
+    last_name: "",
+    email: "",
+    gender: "",
+    fitness_level: "",
+    date_of_birth: "",
     content: "",
     image: "",
   });
-  const { content, image } = profileData;
+  const {
+    first_name,
+    last_name,
+    email,
+    gender,
+    fitness_level,
+    date_of_birth,
+    content,
+    image,
+  } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -39,8 +53,26 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { content, image } = data;
-          setProfileData({ content, image });
+          const {
+            first_name,
+            last_name,
+            email,
+            gender,
+            fitness_level,
+            date_of_birth,
+            content,
+            image,
+          } = data;
+          setProfileData({
+            first_name,
+            last_name,
+            email,
+            gender,
+            fitness_level,
+            date_of_birth,
+            content,
+            image,
+          });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -53,6 +85,9 @@ const ProfileEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+
+
+
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -64,6 +99,12 @@ const ProfileEditForm = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("content", content);
+    formData.append("firstName", first_name);
+    formData.append("lastName", last_name);
+    formData.append("email", email);
+    // formData.append("gender", gender)
+    // formData.append("fitnessLevel", fitness_level)
+    formData.append("date_of_birth", date_of_birth);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -100,6 +141,43 @@ const ProfileEditForm = () => {
           {message}
         </Alert>
       ))}
+      <Form.Group>
+        <Form.Label>First Name</Form.Label>
+        <Form.Control
+          type="text"
+          value={first_name}
+          onChange={handleChange}
+          name="firstName"
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Last Name</Form.Label>
+        <Form.Control
+          type="text"
+          value={last_name}
+          onChange={handleChange}
+          name="lastName"
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>email address</Form.Label>
+        <Form.Control
+          type="email"
+          value={email}
+          onChange={handleChange}
+          name="email"
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Date of Birth</Form.Label>
+        <Form.Control
+          type="date"
+          value={date_of_birth}
+          onChange={handleChange}
+          name="dateOfBirth"
+        />
+      </Form.Group>
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
