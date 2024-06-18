@@ -55,18 +55,12 @@ const Post = (props) => {
       const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
-        results: prevPosts.results.map((post) => {
-          if (post.id === id) {
-            // Increment likes_count and set like_id
-            return {
-              ...post,
-              likes_count: post.likes_count + 1,
-              like_id: data.id,
-            };
-          }
-          return post; // Return the post unchanged if it's not the current post
-        }),
-      }));
+         results: prevPosts.results.map((post) => {
+           return post.id === id
+           ? {...post, likes_count: post.likes_count + 1, like_id: data.id }
+             : post;
+         }),
+       }));
     } catch (err) {
       console.log(err);
     }

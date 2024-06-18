@@ -31,7 +31,7 @@ function CommentCreateForm(props) {
         results: [
           {
             ...prevPost.results[0],
-            comments_count: prevPost.results[0].comments_count + 1,
+            comment_count: prevPost.results[0].comment_count + 1,
           },
         ],
       }));

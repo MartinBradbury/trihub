@@ -31,14 +31,14 @@ const Comment = (props) => {
         results: [
           {
             ...prevPost.results[0],
-            comments_count: prevPost.results[0].comments_count - 1,
+            comment_count: prevPost.results[0].comment_count - 1,
           },
         ],
       }));
 
-      setComments((prevComments) => ({
-        ...prevComments,
-        results: prevComments.results.filter((comment) => comment.id !== id),
+      setComments((prevComment) => ({
+        ...prevComment,
+        results: prevComment.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {}
   };
