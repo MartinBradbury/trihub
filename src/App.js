@@ -36,13 +36,13 @@ function App() {
           />
           <Route exact path="/community/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/community/posts/:id" render={() => <PostPage />} />
-          <Route
+          {/* <Route
             exact
             path="/community/:id"
             render={() => (
               <CommunityPosts message="No results found. Adjust the search keyword." />
             )}
-          />
+          /> */}
           <Route
             exact
             path="/community"
