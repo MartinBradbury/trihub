@@ -15,6 +15,9 @@ import PerformanceCreateForm from "./pages/performances/PerformanceCreateForm";
 import PostEditForm from "./pages/community/PostEditForm";
 import Goals from "./pages/Plans/Goals";
 import ProfilePage from "./pages/profiles/ProfilePage";
+import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 
 function App() {
@@ -30,6 +33,7 @@ function App() {
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/performances" render={() => <PerformanceCreateForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+
           <Route exact path="/myplan/" render={() => <Goals />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
@@ -73,6 +77,21 @@ function App() {
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
               />
             )}
+          />
+            <Route
+            exact
+            path="/profiles/:id/edit/username"
+            render={() => <UsernameForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/password"
+            render={() => <UserPasswordForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <ProfileEditForm />}
           />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
