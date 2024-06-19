@@ -1,33 +1,48 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { axiosReq } from '../../api/axiosDefaults';
+import React, { useEffect, useState } from "react";
 
-const Performances = () => {
-    const { id } = useParams();
-    const [performance, setPerformance] = useState([]);
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
-    useEffect(() => {
-        const fetchPerformance = async () => {
-            try {
-                // Adjust the destructuring based on the actual structure of the response
-                const response = await axiosReq.get(`/performances`);
-                // Assuming the response data is under a property named 'data' or similar
-                const performances = response.data; // Adjust this line based on the actual response structure
-                setPerformance(performances);
-                console.log(performances); // Log the updated state within useEffect
-            } catch (err) {
-                console.error(err);
-            }
-        };
+import appStyles from "../../App.module.css";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
+import Performance from "./Performance";
 
-        fetchPerformance();
-    }, [id]);
+function PerformancePage() {
+  const { id } = useParams();
+  const [performance, setPerformance] = useState({ results: []});
 
-    return (
-        <div>
-            <h2>Performances</h2>
-        </div>
-    );
-};
+  useEffect(() => {
+    const handleMount = async () => {
+        try{
+            const [{data: per}] = await Promise.all([
+                axiosReq.get(`/performances/${id}`)
+            ])
+            setPerformance({results: [per]})
+            console.log(per)
+        } catch(err){
+            console.log(err)
+        }
+    }
+    handleMount()
+  }, [id])
 
-export default Performances;
+
+  return (
+    <Row className="h-100">
+      <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <p>Popular profiles for mobile</p>
+        <Performance {...performance.results[0]} setPerformance={setPerformance} performance />
+        <Container className={appStyles.Content}>
+          Comments
+        </Container>
+      </Col>
+      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+        Popular profiles for desktop
+      </Col>
+    </Row>
+  );
+}
+
+export default PerformancePage;

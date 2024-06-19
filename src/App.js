@@ -18,6 +18,8 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import Performances from "./pages/performances/Performances";
+import PerformanceList from "./pages/performances/PerformanceList";
 
 
 function App() {
@@ -31,7 +33,8 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/performances" render={() => <PerformanceCreateForm />} />
+          <Route exact path="/performances/:id" render={() => <Performances />} />
+          <Route exact path="/performances" render={() => <PerformanceList message="No performances found." filter="add filter here manybe?"/>} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
 
           <Route exact path="/myplan/" render={() => <Goals />} />
