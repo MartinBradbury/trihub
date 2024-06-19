@@ -17,6 +17,7 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+// import format from "date-fns"
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -105,7 +106,9 @@ const ProfileEditForm = () => {
     // formData.append("gender", gender)
     // formData.append("fitnessLevel", fitness_level)
     formData.append("date_of_birth", date_of_birth);
+    console.log(date_of_birth)
 
+    
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
     }
@@ -174,7 +177,7 @@ const ProfileEditForm = () => {
           type="date"
           value={date_of_birth}
           onChange={handleChange}
-          name="dateOfBirth"
+          name="date_of_birth"
         />
       </Form.Group>
 
