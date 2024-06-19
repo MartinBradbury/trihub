@@ -47,7 +47,30 @@ const ProfileEditForm = () => {
     image,
   } = profileData;
 
+  const [fitnessLevels, setFitnessLevels] = useState([]); // State for fitness levels
+
+  useEffect(() => {
+    const fetchFitnessLevels = async () => {
+      try {
+        const { data } = await axiosReq.get("/profiles/fitness_level/");
+        setFitnessLevels(data);
+        console.log(fitnessLevels)
+      } catch (error) {
+        console.error("Failed to fetch fitness levels:", error);
+      }
+    };
+
+    fetchFitnessLevels();
+  }, []);
+
   const [errors, setErrors] = useState({});
+
+  const handleSelectChange = (event) => {
+    setProfileData({
+     ...profileData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   useEffect(() => {
     const handleMount = async () => {
@@ -88,7 +111,6 @@ const ProfileEditForm = () => {
 
 
 
-
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -100,11 +122,11 @@ const ProfileEditForm = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("content", content);
-    formData.append("firstName", first_name);
-    formData.append("lastName", last_name);
+    formData.append("first_name", first_name);
+    formData.append("last_name", last_name);
     formData.append("email", email);
-    // formData.append("gender", gender)
-    // formData.append("fitnessLevel", fitness_level)
+    formData.append("gender", gender)
+    formData.append("fitness_level", fitness_level)
     formData.append("date_of_birth", date_of_birth);
     console.log(date_of_birth)
 
@@ -125,6 +147,7 @@ const ProfileEditForm = () => {
       setErrors(err.response?.data);
     }
   };
+  
 
   const textFields = (
     <>
@@ -138,7 +161,6 @@ const ProfileEditForm = () => {
           rows={7}
         />
       </Form.Group>
-
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
@@ -150,7 +172,7 @@ const ProfileEditForm = () => {
           type="text"
           value={first_name}
           onChange={handleChange}
-          name="firstName"
+          name="first_name"
         />
       </Form.Group>
       <Form.Group>
@@ -159,7 +181,7 @@ const ProfileEditForm = () => {
           type="text"
           value={last_name}
           onChange={handleChange}
-          name="lastName"
+          name="last_name"
         />
       </Form.Group>
       <Form.Group>
@@ -180,6 +202,34 @@ const ProfileEditForm = () => {
           name="date_of_birth"
         />
       </Form.Group>
+      <Form.Group>
+      <Form.Label>Fitness Level</Form.Label>
+      <Form.Control
+        as="select"
+        value={fitness_level}
+        onChange={handleSelectChange}
+        name="fitness_level"
+      >
+        <option value="U">Unknown</option>
+        <option value="L">Low</option>
+        <option value="M">Medium</option>
+        <option value="H">High</option>
+      </Form.Control>
+    </Form.Group>
+    <Form.Group>
+      <Form.Label>Gender</Form.Label>
+      <Form.Control
+        as="select"
+        value={gender}
+        onChange={handleSelectChange}
+        name="gender"
+      >
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="O">Other</option>
+        <option value="N">Not Identified</option>
+      </Form.Control>
+    </Form.Group>
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}

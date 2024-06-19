@@ -96,7 +96,8 @@ function ProfilePage() {
             <strong>Fitness Level:</strong> {profile?.fitness_level}<br />
             <strong>Gender:</strong> {profile?.gender}<br />
             <strong>Updated At:</strong> {profile?.updated_at}<br/>
-            <strong>Created At:</strong> {profile?.created_at}
+            <strong>Created At:</strong> {profile?.created_at}<br/>
+            <strong>Email:</strong> {profile?.email}
           </Card.Text>
         </Card.Body>
       </Card>
