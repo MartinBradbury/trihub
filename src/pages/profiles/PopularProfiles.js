@@ -9,13 +9,11 @@ import { useProfileData } from "../../contexts/ProfileDataContext";
 
 const PopularProfiles = ({ mobile }) => {
   const [profileData, setProfileData] = useState({
-    // we will use the pageProfile later!
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
   });
   const { popularProfiles } = useProfileData();
   const currentUser = useCurrentUser();
-  
 
   useEffect(() => {
     const handleMount = async () => {

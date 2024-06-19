@@ -17,7 +17,6 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-// import format from "date-fns"
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -47,14 +46,14 @@ const ProfileEditForm = () => {
     image,
   } = profileData;
 
-  const [fitnessLevels, setFitnessLevels] = useState([]); // State for fitness levels
+  const [fitnessLevels, setFitnessLevels] = useState([]);
 
   useEffect(() => {
     const fetchFitnessLevels = async () => {
       try {
         const { data } = await axiosReq.get("/profiles/fitness_level/");
         setFitnessLevels(data);
-        console.log(fitnessLevels)
+        console.log(fitnessLevels);
       } catch (error) {
         console.error("Failed to fetch fitness levels:", error);
       }
@@ -67,7 +66,7 @@ const ProfileEditForm = () => {
 
   const handleSelectChange = (event) => {
     setProfileData({
-     ...profileData,
+      ...profileData,
       [event.target.name]: event.target.value,
     });
   };
@@ -109,8 +108,6 @@ const ProfileEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
-
-
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -125,12 +122,11 @@ const ProfileEditForm = () => {
     formData.append("first_name", first_name);
     formData.append("last_name", last_name);
     formData.append("email", email);
-    formData.append("gender", gender)
-    formData.append("fitness_level", fitness_level)
+    formData.append("gender", gender);
+    formData.append("fitness_level", fitness_level);
     formData.append("date_of_birth", date_of_birth);
-    console.log(date_of_birth)
+    console.log(date_of_birth);
 
-    
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
     }
@@ -147,7 +143,6 @@ const ProfileEditForm = () => {
       setErrors(err.response?.data);
     }
   };
-  
 
   const textFields = (
     <>
@@ -203,33 +198,33 @@ const ProfileEditForm = () => {
         </Alert>
       ))}
       <Form.Group>
-      <Form.Label>Fitness Level</Form.Label>
-      <Form.Control
-        as="select"
-        value={fitness_level}
-        onChange={handleSelectChange}
-        name="fitness_level"
-      >
-        <option value="U">Unknown</option>
-        <option value="L">Low</option>
-        <option value="M">Medium</option>
-        <option value="H">High</option>
-      </Form.Control>
-    </Form.Group>
-    <Form.Group>
-      <Form.Label>Gender</Form.Label>
-      <Form.Control
-        as="select"
-        value={gender}
-        onChange={handleSelectChange}
-        name="gender"
-      >
-        <option value="M">Male</option>
-        <option value="F">Female</option>
-        <option value="O">Other</option>
-        <option value="N">Not Identified</option>
-      </Form.Control>
-    </Form.Group>
+        <Form.Label>Fitness Level</Form.Label>
+        <Form.Control
+          as="select"
+          value={fitness_level}
+          onChange={handleSelectChange}
+          name="fitness_level"
+        >
+          <option value="U">Unknown</option>
+          <option value="L">Low</option>
+          <option value="M">Medium</option>
+          <option value="H">High</option>
+        </Form.Control>
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Gender</Form.Label>
+        <Form.Control
+          as="select"
+          value={gender}
+          onChange={handleSelectChange}
+          name="gender"
+        >
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+          <option value="N">Not Identified</option>
+        </Form.Control>
+      </Form.Group>
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}

@@ -58,7 +58,7 @@ function ProfilePage() {
     };
     fetchData();
   }, [id, setProfileData]);
-  console.log(profile)
+  console.log(profile);
 
   const mainProfile = (
     <>
@@ -88,26 +88,33 @@ function ProfilePage() {
             </Col>
           </Row>
           <Card className="mt-4">
-        <Card.Body>
-          <Card.Title>Profile Details</Card.Title>
-          <Card.Text>
-            <strong>First Name:</strong> {profile?.first_name}<br />
-            <strong>Last Name:</strong> {profile?.last_name}<br />
-            <strong>Fitness Level:</strong> {profile?.fitness_level}<br />
-            <strong>Gender:</strong> {profile?.gender}<br />
-            <strong>Updated At:</strong> {profile?.updated_at}<br/>
-            <strong>Created At:</strong> {profile?.created_at}<br/>
-            <strong>Email:</strong> {profile?.email}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-      <Card.Body>
-          <Card.Text>
-            <strong>Bio:</strong>{profile?.content}
-          </Card.Text>
-        </Card.Body>
-      </Card>
+            <Card.Body>
+              <Card.Title>Profile Details</Card.Title>
+              <Card.Text>
+                <strong>First Name:</strong> {profile?.first_name}
+                <br />
+                <strong>Last Name:</strong> {profile?.last_name}
+                <br />
+                <strong>Fitness Level:</strong> {profile?.fitness_level}
+                <br />
+                <strong>Gender:</strong> {profile?.gender}
+                <br />
+                <strong>Updated At:</strong> {profile?.updated_at}
+                <br />
+                <strong>Created At:</strong> {profile?.created_at}
+                <br />
+                <strong>Email:</strong> {profile?.email}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Body>
+              <Card.Text>
+                <strong>Bio:</strong>
+                {profile?.content}
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
         <Col lg={3} className="text-lg-right">
           {currentUser &&
@@ -128,7 +135,6 @@ function ProfilePage() {
               </Button>
             ))}
         </Col>
-        {/* {profile?.content && <Col className="p-3">{profile.content}</Col>} */}
       </Row>
     </>
   );
