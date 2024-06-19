@@ -6,6 +6,7 @@ import { Card, Media, Overlay, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 
+
 const Performance = (props) => {
   const { performance, is_owner, id, content, event, owner, time, title, complete_date } = props;
 
@@ -14,15 +15,11 @@ const Performance = (props) => {
 
   return (
     <Card className={styles.Performance}>
-      <div>
-        {/* Corrected usage of Link component THIS LINK DOES NOT WORK YET.*/}
-        <Link to={`/profiles/${id}`}>
-          <p>See the profile</p>
-        </Link>
-      </div>
       <Card.Body>
         <Media className="allign-items-center justify-content-between">
+        <a href={`/performances/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <h3>{title}</h3>
+        </a>
           <p>{time}</p>
           <p>{owner}</p>
           <p>{content}</p>

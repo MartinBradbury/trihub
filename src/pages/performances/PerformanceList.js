@@ -13,7 +13,7 @@ import Performance from "./Performance";
 import NoResults from "../../assets/no-results.png";
 import Asset from "../../components/Asset";
 
-function PerformanceList({ message, filter = "" }) {
+function PerformanceList({ message = "" }) {
   const [performances, setPerformances] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const [query, setQuery] = useState("");
@@ -34,7 +34,7 @@ function PerformanceList({ message, filter = "" }) {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={12}>
         <p>User Performances</p>
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
@@ -72,9 +72,11 @@ function PerformanceList({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
-      </Col>
+      <button>
+         <a href="performance/create" >
+         Create event
+          </a>
+      </button>
     </Row>
   );
 }

@@ -34,6 +34,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/performances/:id" render={() => <Performances />} />
+          <Route exact path="/performance/create" render={() => <PerformanceCreateForm />} />
           <Route exact path="/performances" render={() => <PerformanceList message="No performances found." filter="add filter here manybe?"/>} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
 
