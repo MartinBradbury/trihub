@@ -22,11 +22,10 @@ const Performance = (props) => {
       </div>
       <Card.Body>
         <Media className="allign-items-center justify-content-between">
-          <h1>{event}</h1>
+          <h3>{title}</h3>
           <p>{time}</p>
           <p>{owner}</p>
           <p>{content}</p>
-          <p>{title}</p>
           <p>{owner}</p>
           <p>{is_owner}</p>
           {/* Conditionally render this paragraph based on ownership */}

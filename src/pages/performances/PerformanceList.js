@@ -10,52 +10,67 @@ import styles from "../../styles/PostsPage.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";
 import Performance from "./Performance";
-import NoResults from '../../assets/no-results.png'
+import NoResults from "../../assets/no-results.png";
 import Asset from "../../components/Asset";
 
-function PerformanceList({ message, filter =""}) {
-    const [performances, setPerformances] = useState({results: []});
-    const [hasLoaded, setHasLoaded] = useState(false);
-    
+function PerformanceList({ message, filter = "" }) {
+  const [performances, setPerformances] = useState({ results: [] });
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [query, setQuery] = useState("");
 
-    useEffect(() => {
-        const fetchPerformances = async () => {
-            try {
-                const {data} = await axiosReq.get(`/performances/`)
-                setPerformances(data)
-                setHasLoaded(true)
-            } catch(err) {
-                console.log(err)
-            }
-        }
-        setHasLoaded(false);
-        fetchPerformances();
-    }, [performance]);
-    
-  
+  useEffect(() => {
+    const fetchPerformances = async () => {
+      try {
+        const { data } = await axiosReq.get(`/performances/?search=${query}`);
+        setPerformances(data);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    setHasLoaded(false);
+    fetchPerformances();
+  }, [query]);
+
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>User Performances</p>
-        {hasLoaded ? (
-            <>
-               {performances.results.length ? (
-                performances.results.map(per => (
-                    <Performance key={per.id} {...per} setPerformances={setPerformances}/>
-                ))
-               ) : (
-                    <Container className={appStyles.Content}>
-                        <Asset src={NoResults} message={message}/>
+        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <Form
+          className={styles.SearchBar}
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search Performances by user"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </Form>
 
-                    </Container>
-               )} 
-            </>
+        {hasLoaded ? (
+          <>
+            {performances.results.length ? (
+              performances.results.map((per) => (
+                <Performance
+                  key={per.id}
+                  {...per}
+                  setPerformances={setPerformances}
+                />
+              ))
+            ) : (
+              <Container className={appStyles.Content}>
+                <Asset src={NoResults} message={message} />
+              </Container>
+            )}
+          </>
         ) : (
-            <Container className={appStyles.Container}>
-                <Asset spinner />
-            </Container>
+          <Container className={appStyles.Container}>
+            <Asset spinner />
+          </Container>
         )}
-        
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <p>Popular profiles for desktop</p>
