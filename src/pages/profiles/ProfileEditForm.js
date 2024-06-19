@@ -161,11 +161,6 @@ const ProfileEditForm = () => {
           rows={7}
         />
       </Form.Group>
-      {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
       <Form.Group>
         <Form.Label>First Name</Form.Label>
         <Form.Control
@@ -202,6 +197,11 @@ const ProfileEditForm = () => {
           name="date_of_birth"
         />
       </Form.Group>
+      {errors?.date_of_birth?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Form.Group>
       <Form.Label>Fitness Level</Form.Label>
       <Form.Control
