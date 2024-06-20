@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -21,7 +20,6 @@ import appStyles from "../../App.module.css";
 const PerformanceCreateForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-  const { id } = useParams();
   const history = useHistory();
 
   const [performanceData, setPerformanceData] = useState({
@@ -31,8 +29,7 @@ const PerformanceCreateForm = () => {
     time: "",
     complete_date: "",
   });
-  const { event, content, owner, time, complete_date } = performanceData;
-
+  const { event, content, time, complete_date } = performanceData;
   const [events, setEvents] = useState({ results: [] });
 
   useEffect(() => {
@@ -55,7 +52,7 @@ const PerformanceCreateForm = () => {
     // Parse the selected value to an integer
     const eventIdInt = parseInt(event.target.value, 10);
     setPerformanceData({
-    ...performanceData,
+      ...performanceData,
       event: eventIdInt, // Store the integer value
     });
   };
@@ -115,7 +112,6 @@ const PerformanceCreateForm = () => {
           {message}
         </Alert>
       ))}
-      console.log(events)
       <Form.Control
         as="select"
         value={event}
@@ -124,7 +120,6 @@ const PerformanceCreateForm = () => {
       >
         {events.results.map((eventItem, index) => (
           <option key={index} value={eventItem.id}>
-
             {eventItem.title}
           </option>
         ))}
@@ -138,6 +133,11 @@ const PerformanceCreateForm = () => {
           name="time"
         />
       </Form.Group>
+      {errors?.time?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}

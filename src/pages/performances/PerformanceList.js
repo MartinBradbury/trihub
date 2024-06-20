@@ -12,6 +12,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Performance from "./Performance";
 import NoResults from "../../assets/no-results.png";
 import Asset from "../../components/Asset";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function PerformanceList({ message = "" }) {
   const [performances, setPerformances] = useState({ results: [] });
@@ -53,13 +55,27 @@ function PerformanceList({ message = "" }) {
         {hasLoaded ? (
           <>
             {performances.results.length ? (
-              performances.results.map((per) => (
-                <Performance
-                  key={per.id}
-                  {...per}
-                  setPerformances={setPerformances}
-                />
-              ))
+              <InfiniteScroll 
+              children={
+                /*show posts here and render each one*/
+                /* map over the posts array and for each we will return post component and give each a key spread post object and pass the setPosts
+                so users can like or unlike a post.*/
+                performances.results.map((per) => (
+                  <Performance
+                    key={per.id}
+                    {...per}
+                    setPerformances={setPerformances}
+                  />
+                ))
+              }
+            
+            dataLength={performances.results.length}
+            loader={<Asset spinner/>}
+            hasMore={!!performances.next}
+            next={() => fetchMoreData(performances, setPerformances)}
+            
+            
+            />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
