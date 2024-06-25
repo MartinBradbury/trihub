@@ -1,28 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Card, Media } from 'react-bootstrap';
+import styles from "../../styles/Performance.module.css";
 
-import { axiosReq } from '../../api/axiosDefaults';
+const TrainingPlan = ({ plan }) => {
+  // No need for useEffect since we're receiving a single plan as a prop
 
-
-
-function TrainingPlan() {
-    const [plans, setPlans] = useState([]);
-
-    useEffect(() => {
-        const fetchPlans = async () => {
-          try {
-            const response = await axiosReq.get(`/trainingplans`);
-            setPlans(response.data.results); 
-            console.log(response.data.results);
-          } catch (err) {
-            console.log(err);
-          }
-        };
-        fetchPlans();
-      }, []);
-
-    return (
-        <div>TrainingPlan</div>
-    )
-}
+  return (
+    <div>
+      <h1>Training Plan Details</h1>
+      {plan? (
+        <Card key={plan.id} className={styles.planCard}>
+          <Media>
+            <Media.Body>
+              <p>{plan.title}</p> {/* Adjusted to use plan.title */}
+              <p>{plan.created_at}</p> {/* Adjusted to use plan.created_at */}
+            </Media.Body>
+          </Media>
+        </Card>
+      ) : (
+        <p>No plan details found.</p>
+      )}
+    </div>
+  );
+};
 
 export default TrainingPlan;

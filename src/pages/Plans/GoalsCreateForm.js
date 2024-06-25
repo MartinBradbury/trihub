@@ -19,6 +19,7 @@ function GoalsCreateForm() {
     event_date: "",
     hours_per_week: "",
     content: "",
+    plan_length: "",
   });
 
   const handleChange = (event) => {
@@ -33,6 +34,7 @@ function GoalsCreateForm() {
 
     const formData = new FormData();
     formData.append("hours_per_week", goalData.hours_per_week);
+    formData.append("plan_length", goalData.plan_length);
     formData.append("content", goalData.content);
     formData.append("event_date", goalData.event_date);
 
@@ -50,6 +52,11 @@ function GoalsCreateForm() {
     { value: "1", label: "3 Hours" },
     { value: "2", label: "6 Hours" },
     { value: "3", label: "9 Hours" },
+  ];
+  const lengthOptions = [
+    { value: "1", label: "3 Weeks" },
+    { value: "2", label: "6 Weeks" },
+    { value: "3", label: "9 Weeks" },
   ];
 
 
@@ -90,6 +97,21 @@ function GoalsCreateForm() {
         ))}
       </Form.Group>
       <Form.Group>
+        <Form.Label>Plan Length</Form.Label>
+        <Form.Control
+          as="select"
+          name="plan_length"
+          value={goalData.plan_length}
+          onChange={handleChange}
+        >
+          {lengthOptions.map((option, index) => (
+            <option key={index} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </Form.Control>
+      </Form.Group>
+      <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
           type="textbox"
@@ -119,6 +141,7 @@ function GoalsCreateForm() {
         </Col>
       </Row>
     </Form>
+    
   );
 }
 
