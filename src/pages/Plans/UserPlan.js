@@ -1,9 +1,12 @@
 import React from 'react'
+import Goals from './Goals'
 
 const UserPlan = () => {
   return (
     <div>
-        <p>User plan</p>
+        <p>
+          <Goals />
+        </p>
     </div>
   )
 }

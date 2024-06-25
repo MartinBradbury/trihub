@@ -13,7 +13,6 @@ import { useCurrentUser } from "./contexts/CurrentUserContext";
 import CommunityPosts from "./pages/community/CommunityPosts"
 import PerformanceCreateForm from "./pages/performances/PerformanceCreateForm";
 import PostEditForm from "./pages/community/PostEditForm";
-import Goals from "./pages/Plans/GoalsCreateForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
@@ -22,6 +21,8 @@ import Performances from "./pages/performances/Performances";
 import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
 import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
+import Goals from "./pages/Plans/Goals";
+
 
 
 function App() {
@@ -40,8 +41,9 @@ function App() {
           <Route exact path="/performances" render={() => <PerformanceList message="No performances found." filter="add filter here manybe?"/>} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route exact path="/goals/create" render={() => <GoalsCreateForm />} />
+          <Route exact path="/goals" render={() => <Goals />} />
 
-          <Route exact path="/myplan/" render={() => <UserPlan />} />
+          <Route exact path="/myplan" render={() => <UserPlan />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route
