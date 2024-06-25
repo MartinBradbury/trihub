@@ -4,12 +4,13 @@ import Goals from './Goals'
 const UserPlan = () => {
   return (
     <div>
-        <p>
-          <Goals />
           <button>
             <a href="goals/create">Create Goal</a>
           </button>
-        </p>
+        
+          <Goals />
+          
+        
     </div>
   )
 }

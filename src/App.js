@@ -10,7 +10,7 @@ import Home from "./pages/home/Home";
 import PostCreateForm from "./pages/community/PostCreateForm";
 import PostPage from "./pages/community/PostPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
-import CommunityPosts from "./pages/community/CommunityPosts"
+import CommunityPosts from "./pages/community/CommunityPosts";
 import PerformanceCreateForm from "./pages/performances/PerformanceCreateForm";
 import PostEditForm from "./pages/community/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
@@ -21,10 +21,6 @@ import Performances from "./pages/performances/Performances";
 import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
 import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
-import Goals from "./pages/Plans/Goals";
-import TrainingPlan from "./pages/Plans/TrainingPlan";
-
-
 
 function App() {
   const currentUser = useCurrentUser();
@@ -37,13 +33,32 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/performances/:id" render={() => <Performances />} />
-          <Route exact path="/performance/create" render={() => <PerformanceCreateForm />} />
-          <Route exact path="/performances" render={() => <PerformanceList message="No performances found." filter="add filter here manybe?"/>} />
+          <Route
+            exact
+            path="/performances/:id"
+            render={() => <Performances />}
+          />
+          <Route
+            exact
+            path="/performance/create"
+            render={() => <PerformanceCreateForm />}
+          />
+          <Route
+            exact
+            path="/performances"
+            render={() => (
+              <PerformanceList
+                message="No performances found."
+                filter="add filter here manybe?"
+              />
+            )}
+          />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-          <Route exact path="/goals/create" render={() => <GoalsCreateForm />} />
-          <Route exact path="/goals" render={() => <Goals />} />
-          <Route exact path="/trainingplan" render={() => <TrainingPlan />} />
+          <Route
+            exact
+            path="/goals/create"
+            render={() => <GoalsCreateForm />}
+          />
 
           <Route exact path="/myplan" render={() => <UserPlan />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
@@ -53,15 +68,16 @@ function App() {
             path="/community/create"
             render={() => <PostCreateForm />}
           />
-          <Route exact path="/community/posts/:id/edit" render={() => <PostEditForm />} />
-          <Route exact path="/community/posts/:id" render={() => <PostPage />} />
-          {/* <Route
+          <Route
             exact
-            path="/community/:id"
-            render={() => (
-              <CommunityPosts message="No results found. Adjust the search keyword." />
-            )}
-          /> */}
+            path="/community/posts/:id/edit"
+            render={() => <PostEditForm />}
+          />
+          <Route
+            exact
+            path="/community/posts/:id"
+            render={() => <PostPage />}
+          />
           <Route
             exact
             path="/community"
@@ -89,7 +105,7 @@ function App() {
               />
             )}
           />
-            <Route
+          <Route
             exact
             path="/profiles/:id/edit/username"
             render={() => <UsernameForm />}
