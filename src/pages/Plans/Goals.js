@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { axiosReq } from '../../api/axiosDefaults';
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { Col, Row } from 'react-bootstrap';
 import Goal from './Goal';
-import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 function Goals() {
   const [goals, setGoals] = useState([]);
-  // Assuming currentUser is available here. Adjust according to your app's architecture.
+
   
   const currentUser = useCurrentUser();
   console.log(currentUser)
@@ -16,7 +15,6 @@ function Goals() {
     const fetchGoals = async () => {
       try {
         const response = await axiosReq.get(`/goals`);
-        // Access the 'results' array within the response object
         const filteredGoals = response.data.results.filter(goal => goal.owner === currentUser.username);
         setGoals(filteredGoals);
         console.log(filteredGoals);

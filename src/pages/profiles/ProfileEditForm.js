@@ -60,7 +60,7 @@ const ProfileEditForm = () => {
     };
 
     fetchFitnessLevels();
-  }, []);
+  }, [fitnessLevels]);
 
   const [errors, setErrors] = useState({});
 

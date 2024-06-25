@@ -22,6 +22,7 @@ import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
 import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
 import Goals from "./pages/Plans/Goals";
+import TrainingPlan from "./pages/Plans/TrainingPlan";
 
 
 
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route exact path="/goals/create" render={() => <GoalsCreateForm />} />
           <Route exact path="/goals" render={() => <Goals />} />
+          <Route exact path="/trainingplan" render={() => <TrainingPlan />} />
 
           <Route exact path="/myplan" render={() => <UserPlan />} />
           <Route exact path="/signin" render={() => <SignInForm />} />

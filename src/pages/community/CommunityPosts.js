@@ -15,7 +15,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
-import { NavLink } from "react-bootstrap";
+
 
 /* Destructure message and filter props in place from appjs?? */
 function PostsPage({ message, filter = "" }) {

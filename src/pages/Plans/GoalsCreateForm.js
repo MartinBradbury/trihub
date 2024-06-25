@@ -6,13 +6,12 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
 
 function GoalsCreateForm() {
-  const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const history = useHistory();
   const [errors, setErrors] = useState({});
@@ -38,7 +37,7 @@ function GoalsCreateForm() {
     formData.append("event_date", goalData.event_date);
 
     try {
-      const { data } = await axiosReq.post(`/goals/`, formData);
+      await axiosReq.post(`/goals/`, formData);
       setCurrentUser((currentUser) => ({...currentUser }));
       history.goBack();
     } catch (err) {
@@ -47,7 +46,6 @@ function GoalsCreateForm() {
     }
   };
 
-  // Define the options for hours_per_week
   const hoursOptions = [
     { value: "1", label: "3 Hours" },
     { value: "2", label: "6 Hours" },

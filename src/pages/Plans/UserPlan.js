@@ -6,6 +6,9 @@ const UserPlan = () => {
     <div>
         <p>
           <Goals />
+          <button>
+            <a href="goals/create">Create Goal</a>
+          </button>
         </p>
     </div>
   )

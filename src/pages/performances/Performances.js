@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
 
-import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Performance from "./Performance";
@@ -12,12 +10,6 @@ import Performance from "./Performance";
 function PerformancePage() {
   const { id } = useParams();
   const [performance, setPerformance] = useState({ results: []});
-
-
-
-  /* FRAMEWoRK */
-
-
 
   useEffect(() => {
     const handleMount = async () => {

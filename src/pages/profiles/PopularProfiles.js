@@ -8,7 +8,7 @@ import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 
 const PopularProfiles = ({ mobile }) => {
-  const [profileData, setProfileData] = useState({
+  const [ setProfileData] = useState({
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
   });
@@ -31,7 +31,7 @@ const PopularProfiles = ({ mobile }) => {
     };
 
     handleMount();
-  }, [currentUser]);
+  }, [currentUser, setProfileData]);
 
   return (
     <Container

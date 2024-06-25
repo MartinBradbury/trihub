@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -44,16 +44,16 @@ const PerformanceCreateForm = () => {
     };
 
     fetchEvents();
-  }, []);
+  }, [events]);
 
   const [errors, setErrors] = useState({});
 
   const handleSelectChange = (event) => {
-    // Parse the selected value to an integer
+    
     const eventIdInt = parseInt(event.target.value, 10);
     setPerformanceData({
       ...performanceData,
-      event: eventIdInt, // Store the integer value
+      event: eventIdInt,
     });
   };
 
@@ -76,7 +76,7 @@ const PerformanceCreateForm = () => {
     console.log(performanceData);
 
     try {
-      const { data } = await axiosReq.post(`/performances/`, formData);
+      await axiosReq.post(`/performances/`, formData);
       setCurrentUser((currentUser) => ({
         ...currentUser,
       }));
