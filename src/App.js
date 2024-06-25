@@ -21,6 +21,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import Performances from "./pages/performances/Performances";
 import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
+import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route exact path="/performance/create" render={() => <PerformanceCreateForm />} />
           <Route exact path="/performances" render={() => <PerformanceList message="No performances found." filter="add filter here manybe?"/>} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/goals/create" render={() => <GoalsCreateForm />} />
 
           <Route exact path="/myplan/" render={() => <UserPlan />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
