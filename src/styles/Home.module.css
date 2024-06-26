@@ -1,3 +1,5 @@
+/* Home.module.css */
+
 .card {
     margin-bottom: 50px; /* Adjust the value as needed */
     display: flex; /* Ensure flexbox is enabled */
@@ -10,10 +12,9 @@
     border: none;
 }
 
-/* Additional class for the text that will be overlaid on the image */
 .overlay {
     position: absolute;
-    flex-direction:column;
+    flex-direction: column;
     top: 0; /* Specify the top position to ensure it's centered */
     left: 0; /* Specify the left position to ensure it's centered */
     right: 0; /* Specify the right position to ensure it's centered */
@@ -33,7 +34,7 @@
     white-space: nowrap;
 }
 
-.content { /* Corrected class name */
+.content {
     position: absolute;
     flex-direction: column;
     top: 0;
@@ -45,4 +46,18 @@
     align-items: center;
     color: white;
     background-color: rgba(8, 8, 8, 0.884); /* Corrected syntax for rgba */
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "Roboto", sans-serif; /* Applied font family here */
+}
+
+
+h1, h3, p {
+    font-family: "Roboto", sans-serif; /* Applying font family to headings and paragraphs */
 }

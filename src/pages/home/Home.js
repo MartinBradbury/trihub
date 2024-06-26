@@ -10,8 +10,10 @@ const Home = () => {
   return (
     <>
       <Container>
-        <div>
+        <div className={styles.text}>
           <h1>Welcome trihub</h1>
+          </div>
+          <div className={styles.text}>
           <p>
             Welcome to TriHub, your go-to hub for triathlon enthusiasts Here,
             you can share your triathlon memories, connect with fellow athletes,
