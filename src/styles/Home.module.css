@@ -1,10 +1,11 @@
 .card {
     margin-bottom: 50px; /* Adjust the value as needed */
+    display: flex; /* Ensure flexbox is enabled */
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative; /* Added to support absolute positioning of text */
-    background:rgba(0, 0, 0, 0.212);
+    background: rgba(0, 0, 0, 0.065); /* Corrected syntax for rgba */
     border-radius: 12px;
     border: none;
 }
@@ -12,18 +13,27 @@
 /* Additional class for the text that will be overlaid on the image */
 .overlay {
     position: absolute;
+    flex-direction:column;
+    top: 0; /* Specify the top position to ensure it's centered */
+    left: 0; /* Specify the left position to ensure it's centered */
+    right: 0; /* Specify the right position to ensure it's centered */
+    bottom: 0; /* Specify the bottom position to ensure it's centered */
+    display: flex; /* Enable flexbox for alignment */
     align-items: center;
     justify-content: center;
-    background-color: none; /* Semi-transparent white background */
+    background-color: transparent; /* Corrected from 'none' to 'transparent' */
     padding: 5px;
     color: #ffffff; /* Text color */
     font-size: 20px; /* Text size */
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.Content {
+.content { /* Corrected class name */
     position: absolute;
     flex-direction: column;
     top: 0;
@@ -34,6 +44,5 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color:rgba(8, 8, 8, 0.644);
-    
+    background-color: rgba(8, 8, 8, 0.884); /* Corrected syntax for rgba */
 }

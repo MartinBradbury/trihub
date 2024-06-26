@@ -14,13 +14,21 @@ const HomePage = () => {
 
   return (
     <div className={styles.Background}>
-      <video autoPlay muted loop className={styles.Video} alt="triathlon background video">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        webkit-playsinline="true"
+        className={styles.Video}
+        alt="triathlon background video"
+      >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <p>Test</p>
       <div className={styles.Content}>
-        <img src={logo} alt="trihub logo"/>
+        <img src={logo} alt="trihub logo" />
         <h3>A Triathlon Community</h3>
         <p>For triathletes of all abilities</p>
       </div>
