@@ -1,0 +1,39 @@
+.card {
+    margin-bottom: 50px; /* Adjust the value as needed */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Added to support absolute positioning of text */
+    background:rgba(0, 0, 0, 0.212);
+    border-radius: 12px;
+    border: none;
+}
+
+/* Additional class for the text that will be overlaid on the image */
+.overlay {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: none; /* Semi-transparent white background */
+    padding: 5px;
+    color: #ffffff; /* Text color */
+    font-size: 20px; /* Text size */
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Content {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:rgba(8, 8, 8, 0.644);
+    
+}

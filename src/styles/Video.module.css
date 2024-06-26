@@ -20,6 +20,7 @@ h1 {
 
 .Content {
     position: absolute;
+    flex-direction: column;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,7 +28,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: white;
     background-color:rgba(8, 8, 8, 0.644);
     
 }
+
