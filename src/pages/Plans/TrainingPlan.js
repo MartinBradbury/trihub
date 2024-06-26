@@ -13,6 +13,9 @@ const TrainingPlan = ({ plan }) => {
           <Media>
             <Media.Body>
               <p>{plan.title}</p> 
+              <pre>
+              <p>{plan.content}</p>
+              </pre>
               <p>{plan.created_at}</p>
             </Media.Body>
           </Media>

@@ -22,3 +22,9 @@
   .HeartOutline:hover {
     color: #f85032;
   }
+
+  pre {
+    font-family: monospace; /* Ensures a consistent font */
+    white-space: pre-wrap; /* Allows wrapping of long lines */
+    word-wrap: break-word; /* Breaks words to prevent overflow */
+}
