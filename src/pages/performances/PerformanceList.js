@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import btnStyles from "../../styles/Button.module.css";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
@@ -54,24 +55,19 @@ function PerformanceList({ message = "" }) {
         {hasLoaded ? (
           <>
             {performances.results.length ? (
-              <InfiniteScroll 
-              children={
-                performances.results.map((per) => (
+              <InfiniteScroll
+                children={performances.results.map((per) => (
                   <Performance
                     key={per.id}
                     {...per}
                     setPerformances={setPerformances}
                   />
-                ))
-              }
-            
-            dataLength={performances.results.length}
-            loader={<Asset spinner/>}
-            hasMore={!!performances.next}
-            next={() => fetchMoreData(performances, setPerformances)}
-            
-            
-            />
+                ))}
+                dataLength={performances.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!performances.next}
+                next={() => fetchMoreData(performances, setPerformances)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
@@ -84,11 +80,16 @@ function PerformanceList({ message = "" }) {
           </Container>
         )}
       </Col>
-      <button>
-         <a href="performance/create" >
-         Create event
-          </a>
-      </button>
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="performance/create">
+          <button
+            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center}`}
+            type="submit"
+          >
+            Create event
+          </button>
+        </a>
+      </div>
     </Row>
   );
 }
