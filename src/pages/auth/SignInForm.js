@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-import img from '../../assets/triathlon.jpg'
+import img from "../../assets/triathlon.jpg";
 
 import { Link, useHistory } from "react-router-dom";
 
@@ -20,7 +20,7 @@ import { useRedirect } from "../../hooks/UseRedirect";
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
-  useRedirect('loggedIn')
+  useRedirect("loggedIn");
 
   const [signInData, setSignInData] = useState({
     username: "",
@@ -38,7 +38,7 @@ function SignInForm() {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
       history.goBack();
-      console.log(data.user)
+      console.log(data.user);
     } catch (err) {
       setErrors(err.response?.data);
     }
@@ -113,10 +113,7 @@ function SignInForm() {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
       >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={img}
-        />
+        <Image className={`${appStyles.FillerImage}`} src={img} />
       </Col>
     </Row>
   );

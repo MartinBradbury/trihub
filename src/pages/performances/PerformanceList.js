@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import btnStyles from "../../styles/Button.module.css";
+import Styles from "../../styles/Performance.module.css"
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
@@ -80,16 +81,18 @@ function PerformanceList({ message = "" }) {
           </Container>
         )}
       </Col>
+      <Container className={Styles.ButtonSpace}>
       <div class="d-flex justify-content-center align-items-center">
         <a href="performance/create">
           <button
-            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center}`}
+            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center} ${btnStyles.Text}`}
             type="submit"
           >
-            Create event
+            Add Performance
           </button>
         </a>
       </div>
+      </Container>
     </Row>
   );
 }

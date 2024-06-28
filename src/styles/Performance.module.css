@@ -28,3 +28,8 @@
     white-space: pre-wrap; /* Allows wrapping of long lines */
     word-wrap: break-word; /* Breaks words to prevent overflow */
 }
+
+.ButtonSpace {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
