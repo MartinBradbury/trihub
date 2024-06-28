@@ -25,58 +25,54 @@ const Home = () => {
         </div>
         <hr/>
         <Row>
-          <Col xs={12} sm={12} md={6} lg={12}> {/* Adjusted to ensure proper responsiveness */}
+          <Col xs={12} sm={12} md={6} lg={12}> 
             <Card className={styles.card}>
               <Card.Img src={bgimg1} className={styles.img} />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
-                  <h1>British Triathlon Website</h1>
+                  <h3>Join a social community</h3>
                 </Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Interact with triathletes of all abilities.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={12}> {/* Adjusted to ensure proper responsiveness */}
+          <Col xs={12} sm={12} md={6} lg={12}> 
             <Card className={styles.card}>
               <Card.Img src={bgimg2} className="card-img-top" />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
-                  <h3>British Triathlon Website</h3>
+                  <h3>Set Your Goals</h3>
                 </Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Set a goal for a future race.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={12}> {/* Adjusted to ensure proper responsiveness */}
+          <Col xs={12} sm={12} md={6} lg={12}> 
             <Card className={styles.card}>
               <Card.Img src={bgimg3} className="card-img-top" />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
-                  <h3>British Triathlon Website</h3>
+                  <h3>Custom Built Training Plans</h3>
                 </Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Discover the custom training plans.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} sm={12} md={6} lg={12}> {/* Adjusted to ensure proper responsiveness */}
+          <Col xs={12} sm={12} md={6} lg={12}> 
             <Card className={styles.card}>
               <Card.Img src={bgimg4} className="card-img-top" />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
-                  <h3>British Triathlon Website</h3>
+                  <h3>Let others know your progress</h3>
                 </Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Post content so others can support your progress.
                 </Card.Text>
               </Card.Body>
             </Card>
