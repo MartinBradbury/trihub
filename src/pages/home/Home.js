@@ -33,7 +33,7 @@ const Home = () => {
                   <h3>Join a social community</h3>
                 </Card.Title>
                 <Card.Text>
-                  Interact with triathletes of all abilities.
+                  Interact with other triathletes.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -56,7 +56,7 @@ const Home = () => {
               <Card.Img src={bgimg3} className="card-img-top" />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
-                  <h3>Custom Built Training Plans</h3>
+                  <h3>Custom Training Plans</h3>
                 </Card.Title>
                 <Card.Text>
                   Discover the custom training plans.
@@ -69,10 +69,10 @@ const Home = () => {
               <Card.Img src={bgimg4} className="card-img-top" />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
-                  <h3>Let others know your progress</h3>
+                  <h3>Share your progress</h3>
                 </Card.Title>
                 <Card.Text>
-                  Post content so others can support your progress.
+                  Let people know your progress.
                 </Card.Text>
               </Card.Body>
             </Card>

@@ -19,11 +19,12 @@
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #2142b2;
+  color: #ed4300
 }
 
 .Link {
   text-decoration: none;
+  color: black;
   text-align: center;
   display: block;
   margin: auto;
