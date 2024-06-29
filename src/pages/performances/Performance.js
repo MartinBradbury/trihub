@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Performance.module.css";
+import Styles from "../../styles/Performance.module.css";
 // import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media } from "react-bootstrap";
 
@@ -12,17 +12,15 @@ const Performance = (props) => {
   const isCurrentUserOwner = is_owner === true;
 
   return (
-    <Card className={styles.Performance}>
+    <Card className={Styles.PerformanceSpacing}>
       <Card.Body>
         <Media className="allign-items-center justify-content-between">
         <a href={`/performances/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h3>{title}</h3>
+          <h3>Event: {title}</h3>
         </a>
-          <p>{time}</p>
-          <p>{owner}</p>
-          <p>{content}</p>
-          <p>{owner}</p>
-          <p>{is_owner}</p>
+          <p>Time: {time}</p>
+          <p>Performance by: {owner}</p>
+          <p>Comment: {content}</p>
 
           {isCurrentUserOwner && <p>You own this performance.</p>}
 
