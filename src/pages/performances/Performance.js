@@ -46,7 +46,7 @@ const Performance = (props) => {
             <h2>{title}</h2>
             <p>{time}</p>
             <p>{content}</p>
-            <p>Performance: {owner}</p>
+            <p>{owner}</p>
           </Media>
         </Card.Body>
       </Card>

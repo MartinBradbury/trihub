@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import logo from "../../assets/triathlonbike.jpg";
 
 import { axiosReq } from "../../api/axiosDefaults";
 import {
@@ -49,7 +50,6 @@ const PerformanceCreateForm = () => {
   const [errors, setErrors] = useState({});
 
   const handleSelectChange = (event) => {
-    
     const eventIdInt = parseInt(event.target.value, 10);
     setPerformanceData({
       ...performanceData,
@@ -151,18 +151,27 @@ const PerformanceCreateForm = () => {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
-          <Container className={appStyles.Content}>
-            <div className="d-md-none">{textFields}</div>
-          </Container>
-        </Col>
-        <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
-      </Row>
-    </Form>
+    <div style={{ minHeight: "100vh" }}>
+      {" "}
+      {/* Set minimum height to full viewport height */}
+      <div className="d-flex align-items-center justify-content-center">
+        {" "}
+        {/* Apply flex properties */}
+        <Form onSubmit={handleSubmit}>
+          <Row>
+            <Col className="py-2 p-0 p-md-2 text-center" lg={12}>
+              <img src={logo} alt="Logo" className="w-100" />
+              <Container className={appStyles.Content}>{textFields}</Container>
+            </Col>
+            <Col
+              md={5}
+              lg={6}
+              className="d-none d-md-block p-0 p-md-2 text-center"
+            ></Col>
+          </Row>
+        </Form>
+      </div>
+    </div>
   );
 };
 
