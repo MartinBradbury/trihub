@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../../styles/Performance.module.css";
+import styles from "../../styles/Goals.module.css";
+import btnStyles from "../../styles/Button.module.css"
 
 import { Card, Media } from "react-bootstrap";
 
@@ -16,31 +17,32 @@ const HOURS_LABELS = {
 };
 
 const Goal = (props) => {
-  const { is_owner, id, content, event_date, owner, hours_per_week, plan_length } = props;
+  const { content, event_date, hours_per_week, plan_length } = props;
   const planLengthLabel = PLAN_LENGTH_LABELS[plan_length];
   const hoursLabel = HOURS_LABELS[hours_per_week];
 
-  const isCurrentUserOwner = is_owner === true;
-
   return (
-    <Card className={styles.Performance}>
+    <>
+    <Card className={styles.COntent}>
       <Card.Body>
-        <Media className="allign-items-center justify-content-between">
-        <a href={`/goals/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p>{owner}</p>
-        </a>
+        <Media className="align-items-center justify-content-between">
+          <p>Event Date:</p>
           <p>{event_date}</p>
+        </Media>
+        <Media className="align-items-center justify-content-between">
+          <p>Hours per week:</p>
           <p>{hoursLabel}</p>
+        </Media>
+        <Media className="align-items-center justify-content-between">
+          <p>Length of Plan:</p>
           <p>{planLengthLabel}</p>
+        </Media>
+        <Media className={styles.Content}>
           <p>{content}</p>
-          <p>{is_owner}</p>
-
-          {isCurrentUserOwner && <h6>You own this performance.</h6>}
-
-          {!isCurrentUserOwner && <p>{owner}</p>}
         </Media>
       </Card.Body>
     </Card>
+  </>
   );
 };
 

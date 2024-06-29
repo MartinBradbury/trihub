@@ -1,0 +1,11 @@
+.Content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Spacing {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}

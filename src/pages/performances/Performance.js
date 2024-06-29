@@ -38,9 +38,6 @@ const Performance = (props) => {
         {isCurrentUserOwner && (
           <MoreDropdownPerformance handleDelete={handleOpenModal} />
         )}
-        {!isCurrentUserOwner && (
-          <p className="text-right small">Your performance</p>
-        )}
         <Card.Body>
           <Media className={Styles.PerformanceSpacing}>
             <h2>{title}</h2>

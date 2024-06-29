@@ -48,7 +48,7 @@ function Goals() {
       {goals.map((goal, index) => (
         <React.Fragment key={index}>
           <Row className="h-100">
-            <Col className="py-2 p-0 p-lg-2" lg={12}>
+            <Col  lg={12}>
               <Goal {...goal} />
               {filteredPlans.length > 0 ? (
                 filteredPlans.map((plan, planIndex) => (

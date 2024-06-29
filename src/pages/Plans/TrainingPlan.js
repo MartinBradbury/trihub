@@ -1,15 +1,16 @@
 import React from 'react';
 import { Card, Media } from 'react-bootstrap';
-import styles from "../../styles/Performance.module.css";
+
 
 const TrainingPlan = ({ plan }) => {
 
 
   return (
+    
     <div>
       <h1>Training Plan Details</h1>
       {plan? (
-        <Card key={plan.id} className={styles.planCard}>
+        <Card key={plan.id}>
           <Media>
             <Media.Body>
               <p>{plan.title}</p> 
