@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import btnStyles from "../../styles/Button.module.css";
-import Styles from "../../styles/Performance.module.css"
+import Styles from "../../styles/Performance.module.css";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
@@ -39,9 +39,9 @@ function PerformanceList({ message = "" }) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={12}>
         <p>User Performances</p>
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <i className={`fas fa-search ${Styles.SearchIcon}`} />
         <Form
-          className={styles.SearchBar}
+          className={Styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
@@ -82,16 +82,16 @@ function PerformanceList({ message = "" }) {
         )}
       </Col>
       <Container className={Styles.ButtonSpace}>
-      <div class="d-flex justify-content-center align-items-center">
-        <a href="performance/create">
-          <button
-            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center} ${btnStyles.Text}`}
-            type="submit"
-          >
-            Add Performance
-          </button>
-        </a>
-      </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="performance/create">
+            <button
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center} ${btnStyles.Text}`}
+              type="submit"
+            >
+              Add Performance
+            </button>
+          </a>
+        </div>
       </Container>
     </Row>
   );

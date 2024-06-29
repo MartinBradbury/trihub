@@ -1,33 +1,16 @@
-.Post {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-  
-  .Post figure,
-  h5 {
-    margin: 0 0;
-  }
-  
-  .Heart {
-    color: #f85032;
-  }
-  
-  .Heart:hover {
-    color: #2142b2;
-  }
-  
-  .HeartOutline:hover {
-    color: #f85032;
-  }
 
-  pre {
-    font-family: monospace; /* Ensures a consistent font */
-    white-space: pre-wrap; /* Allows wrapping of long lines */
-    word-wrap: break-word; /* Breaks words to prevent overflow */
+
+  h3, p {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "Roboto", sans-serif; 
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
+
 
 .ButtonSpace {
   margin-top: 50px;
@@ -35,5 +18,27 @@
 }
 
 .PerformanceSpacing {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 20px;
+}
+
+
+.SearchBar input {
+  border-radius: 20px;
+  color: #242a3d;
+  padding-left: 40px;
+  margin-bottom: 16px;
+}
+
+.SearchIcon {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 9px;
+  padding-left: 15px;
+}
+
+.SearchIcon:hover {
+  cursor: default;
+  color: #cfced3;
 }

@@ -12,19 +12,20 @@ const Performance = (props) => {
   const isCurrentUserOwner = is_owner === true;
 
   return (
-    <Card className={Styles.PerformanceSpacing}>
+    <Card className={`${Styles.PerformanceSpacing} ${Styles.pre}`}>
       <Card.Body>
         <Media className="allign-items-center justify-content-between">
         <a href={`/performances/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <h3>Event: {title}</h3>
-        </a>
+        
           <p>Time: {time}</p>
-          <p>Performance by: {owner}</p>
+          
           <p>Comment: {content}</p>
-
-          {isCurrentUserOwner && <p>You own this performance.</p>}
-
-          {!isCurrentUserOwner && <p>{owner}</p>}
+          </a>
+          <p>Performance by: {owner}</p>
+          {/* {isCurrentUserOwner && <p>You own this performance.</p>} */}
+          
+          {/* {!isCurrentUserOwner && <p>{owner}</p>} */}
         </Media>
       </Card.Body>
     </Card>
