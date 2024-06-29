@@ -81,7 +81,7 @@ function PerformanceList({ message = "" }) {
         )}
       </Col>
       <Container className={Styles.ButtonSpace}>
-        <div class="d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center">
           <a href="performance/create">
             <button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center} ${btnStyles.Text}`}

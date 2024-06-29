@@ -26,9 +26,8 @@ const HomePage = () => {
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <p>Test</p>
       <div className={styles.Content}>
-        <div class ="p-3">
+        <div className ="p-3">
         <img src={logo} className={styles.logoMobile} alt="trihub logo" />
         </div>
         <h3>A Triathlon Community</h3>

@@ -26,15 +26,6 @@ const NavBar = () => {
     }
   };
 
-  // const addPostIcon = (
-  //   <NavLink
-  //     className={styles.NavLink}
-  //     activeClassName={styles.Active}
-  //     to="/community/create"
-  //   >
-  //     <i className="far fa-plus-square"></i>Add post
-  //   </NavLink>
-  // );
   const loggedInIcons = (
     <>
       <NavLink
@@ -52,21 +43,6 @@ const NavBar = () => {
         <i className="fas fa-users"></i>Performances
       </NavLink>
 
-      {/* <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/feed"
-      >
-        <i className="fas fa-stream"></i>Feed
-      </NavLink>
-
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/liked"
-      >
-        <i className="fas fa-heart"></i>Liked
-      </NavLink> */}
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
