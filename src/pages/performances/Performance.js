@@ -42,7 +42,7 @@ const Performance = (props) => {
           <p className="text-right small">Your performance</p>
         )}
         <Card.Body>
-          <Media className="allign-items-center justify-content-between">
+          <Media className={Styles.PerformanceSpacing}>
             <h2>{title}</h2>
             <p>{time}</p>
             <p>{content}</p>

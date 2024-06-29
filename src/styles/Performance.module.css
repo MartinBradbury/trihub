@@ -1,16 +1,14 @@
-
-
-  h3, p {
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: "Roboto", sans-serif; 
-    white-space: pre-wrap;
-    word-wrap: break-word;
+/* Existing styles */
+h3, p {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Roboto", sans-serif; 
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
-
 
 .ButtonSpace {
   margin-top: 50px;
@@ -19,10 +17,9 @@
 
 .PerformanceSpacing {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   margin-bottom: 20px;
 }
-
 
 .SearchBar input {
   border-radius: 20px;
@@ -41,4 +38,24 @@
 .SearchIcon:hover {
   cursor: default;
   color: #cfced3;
+}
+
+/* media query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .PerformanceSpacing {
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+ 
+
+  h3, p {
+    font-size: 16px; 
+    margin-bottom: 30px; 
+  }
+
+ .ButtonSpace {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
