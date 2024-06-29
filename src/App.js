@@ -17,7 +17,6 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-import Performances from "./pages/performances/Performances";
 import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
 import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
@@ -33,11 +32,6 @@ function App() {
       <Container className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          <Route
-            exact
-            path="/performances/:id"
-            render={() => <Performances />}
-          />
           <Route
             exact
             path="/performance/create"
