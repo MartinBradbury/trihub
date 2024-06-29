@@ -6,7 +6,8 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 import appStyles from "../../App.module.css";
-import styles from "../../styles/PostsPage.module.css";
+import btnStyles from "../../styles/Button.module.css"
+import styles from "../../styles/Community.module.css"
 import { Link, useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
@@ -72,14 +73,14 @@ const [query, setQuery] = useState("");
   return (
     <>
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={12}>
-      <Link to="/liked" className="btn btn-primary">
-            Go to Liked
+      <Col className={`${btnStyles.Spacing} py-2 p-2 p-lg-2`} lg={12}>
+      <Link to="/liked" className={`${btnStyles.Button} ${btnStyles.Spacing}`}>
+            Liked
           </Link>
-          <Link to="/feed" className="btn btn-primary">
-            Go to Feed
+          <Link to="/feed" className={`${btnStyles.Button} ${btnStyles.Spacing}`}>
+            Feed
           </Link>
-          <Link to="/community/create" className="btn btn-primary">
+          <Link to="/community/create" className={`${btnStyles.Button} ${btnStyles.Spacing}`}>
             Add Post
           </Link>
       </Col>

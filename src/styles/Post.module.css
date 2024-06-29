@@ -25,3 +25,16 @@
     color: #f85032;
     cursor: pointer;
   }
+
+  .Profile {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    
+
+    
+  }

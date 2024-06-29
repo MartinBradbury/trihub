@@ -26,6 +26,10 @@
   background-color: #ed4300; /* Maintain focus state with orange background */
 }
 
+.ButtonFollow {
+  background-color: rgb(167, 97, 17)!important;
+}
+
 .Wide {
   padding: 10px 50px;
   width: 100%;
@@ -35,6 +39,16 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 900;
+}
+
+.Spacing {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 

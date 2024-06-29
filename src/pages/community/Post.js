@@ -8,7 +8,6 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-
 const Post = (props) => {
   /* Destructure the data from the props sent from post page request. */
   const {
@@ -33,20 +32,17 @@ const Post = (props) => {
 
   /* Handle edit function and delete for editing posts */
   const handleEdit = () => {
-    history.push(`/community/posts/${id}/edit`)
-  }
+    history.push(`/community/posts/${id}/edit`);
+  };
 
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
-      history.goBack()
-    } catch(err) {
-      console.log(err)
+      history.goBack();
+    } catch (err) {
+      console.log(err);
     }
-
-  }
-
-
+  };
 
   /* handleLike async function so users can like posts */
   const handleLike = async () => {
@@ -55,12 +51,12 @@ const Post = (props) => {
       const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
-         results: prevPosts.results.map((post) => {
-           return post.id === id
-           ? {...post, likes_count: post.likes_count + 1, like_id: data.id }
-             : post;
-         }),
-       }));
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
+        }),
+      }));
     } catch (err) {
       console.log(err);
     }
@@ -101,14 +97,19 @@ const Post = (props) => {
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />
             {/* When destructured the props you can just display each prop in {} */}
-            {owner}
+            <span className={styles.Profile}>{owner}</span>
           </Link>
           {/* Div to display when the post was last updated */}
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {/*Check if currently logged in user is the owner and postPage exists */}
             {/* if they both exist we want an edit / delete option on post, placeholder ... atm, */}
-            {is_owner && postPage && <MoreDropdown handleEdit={handleEdit} handleDelete={handleDelete}/>}
+            {is_owner && postPage && (
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
+            )}
           </div>
         </Media>
       </Card.Body>
