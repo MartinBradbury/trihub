@@ -8,7 +8,6 @@ import btnStyles from "../../styles/Button.module.css";
 import Styles from "../../styles/Performance.module.css";
 
 import appStyles from "../../App.module.css";
-import styles from "../../styles/PostsPage.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import Performance from "./Performance";
 import NoResults from "../../assets/no-results.png";

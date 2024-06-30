@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../../styles/Goals.module.css";
-import btnStyles from "../../styles/Button.module.css"
 
 import { Card, Media } from "react-bootstrap";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import styles from "../../styles/Home.module.css";
 import bgimg1 from "../../assets/triathlon.jpg";
 import bgimg2 from "../../assets/triathlonbike.jpg";

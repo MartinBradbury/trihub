@@ -20,6 +20,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
 import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
+import NotFound from "./components/NotFound";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -114,7 +115,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>
