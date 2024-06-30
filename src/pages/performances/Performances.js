@@ -9,27 +9,30 @@ import Performance from "./Performance";
 
 function PerformancePage() {
   const { id } = useParams();
-  const [performance, setPerformance] = useState({ results: []});
+  const [performance, setPerformance] = useState({ results: [] });
 
   useEffect(() => {
     const handleMount = async () => {
-        try{
-            const [{data: per}] = await Promise.all([
-                axiosReq.get(`/performances/${id}`)
-            ])
-            setPerformance({results: [per]})
-        } catch(err){
-            // console.log(err)
-        }
-    }
-    handleMount()
-  }, [id])
-
+      try {
+        const [{ data: per }] = await Promise.all([
+          axiosReq.get(`/performances/${id}`),
+        ]);
+        setPerformance({ results: [per] });
+      } catch (err) {
+        // console.log(err)
+      }
+    };
+    handleMount();
+  }, [id]);
 
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={12}>
-        <Performance {...performance.results[0]} setPerformance={setPerformance} performance />
+        <Performance
+          {...performance.results[0]}
+          setPerformance={setPerformance}
+          performance
+        />
       </Col>
     </Row>
   );

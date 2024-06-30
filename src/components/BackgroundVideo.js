@@ -27,8 +27,8 @@ const HomePage = () => {
         Your browser does not support the video tag.
       </video>
       <div className={styles.Content}>
-        <div className ="p-3">
-        <img src={logo} className={styles.logoMobile} alt="trihub logo" />
+        <div className="p-3">
+          <img src={logo} className={styles.logoMobile} alt="trihub logo" />
         </div>
         <h3>A Triathlon Community</h3>
         <p>For triathletes of all abilities</p>

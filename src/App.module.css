@@ -22,7 +22,6 @@
 
 .Main {
   padding-top: 120px;
-
 }
 
 .Image {
@@ -64,7 +63,6 @@ figure {
   display: inline-block;
 }
 
-/* scrollbar */
 *::-webkit-scrollbar {
   width: 5px;
 }

@@ -1,10 +1,8 @@
 .NavBar {
   background-color: #000000;
-  margin:0px;
+  margin: 0px;
 }
 
-
-/* Navbar text color */
 .NavLink {
   padding: 2px;
   color: rgb(255, 255, 255);
@@ -18,10 +16,7 @@
   color: #085e0d;
 }
 
-
-
-/* Burger Menu styling */
 .Toggle {
-  border-color: #ed4300!important;
-  background-color:rgb(64, 63, 63);
+  border-color: #ed4300 !important;
+  background-color: rgb(64, 63, 63);
 }

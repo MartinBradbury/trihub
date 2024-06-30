@@ -1,63 +1,62 @@
-/* Home.module.css */
-
 .card {
-    margin-bottom: 50px; /* Adjust the value as needed */
-    display: flex; /* Ensure flexbox is enabled */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative; /* Added to support absolute positioning of text */
-    background: rgba(0, 0, 0, 0.065); /* Corrected syntax for rgba */
-    border-radius: 12px;
-    border: none;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.065);
+  border-radius: 12px;
+  border: none;
 }
 
 .overlay {
-    position: absolute;
-    flex-direction: column;
-    top: 0; /* Specify the top position to ensure it's centered */
-    left: 0; /* Specify the left position to ensure it's centered */
-    right: 0; /* Specify the right position to ensure it's centered */
-    bottom: 0; /* Specify the bottom position to ensure it's centered */
-    display: flex; /* Enable flexbox for alignment */
-    align-items: center;
-    justify-content: center;
-    background-color: transparent; /* Corrected from 'none' to 'transparent' */
-    padding: 5px;
-    color: #ffffff; /* Text color */
-    font-size: 20px; /* Text size */
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content {
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgba(8, 8, 8, 0.884); /* Corrected syntax for rgba */
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(8, 8, 8, 0.884);
 }
 
 .text {
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: "Roboto", sans-serif; /* Applied font family here */
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-
-h1, h3, p {
-    font-family: "Roboto", sans-serif; /* Applying font family to headings and paragraphs */
+h1,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
 }

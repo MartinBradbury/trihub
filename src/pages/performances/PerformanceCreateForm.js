@@ -151,10 +151,8 @@ const PerformanceCreateForm = () => {
   return (
     <div style={{ minHeight: "100vh" }}>
       {" "}
-      {/* Set minimum height to full viewport height */}
       <div className="d-flex align-items-center justify-content-center">
         {" "}
-        {/* Apply flex properties */}
         <Form onSubmit={handleSubmit}>
           <Row>
             <Col className="py-2 p-0 p-md-2 text-center" lg={12}>

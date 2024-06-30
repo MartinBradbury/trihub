@@ -24,7 +24,7 @@ function GoalsCreateForm() {
 
   const handleChange = (event) => {
     setGoalData({
-     ...goalData,
+      ...goalData,
       [event.target.name]: event.target.value,
     });
   };
@@ -40,7 +40,7 @@ function GoalsCreateForm() {
 
     try {
       await axiosReq.post(`/goals/`, formData);
-      setCurrentUser((currentUser) => ({...currentUser }));
+      setCurrentUser((currentUser) => ({ ...currentUser }));
       history.goBack();
     } catch (err) {
       // console.log(err);
@@ -58,7 +58,6 @@ function GoalsCreateForm() {
     { value: "2", label: "6 Weeks" },
     { value: "3", label: "9 Weeks" },
   ];
-
 
   const textFields = (
     <div className="text-center">
@@ -141,7 +140,6 @@ function GoalsCreateForm() {
         </Col>
       </Row>
     </Form>
-    
   );
 }
 

@@ -23,13 +23,8 @@ function Goals() {
           );
           setGoals(filteredGoals);
 
-          // Now that we have filtered goals, calculate userHoursPerWeek
-          const userHoursPerWeek = filteredGoals[0]?.hours_per_week || 0; // Fallback to 0 if no goals exist
-
+          const userHoursPerWeek = filteredGoals[0]?.hours_per_week || 0;
           const userPlanLength = filteredGoals[0]?.plan_length || 0;
-
-
-          // Filter plans based on hours_per_week
           const filteredPlansData = plansResponse.data.results.filter(
             (plan) =>
               plan.hours_available === userHoursPerWeek &&
@@ -42,13 +37,13 @@ function Goals() {
       }
     };
     fetchGoalsAndPlans();
-  }, [currentUser]); // Dependency array includes currentUser to refetch on change
+  }, [currentUser]);
   return (
     <>
       {goals.map((goal, index) => (
         <React.Fragment key={index}>
           <Row className="h-100">
-            <Col  lg={12}>
+            <Col lg={12}>
               <Goal {...goal} />
               {filteredPlans.length > 0 ? (
                 filteredPlans.map((plan, planIndex) => (

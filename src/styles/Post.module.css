@@ -1,40 +1,36 @@
 .Post {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-  
-  .Post figure,
-  h5 {
-    margin: 0 0;
-  }
-  
-  .Heart {
-    color: #f85032;
-  }
-  
-  .Heart:hover {
-    color: #f85032;
-    cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #dadadf;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  text-align: center;
+}
 
-  }
-  
-  .HeartOutline:hover {
-    color: #f85032;
-    cursor: pointer;
-  }
+.Post figure,
+h5 {
+  margin: 0 0;
+}
 
-  .Profile {
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    
+.Heart {
+  color: #f85032;
+}
 
-    
-  }
+.Heart:hover {
+  color: #f85032;
+  cursor: pointer;
+}
+
+.HeartOutline:hover {
+  color: #f85032;
+  cursor: pointer;
+}
+
+.Profile {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}

@@ -117,9 +117,7 @@ function ProfilePage() {
               <Card.Text>
                 <strong>Bio:</strong>
               </Card.Text>
-              <Card.Text>
-                {profile?.content}
-              </Card.Text>
+              <Card.Text>{profile?.content}</Card.Text>
             </Card.Body>
           </Card>
         </Col>

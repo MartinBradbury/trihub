@@ -22,7 +22,7 @@ import { useRedirect } from "../../hooks/UseRedirect";
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
-  useRedirect('loggedOut')
+  useRedirect("loggedOut");
 
   const [postData, setPostData] = useState({
     title: "",

@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import Styles from '../../styles/Performance.module.css';
-import { Card, Media } from 'react-bootstrap';
-import { MoreDropdownPerformance } from '../../components/MoreDropDownPerformance';
-import { axiosReq } from '../../api/axiosDefaults';
-import { Modal, Button } from 'react-bootstrap'; // Import Modal and Button
+import React, { useState } from "react";
+import Styles from "../../styles/Performance.module.css";
+import { Card, Media } from "react-bootstrap";
+import { MoreDropdownPerformance } from "../../components/MoreDropDownPerformance";
+import { axiosReq } from "../../api/axiosDefaults";
+import { Modal, Button } from "react-bootstrap";
 
 const Performance = (props) => {
   const { is_owner, id, content, owner, time, title } = props;
-  const [showModal, setShowModal] = useState(false); // State for showing the modal
+  const [showModal, setShowModal] = useState(false); 
 
   const handleDelete = async () => {
     try {
       const response = await axiosReq.delete(`/performances/${id}`);
 
-      if (response.status!== 204) {
+      if (response.status !== 204) {
         throw new Error(`Unexpected response status: ${response.status}`);
       }
       window.location.reload();
     } catch (error) {
-      console.error('Error deleting performance:', error.message);
+      console.error("Error deleting performance:", error.message);
     }
   };
 
@@ -44,10 +44,12 @@ const Performance = (props) => {
             <p>{time} (hh:mm:ss)</p>
             <p>{owner}</p>
           </Media>
-          <hr/>
-          <Media className={`${Styles.PerformanceSpacing} ${Styles.PerformanceContent}`}>
+          <hr />
+          <Media
+            className={`${Styles.PerformanceSpacing} ${Styles.PerformanceContent}`}
+          >
             <p>Description</p>
-          <p>{content}</p>
+            <p>{content}</p>
           </Media>
         </Card.Body>
       </Card>
@@ -55,7 +57,9 @@ const Performance = (props) => {
         <Modal.Header closeButton>
           <Modal.Title>Confirmation</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this performance?</Modal.Body>
+        <Modal.Body>
+          Are you sure you want to delete this performance?
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
             Cancel

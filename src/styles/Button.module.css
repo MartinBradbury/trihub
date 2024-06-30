@@ -7,8 +7,8 @@
   margin-left: 2px;
   margin-right: 2px;
   min-width: 75px;
-  background-color: #ed4300!important; /* Set the background color to orange */
-  color: white!important; /* Set the text color to white */
+  background-color: #ed4300 !important;
+  color: white !important;
 }
 
 .Button:hover {
@@ -19,15 +19,15 @@
 
 .Button:hover:active,
 .Button:active {
-  background-color: #ed4300; /* Keep the active state with orange background */
+  background-color: #ed4300;
 }
 
 .Button:focus {
-  background-color: #ed4300; /* Maintain focus state with orange background */
+  background-color: #ed4300;
 }
 
 .ButtonFollow {
-  background-color: rgb(167, 97, 17)!important;
+  background-color: rgb(167, 97, 17) !important;
 }
 
 .Wide {
@@ -42,7 +42,7 @@
 }
 
 .Spacing {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 2%;
@@ -60,5 +60,3 @@
   display: flex;
   flex-direction: row;
 }
-
-

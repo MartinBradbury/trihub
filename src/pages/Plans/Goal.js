@@ -22,26 +22,26 @@ const Goal = (props) => {
 
   return (
     <>
-    <Card>
-      <Card.Body>
-        <Media className="align-items-center justify-content-between">
-          <p>Event Date:</p>
-          <p>{event_date}</p>
-        </Media>
-        <Media className="align-items-center justify-content-between">
-          <p>Hours per week:</p>
-          <p>{hoursLabel}</p>
-        </Media>
-        <Media className="align-items-center justify-content-between">
-          <p>Length of Plan:</p>
-          <p>{planLengthLabel}</p>
-        </Media>
-        <Media className={styles.Content}>
-          <p>{content}</p>
-        </Media>
-      </Card.Body>
-    </Card>
-  </>
+      <Card>
+        <Card.Body>
+          <Media className="align-items-center justify-content-between">
+            <p>Event Date:</p>
+            <p>{event_date}</p>
+          </Media>
+          <Media className="align-items-center justify-content-between">
+            <p>Hours per week:</p>
+            <p>{hoursLabel}</p>
+          </Media>
+          <Media className="align-items-center justify-content-between">
+            <p>Length of Plan:</p>
+            <p>{planLengthLabel}</p>
+          </Media>
+          <Media className={styles.Content}>
+            <p>{content}</p>
+          </Media>
+        </Card.Body>
+      </Card>
+    </>
   );
 };
 
