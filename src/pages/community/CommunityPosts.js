@@ -16,6 +16,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 
 /* Destructure message and filter props in place from appjs?? */
@@ -32,6 +33,7 @@ function PostsPage({ message, filter = "" }) {
   //   /* refetch posts again when the user clicks between community, liked and feed pages. useLocation hook */
   // }
   const { pathname } = useLocation();
+  const currentUser = useCurrentUser();
 
 
 // {/* TO handle query value in the search bar destructure */}
@@ -68,7 +70,7 @@ const [query, setQuery] = useState("");
     }
     
     /* we want the fetch post to run every time the url changes or filter changes */
-  }, [filter, query, pathname]);
+  }, [filter, query, pathname, currentUser]);
 
   return (
     <>
