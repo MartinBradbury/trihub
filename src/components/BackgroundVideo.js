@@ -30,7 +30,7 @@ const HomePage = () => {
         <div className="p-3">
           <img src={logo} className={styles.logoMobile} alt="trihub logo" />
         </div>
-        <h3>A Triathlon Community</h3>
+        <h2>A Triathlon Community</h2>
         <p>For triathletes of all abilities</p>
       </div>
     </div>

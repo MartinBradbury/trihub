@@ -21,6 +21,7 @@ import PerformanceList from "./pages/performances/PerformanceList";
 import UserPlan from "./pages/Plans/UserPlan";
 import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
 import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -118,6 +119,7 @@ function App() {
           <Route render={() => <NotFound />} />
         </Switch>
       </Container>
+      <Footer />
     </div>
   );
 }

@@ -5,6 +5,13 @@ h1 {
   font-size: 60px;
 }
 
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+
 .Background {
   position: relative;
   height: 100vh;
