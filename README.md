@@ -1,4 +1,4 @@
-# Walking the Wainwrights
+# trihub
 
 (Developer: Martin Bradbury)
 
