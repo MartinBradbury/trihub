@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <div className={styles.Margin}>
       Sorry, the page you are looking for doesn't exist
-      <img src={NoResult} />
+      <img src={NoResult} alt="No result"/>
     </div>
   );
 };

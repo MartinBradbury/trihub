@@ -22,7 +22,7 @@ const PerformanceCreateForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const history = useHistory();
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [setShowConfirmModal] = useState(false);
 
   const [performanceData, setPerformanceData] = useState({
     event: 1,
