@@ -41,9 +41,13 @@ const Performance = (props) => {
         <Card.Body>
           <Media className={Styles.PerformanceSpacing}>
             <h2>{title}</h2>
-            <p>{time}</p>
-            <p>{content}</p>
+            <p>{time} (hh:mm:ss)</p>
             <p>{owner}</p>
+          </Media>
+          <hr/>
+          <Media className={`${Styles.PerformanceSpacing} ${Styles.PerformanceContent}`}>
+            <p>Description</p>
+          <p>{content}</p>
           </Media>
         </Card.Body>
       </Card>
