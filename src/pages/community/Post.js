@@ -155,7 +155,7 @@ const Post = (props) => {
           {/* DIsplay number of likes and comments.  */}
           {likes_count}
           {/*Comment component links to post ID so wrap in link set to post id */}
-          <Link to={`/posts/${id}`}>
+          <Link to={`/community/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
           {comment_count}
