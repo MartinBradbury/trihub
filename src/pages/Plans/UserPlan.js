@@ -7,11 +7,14 @@ import { Card } from "react-bootstrap";
 import Styles from "../../styles/Goals.module.css";
 import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
+import { Modal, Button } from "react-bootstrap";
 
 const UserPlan = () => {
   const [isLoading, setIsLoading] = useState(true);
   const currentUser = useCurrentUser();
   const [hasGoals, setHasGoals] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+
 
   useEffect(() => {
     const fetchGoalsAndPlans = async () => {
@@ -39,6 +42,14 @@ const UserPlan = () => {
     }
   }, [currentUser]);
 
+  const handleShowConfirmModal = () => setShowConfirmModal(true);
+  const handleCloseConfirmModal = () => setShowConfirmModal(false);
+
+  const handleConfirmNavigation = () => {
+    window.location.href = "/goals/create";
+    handleCloseConfirmModal();
+  };
+
   return (
     <>
       <div className={`${btnStyles.Spacing} ${btnStyles.Margin}`}>
@@ -50,20 +61,30 @@ const UserPlan = () => {
           <>
             {hasGoals? (
               <div>
-                <a href="/goals/create">
-                  <button className={`${btnStyles.Button} ${btnStyles.Text}`}>
-                    Change Goal
-                  </button>
-                </a>
+                <Button onClick={handleShowConfirmModal} className={`${btnStyles.Button} ${btnStyles.Text}`}>
+                  Change Goal
+                </Button>
+                <Modal show={showConfirmModal} onHide={handleCloseConfirmModal}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Warning</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>You will lose your current plan. Are you sure you want to continue?</Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseConfirmModal}>
+                      Cancel
+                    </Button>
+                    <a href="/goals/create" style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleConfirmNavigation}>
+                      <Button variant="primary">Confirm</Button>
+                    </a>
+                  </Modal.Footer>
+                </Modal>
               </div>
             ) : (
               <>
                 <Card>
                   <Card.Body className={`${Styles.Content}`}>
                     <p>If you would like a training plan you must create a goal.</p>
-                    <a href="/goals/create">
-                      <button className={`${btnStyles.Button} ${btnStyles.Text}`}>Create Goal</button>
-                    </a>
+                    <Button href="/goals/create" className={`${btnStyles.Button} ${btnStyles.Text}`}>Create Goal</Button>
                   </Card.Body>
                 </Card>
               </>
