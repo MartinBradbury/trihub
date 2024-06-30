@@ -38,7 +38,6 @@ const PerformanceCreateForm = () => {
       try {
         const { data } = await axiosReq.get("/events/");
         setEvents(data);
-        console.log(events);
       } catch (error) {
         console.error("Failed to fetch events:", error);
       }
@@ -73,7 +72,6 @@ const PerformanceCreateForm = () => {
     formData.append("content", content);
     formData.append("time", time);
     formData.append("complete_date", complete_date);
-    console.log(performanceData);
 
     try {
       await axiosReq.post(`/performances/`, formData);
@@ -82,7 +80,7 @@ const PerformanceCreateForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

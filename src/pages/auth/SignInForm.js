@@ -40,7 +40,6 @@ function SignInForm() {
       setCurrentUser(data.user);
       history.goBack();
       setTokenTimestamp(data);
-      console.log(data.user);
     } catch (err) {
       setErrors(err.response?.data);
     }

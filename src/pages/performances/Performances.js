@@ -18,9 +18,8 @@ function PerformancePage() {
                 axiosReq.get(`/performances/${id}`)
             ])
             setPerformance({results: [per]})
-            console.log(per)
         } catch(err){
-            console.log(err)
+            // console.log(err)
         }
     }
     handleMount()

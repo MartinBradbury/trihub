@@ -53,7 +53,6 @@ const ProfileEditForm = () => {
       try {
         const { data } = await axiosReq.get("/profiles/fitness_level/");
         setFitnessLevels(data);
-        console.log(fitnessLevels);
       } catch (error) {
         console.error("Failed to fetch fitness levels:", error);
       }
@@ -97,7 +96,7 @@ const ProfileEditForm = () => {
             image,
           });
         } catch (err) {
-          console.log(err);
+          // console.log(err);
           history.push("/");
         }
       } else {
@@ -125,7 +124,6 @@ const ProfileEditForm = () => {
     formData.append("gender", gender);
     formData.append("fitness_level", fitness_level);
     formData.append("date_of_birth", date_of_birth);
-    console.log(date_of_birth);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -139,7 +137,7 @@ const ProfileEditForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

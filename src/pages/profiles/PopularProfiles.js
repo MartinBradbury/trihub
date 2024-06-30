@@ -26,7 +26,7 @@ const PopularProfiles = ({ mobile }) => {
           popularProfiles: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
