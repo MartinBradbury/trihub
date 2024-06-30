@@ -68,7 +68,7 @@ const UserPlan = () => {
                   <Modal.Header closeButton>
                     <Modal.Title>Warning</Modal.Title>
                   </Modal.Header>
-                  <Modal.Body>You will lose your current plan. Are you sure you want to continue?</Modal.Body>
+                  <Modal.Body>You will lose your current training plan. Are you sure you want to continue?</Modal.Body>
                   <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseConfirmModal}>
                       Cancel
