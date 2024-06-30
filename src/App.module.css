@@ -9,9 +9,15 @@
 
 .Content {
   background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
   padding: 10px;
   border-radius: 2px;
   border: 1px solid #dadadf;
+}
+
+.Center {
+  align-items: center;
+  justify-content: center;
 }
 
 .Main {

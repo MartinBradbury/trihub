@@ -5,14 +5,18 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card } from "react-bootstrap";
 import Styles from "../../styles/Goals.module.css";
+import Asset from "../../components/Asset";
+import appStyles from "../../App.module.css";
 
 const UserPlan = () => {
-  const [hasGoals, setHasGoals] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const currentUser = useCurrentUser();
+  const [hasGoals, setHasGoals] = useState(false);
 
   useEffect(() => {
     const fetchGoalsAndPlans = async () => {
       try {
+        setIsLoading(true);
         const goalsResponse = await axiosReq.get(`/goals`);
         const filteredGoals = goalsResponse.data.results.filter(
           (goal) => goal.owner === currentUser.username
@@ -22,9 +26,11 @@ const UserPlan = () => {
           setHasGoals(true);
         }
 
+        setIsLoading(false);
         return filteredGoals;
       } catch (err) {
         console.error(err);
+        setIsLoading(false);
       }
     };
 
@@ -35,26 +41,33 @@ const UserPlan = () => {
 
   return (
     <>
-      <div className={btnStyles.Spacing}>
-        {hasGoals ? (
-          <div>
-            <a href="/goals/create">
-              <button className={`${btnStyles.Button} ${btnStyles.Text}`}>
-                Change Goal
-              </button>
-            </a>
+      <div className={`${btnStyles.Spacing} ${btnStyles.Margin}`}>
+        {isLoading? (
+          <div className={appStyles.Container}>
+            <Asset spinner />
           </div>
         ) : (
           <>
-            <Card>
-              <Card.Body className={`${Styles.Content}`}>
-                <p>If you would like a training plan you must create a goal.</p>
-
+            {hasGoals? (
+              <div>
                 <a href="/goals/create">
-                  <button className={`${btnStyles.Button} ${btnStyles.Text}`}>Create Goal</button>
+                  <button className={`${btnStyles.Button} ${btnStyles.Text}`}>
+                    Change Goal
+                  </button>
                 </a>
-              </Card.Body>
-            </Card>
+              </div>
+            ) : (
+              <>
+                <Card>
+                  <Card.Body className={`${Styles.Content}`}>
+                    <p>If you would like a training plan you must create a goal.</p>
+                    <a href="/goals/create">
+                      <button className={`${btnStyles.Button} ${btnStyles.Text}`}>Create Goal</button>
+                    </a>
+                  </Card.Body>
+                </Card>
+              </>
+            )}
           </>
         )}
       </div>

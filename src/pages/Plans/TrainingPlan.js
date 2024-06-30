@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Media } from 'react-bootstrap';
+import styles from "../../styles/TrainingPlan.module.css"
 
 
 const TrainingPlan = ({ plan }) => {
@@ -7,17 +8,19 @@ const TrainingPlan = ({ plan }) => {
 
   return (
     
-    <div>
+    <div className={styles.Margin}>
       <h1>Training Plan Details</h1>
       {plan? (
         <Card key={plan.id}>
           <Media>
             <Media.Body>
-              <p>{plan.title}</p> 
-              <pre>
-              <p>{plan.content}</p>
-              </pre>
-              <p>{plan.created_at}</p>
+              <div className={styles.Title}>
+              <p>{plan.title}</p>
+              </div> 
+              <div className={styles.content}>
+                <p>{plan.content}</p>
+              </div>
+              <p>This plan was created: {plan.created_at}</p>
             </Media.Body>
           </Media>
         </Card>

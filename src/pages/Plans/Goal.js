@@ -23,7 +23,7 @@ const Goal = (props) => {
 
   return (
     <>
-    <Card className={styles.COntent}>
+    <Card>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <p>Event Date:</p>
