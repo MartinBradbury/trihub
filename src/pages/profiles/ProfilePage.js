@@ -32,7 +32,6 @@ function ProfilePage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
-
   const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { pageProfile } = useProfileData();
 
@@ -91,27 +90,35 @@ function ProfilePage() {
           <Card className="mt-4">
             <Card.Body>
               <Card.Title>Profile Details</Card.Title>
-              <Card.Text>
+              <Card.Text className="mb-3">
                 <strong>First Name:</strong> {profile?.first_name}
-                <br />
+              </Card.Text>
+              <Card.Text className="mb-3">
                 <strong>Last Name:</strong> {profile?.last_name}
-                <br />
+              </Card.Text>
+              <Card.Text className="mb-3">
                 <strong>Fitness Level:</strong> {profile?.fitness_level}
-                <br />
+              </Card.Text>
+              <Card.Text className="mb-3">
                 <strong>Gender:</strong> {profile?.gender}
-                <br />
+              </Card.Text>
+              <Card.Text className="mb-3">
                 <strong>Updated At:</strong> {profile?.updated_at}
-                <br />
+              </Card.Text>
+              <Card.Text className="mb-3">
                 <strong>Created At:</strong> {profile?.created_at}
-                <br />
+              </Card.Text>
+              <Card.Text className="mb-3">
                 <strong>Email:</strong> {profile?.email}
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card>
+          <Card className={styles.Spacing}>
             <Card.Body>
               <Card.Text>
                 <strong>Bio:</strong>
+              </Card.Text>
+              <Card.Text>
                 {profile?.content}
               </Card.Text>
             </Card.Body>

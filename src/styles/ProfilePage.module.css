@@ -11,3 +11,10 @@
       height: 250px;
     }
   }
+
+  .Spacing {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+
+  }
