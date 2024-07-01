@@ -67,13 +67,13 @@ A detailed breakdown of the project's user stories categorized into various epic
 | As a user I can view other users performances so that I can see their times and event details | Listing performances on the performances page that display performance information. | |
 | As a user I can create new performances that will be added to the performance page. | Create performance page to enable users to add their performance. | |
 | As a user I want to be able to delete my performance. | I am able to click the delete button on my own performance to remove it. | |
-| As a user I am able to search for performances based on the user or the event | Use the search feature to filter the performances by the required creteria. | |
+| As a user I am able to search for performances based on the user or the event | Use the search feature to filter the performances by the required criteria. | |
 
 **EPIC - My Plan Page**
 | Goals | How are they achieved? | Comment |
 | --- | --- |--- |
 | As a user I am able to create a goal which will generate a training plan for me | A button allowing users to create a goal and generate a training plan | |
-| As a user I want to select the creteria of my plan based on weeks available and hours available. | Goal creation offers options for weeks of plan and hours available. | |
+| As a user I want to select the criteria of my plan based on weeks available and hours available. | Goal creation offers options for weeks of plan and hours available. | |
 | As a user I want to be able to see my training plan and goal. | I am able to see the training plan and goal after creation on the My Plan page. | |
 | As a user I want to be able to change my plan or goal. | Change goal button enabling users to change their plan or goal. | |
 
@@ -97,14 +97,13 @@ All Python files were validated with pep8 and corrected to ensure there were no 
 ![Linter no errors](/src/assets/readme/linternoerrors.png)
 
 Profile serializer generated a line too long error. I was unable to break the line without breaking the code function.
-![Profile servializer error](/src/assets/readme/Profilesserializererr.png)
-
+![Profile serializes error](/src/assets/readme/Profilesserializererr.png)
 
 
 
 ### Lighthouse
 
-I used Lighthouse to test all pages. Performance results were quite low, but this is to be expected when loading multiple images from an API, and sending lots of requests to another API. All other scores are good. If time allowed I would address some of the lower scores on both mobile and desktop. I could imporve performance by changing all images to webp format and refining my css. This would be done in future development.
+I used Lighthouse to test all pages. Performance results were quite low, but this is to be expected when loading multiple images from an API, and sending lots of requests to another API. All other scores are good. If time allowed I would address some of the lower scores on both mobile and desktop. I could improve performance by changing all images to webp format and refining my css. This would be done in future development.
 
 <details>
 <summary>Desktop</summary>
@@ -135,7 +134,6 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 | Profile      | 84          | 95            | 79             | 100 |
 | Sign In      | 89          | 95            | 96             | 100 |
 
-
 </details>
 
 <br>
@@ -143,14 +141,14 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 ## Manuel Device Testing
 
 ### Desktop Testing
-I tested the website on multiple desktop computers to ensure it was compatable with different borwsers and operating systems. All testing returned the same result and the application functioned as in tended on all desktop devices. Below are the devices used for testing the desktop environamnt.
+I tested the website on multiple desktop computers to ensure it was compatible with different browsers and operating systems. All testing returned the same result and the application functioned as in tended on all desktop devices. Below are the devices used for testing the desktop environment.
 
 - Alienware Aoura i9 (Windows 10 os / google chrome browser)
 - Lenovo Desktop i7 (Windows 10 os / microsoft edge browser)
 - Macbook air M2 (Mac OS / safari browser)
 
 ### Mobile Testing
-I tested the application on multiple mobile devices. The application rendered as intended and displayed correctly. I encountered an error however when trying to sign in which resulted in the user being sent back to the sign in page without being signed in. I discovered this was caused by a lack os SSL Certification and the browser not trusing the security of my site. I can overcome this by turning off security settings in the device browser settings. This is not idea and for future development I would look to add an SSL Certificate to ensure all borwsers trust the application site. 
+I tested the application on multiple mobile devices. The application rendered as intended and displayed correctly. I encountered an error however when trying to sign in which resulted in the user being sent back to the sign in page without being signed in. I discovered this was caused by a lack of SSL Certification and the browser not trusting the security of my site. I can overcome this by turning off security settings in the device browser settings. This is not idea and for future development I would look to add an SSL Certificate to ensure all browsers trust the application site. 
 
 - iphone 15 Pro (Safari)
 - iphone 14 (safari)
@@ -228,7 +226,6 @@ I tested the application on multiple mobile devices. The application rendered as
 | Comment Icon    | Click   | Open the post's comment section                                  | Pass   |         |
 | Comment Counter | Display | Display the correct number of comments on the post               | Pass   |         |
 
-
 </details>
 
 <br>
@@ -299,7 +296,6 @@ I tested the application on multiple mobile devices. The application rendered as
 | User Posts               | Display | The profile owner's posts are displayed under the profile        | Pass   |         |
 | User Posts               | Display | The profile post feed has an infinite scroll layout              | Pass   |         |
 
-
 </details>
 
 <br>
@@ -314,7 +310,7 @@ I tested the application on multiple mobile devices. The application rendered as
 | ---------------------- | ------- | ----------------------------------------------------------------------------------- | ------ | ------- |
 | Popular Profiles       | Display | The "popular profiles" section displays across the site                             | Pass   |         |
 | Popular Profiles       | Display | The list updates to reflect the number of followers for each profile                | Pass   |         |
-| Popular Profiles       | Display | The list moves to the top and center on smaller screens                             | Pass   |         |
+| Popular Profiles       | Display | The list moves to the top and centre on smaller screens                             | Pass   |         |
 | Popular Profiles       | Display | No "popular profiles" section appears on profile pages on smaller screens           | Pass   |         |
 | Username               | Display | User avatars appear for each profile                                                | Pass   |         |
 | Username               | Click   | Open the associated profile page                                                    | Pass   |         |
@@ -390,7 +386,6 @@ I tested the application on multiple mobile devices. The application rendered as
 | Goal            | Display   | Goal displays when user has created a goal                       | Pass   |         |
 | Training Plan   | Display   | Training plan displays if user has created a goal                | Pass   |         |
 | Training Plan   | Display   | Training plan is specific to the users goal                      | Pass   |         |
-
 
 </details>
 
@@ -474,10 +469,9 @@ I tested the application on multiple mobile devices. The application rendered as
 | Training Plan  | GET | Show the training plan specific to users goal | Pass | |
 | Training Change  | GET | Change the training plan if the user changes their goal | Pass | |
 
-
 ### Custom Automated Testing
 
-In addition to the manuel testing, I created some automated tests to test my custom code. These tests check the modals, views and serializers used on the backend.
+In addition to the manual testing, I created some automated tests to test my custom code. These tests check the modals, views and serializers used on the backend.
 The tests were carried out on the goals component, performance component, posts component and training plan component. 
 23 automated tests were carried out, all which were set to fail initially and then corrected to pass. All 23 tests carried out passed.
 
@@ -520,14 +514,14 @@ The tests were carried out on the goals component, performance component, posts 
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
-| Can list events unauthenticated | test_can_list_events_unauthenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
-| Can list events authenticated | test_can_list_events_authenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
-| Specific user can create event | test_specific_user_can_create_Events(self): | The test was successfull with a new event created.    | PASS   |         |
-| Can list performances unauthenticated | test_can_list_userperformances_unauthenticated(self): | The test was successfull with a 200 OK.    | PASS   |         |
-| Can list performances authenticated | test_can_list_userperformances_authenticated(self): | The test was successfull with a 200 OK.    | PASS   |         |
-| Can create performance authenticated | test_user_can_create_performance(self): | The test was successfull new performance created    | PASS   |         |
-| Cannot create performance if not authenticated | test_non_auth_cannot_create_peformance(self): | The test was successfull with a 403 FORBIDDEN.    | PASS   |         |
-| Cannot create performance in future | test_user_cannot_create_performance_in_future(self): | The test was successfull with a 400 BAD_REQUEST.    | PASS   |         |
+| Can list events unauthenticated | test_can_list_events_unauthenticated(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
+| Can list events authenticated | test_can_list_events_authenticated(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
+| Specific user can create event | test_specific_user_can_create_Events(self): | The test was successful with a new event created.    | PASS   |         |
+| Can list performances unauthenticated | test_can_list_userperformances_unauthenticated(self): | The test was successful with a 200 OK.    | PASS   |         |
+| Can list performances authenticated | test_can_list_userperformances_authenticated(self): | The test was successful with a 200 OK.    | PASS   |         |
+| Can create performance authenticated | test_user_can_create_performance(self): | The test was successful new performance created    | PASS   |         |
+| Cannot create performance if not authenticated | test_non_auth_cannot_create_peformance(self): | The test was successful with a 403 FORBIDDEN.    | PASS   |         |
+| Cannot create performance in future | test_user_cannot_create_performance_in_future(self): | The test was successful with a 400 BAD_REQUEST.    | PASS   |         |
 
 </detail>
 
@@ -539,13 +533,13 @@ The tests were carried out on the goals component, performance component, posts 
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
-| Can list posts authenticated | test_can_list_posts(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
-| Logged in user can create posts | test_logged_in_user_can_create_post(self): | The test was successfull with a status code of 201 CREATED.    | PASS   |         |
-| Loggedout user cannot create posts | test_loggedout_user_cannot_create_post(self): | The test was successfull with 403 FORBIDDEN    | PASS   |         |
-| Can retrieve post with valid ID | test_can_retrieve_post_using_valid_id(self): | The test was successfull with a 200 OK.    | PASS   |         |
-| Cannot retrieve post with invalid ID | test_cannot_retrieve_post_using_invalid_id(self): | The test was successfull with a 404 NOT FOUND.    | PASS   |         |
-| User can update own post | test_user_can_update_own_post(self): | The test was successfull with a 200 OK   | PASS   |         |
-| User cannot update another users posts | test_user_cant_update_another_users_post(self): | The test was successfull with a 403 FORBIDDEN.    | PASS   |         |
+| Can list posts authenticated | test_can_list_posts(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
+| Logged in user can create posts | test_logged_in_user_can_create_post(self): | The test was successful with a status code of 201 CREATED.    | PASS   |         |
+| Logged out user cannot create posts | test_loggedout_user_cannot_create_post(self): | The test was successful with 403 FORBIDDEN    | PASS   |         |
+| Can retrieve post with valid ID | test_can_retrieve_post_using_valid_id(self): | The test was successful with a 200 OK.    | PASS   |         |
+| Cannot retrieve post with invalid ID | test_cannot_retrieve_post_using_invalid_id(self): | The test was successful with a 404 NOT FOUND.    | PASS   |         |
+| User can update own post | test_user_can_update_own_post(self): | The test was successful with a 200 OK   | PASS   |         |
+| User cannot update another users posts | test_user_cant_update_another_users_post(self): | The test was successful with a 403 FORBIDDEN.    | PASS   |         |
 
 </detail>
 
@@ -557,8 +551,8 @@ The tests were carried out on the goals component, performance component, posts 
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
-| Can list training plans unauthenticated | test_can_list_trainingplans_unauthenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
-| Can list training plans authenticated | test_can_list_trainingplans_authenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+| Can list training plans unauthenticated | test_can_list_trainingplans_unauthenticated(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
+| Can list training plans authenticated | test_can_list_trainingplans_authenticated(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
 
 </detail>
 
@@ -569,11 +563,10 @@ The tests were carried out on the goals component, performance component, posts 
 
 ### Known and unresolved issues
 
-- Mobile devices are unable to access the site content due to the requirement of an SSL Certification. Upon attepmting to sign in, the user is redirected to the signin page without signing in. 
-- Once desktop device tested was unable to create a performance due the the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
+- Mobile devices are unable to access the site content due to the requirement of an SSL Certification. Upon attempting to sign in, the user is redirected to the sign in page without signing in. 
+- Once desktop device tested was unable to create a performance due the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
 - When viewing a another user profile, when the follow and unfollow button is clicked, the counter does not always update without the manual page refresh.
-- Users are not able to add seconds munually to their performances. Seconds get automatically added as 00 after the performance is created.
-
+- Users are not able to add seconds manually to their performances. Seconds get automatically added as 00 after the performance is created.
 
 ### NPM Audit
 - **Disclaimer on npm Audit Issues**:
@@ -581,6 +574,6 @@ As students, we're not expected to fix the following npm audit errors identified
 
 There are a total of 137 vulnerabilities (1 low, 80 moderate, 48 high, 8 critical).
 
-
 </details>
+
 

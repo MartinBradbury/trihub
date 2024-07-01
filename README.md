@@ -14,14 +14,14 @@ The purpose of TriHub is to make the ultimate destination for all things triathl
 
 I want TriHub to foster the power of community. My platform allows users to share images and comments, creating a space where triathletes can connect, inspire, and motivate each other. Whether you've just completed your first sprint or are gearing up for an Ironman, their voice matters here. Users can share their triumphs, challenges, and insights to build a supportive network that goes beyond the finish line.
 
-Performance tracking is at the heart of TriHub. Users can log their performances, analyze their progress, and set new goals with my intuitive tools. Users who are ooking to improve, TriHub offers customizable training plans designed to fit your schedule and ability level. Tailor your training to reach your peak performance, whether you're aiming for a personal best or simply enjoying the journey.
+Performance tracking is at the heart of TriHub. Users can log their performances, analyse their progress, and set new goals with my intuitive tools. Users who are looking to improve, TriHub offers customizable training plans designed to fit your schedule and ability level. Tailor your training to reach your peak performance, whether you're aiming for a personal best or simply enjoying the journey.
 
 ## User experience (UX)
 
 ### Key project goals
 
 - Create a Unified Community Platform: Develop a comprehensive platform that fosters a strong sense of community among triathletes of all abilities. This involves designing features that encourage interaction, such as image and comment sharing, to facilitate connections between users.
-- Implement Performance Tracking Features: Integrate robust tools for logging and analyzing triathlon performances. These tools should allow users to record details of their swims, bikes, and runs, enabling them to track their progress over time and set new goals based on past achievements.
+- Implement Performance Tracking Features: Integrate robust tools for logging and analysing triathlon performances. These tools should allow users to record details of their swims, bikes, and runs, enabling them to track their progress over time and set new goals based on past achievements.
 - Offer Customizable Training Plans: Provide users with access to customizable training plans that cater to their individual schedules and abilities. These plans should be adaptable to fit into a user's existing commitments, emphasizing flexibility and personalization.
 - Enable Goal Setting and Achievement Sharing: Incorporate features that enable users to set personal goals and share their achievements within the community. This encourages motivation and competition among users, driving them to push their limits and strive for excellence.
 - Facilitate Social Interaction and Support: Design the platform to promote social interactions and support among users. This includes following other users' progress, cheering them on during races, and engaging in discussions related to triathlon training and performance.
@@ -39,7 +39,7 @@ Performance tracking is at the heart of TriHub. Users can log their performances
 ### User requirements and expectations
 
 - Comprehensive Community Engagement: Users expect a platform that facilitates easy sharing of images and comments, allowing them to connect with fellow triathletes, share experiences, and receive support.
-- Detailed Performance Tracking: Users need tools to log and analyze their triathlon performances, including swim, bike, and run metrics. This feature should allow them to track their progress over time and identify areas for improvement.
+- Detailed Performance Tracking: Users need tools to log and analyse their triathlon performances, including swim, bike, and run metrics. This feature should allow them to track their progress over time and identify areas for improvement.
 - Customizable Training Plans: Users expect access to customizable training plans that adapt to their individual schedules and abilities. These plans should be flexible enough to integrate seamlessly with their existing commitments.
 - Goal Setting and Achievement Sharing: Users desire a platform that supports setting personal goals and sharing achievements within the community. This feature should foster motivation and competition among users.
 - Social Interaction and Support: Users anticipate being able to follow other users' progress, cheer them on during races, and engage in discussions related to triathlon training and performance. This social aspect is crucial for building a supportive community.
@@ -47,12 +47,11 @@ Performance tracking is at the heart of TriHub. Users can log their performances
 - Accessibility for All Abilities: Users, regardless of their experience level or physical condition, expect the platform to be welcoming and inclusive. This includes offering guidance for newcomers and ensuring that advanced features are accessible to those seeking more specialized training and support.
 
 
-
 ## Epics and User Stories
 
 1.  Epic: User Registration:
     -   User Story 1: As a new user, I want to register on the website so that I can access the site content, share my experiences and contribute to the community.
-    -   User Story 2: As a registered user, I want to be able to upload my images, write about my experiences, like / comment on posts, create performances, set a goal and recieve a custom training plan based on my requirements.
+    -   User Story 2: As a registered user, I want to be able to upload my images, write about my experiences, like / comment on posts, create performances, set a goal and receive a custom training plan based on my requirements.
 
 2.  Epic: Performances:
     -   User Story 1: As a user, I want to view other performances by users and be able to sort the performances by event or user.
@@ -64,8 +63,8 @@ Performance tracking is at the heart of TriHub. Users can log their performances
     -   User Story 3: As a user, I want to be able to delete my posts and all comments associated with it. 
 
 4.  Epic: Training Plans:
-    -   User Story 1: As a user, I want to be able to access custom training plans based on my creteria specified in my goal.
-    -   User Story 2: As a user, I want to be able to change my training plan by updateing my requirements in the goal section
+    -   User Story 1: As a user, I want to be able to access custom training plans based on my criteria specified in my goal.
+    -   User Story 2: As a user, I want to be able to change my training plan by updating my requirements in the goal section
 
 5.  Epic: Promotion Triathlon:
     -   User Story 1: As a user, I want to be able to interact with other triathletes of all abilities and share my experiences. 
@@ -76,15 +75,14 @@ Performance tracking is at the heart of TriHub. Users can log their performances
 6.  Epic: Database and Admin Setup:
     -   Full backend CRUD on Events, Posts, Comments, Goals and performances.
     -   CRUD Training plans that users have available to them.
-    -   CRUD Events that users are able to select from when loggin a performance.
+    -   CRUD Events that users are able to select from when logging a performance.
     -   CRUD user accounts and details. 
-
 
 ##  Features:
 
 ### Nav bar
 
-A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon that is functional on tablets too up to and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are dependant on if the user is logged in or not. When the user is not logged in the links available are: 'Home' - Which takes you to the homepage, 'Sign in' - Navigates to the sign in page and 'Sign up' - which navigates to the sign up page. When a user is logged in the links available are: 'Home' - Navigates tot he home page, 'Community' - Navigates to the community post page, 'Performance' - Navigates to the performance page, 'My Plan' - Navigates to the goal setting and training plan page, 'Sign Out' - Enables the use to be able to sign out, 'Avatar Image' - Default or uploaded image of the user that navigates to the profile page. 
+A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon that is functional on tablets too up to and not including the iPad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are dependent on if the user is logged in or not. When the user is not logged in the links available are: 'Home' - Which takes you to the homepage, 'Sign in' - Navigates to the sign in page and 'Sign up' - which navigates to the sign up page. When a user is logged in the links available are: 'Home' - Navigates to the home page, 'Community' - Navigates to the community post page, 'Performance' - Navigates to the performance page, 'My Plan' - Navigates to the goal setting and training plan page, 'Sign Out' - Enables the use to be able to sign out, 'Avatar Image' - Default or uploaded image of the user that navigates to the profile page. 
 
 #### Desktop Navigation
 ![Desktop navbar](/src/assets/readme/dtnav.png)
@@ -99,7 +97,7 @@ A fully responsive navigation bar is in has been used. The main focus was on a '
 
 ### Hero video / Home Page Content
 
-The hero image is a background video that auto playes on site load muted. It is fully responsive on mobile and desktop and fills the viable area. The video has a filter to enable the site logo and text to be positioned on top and stand out. The remaining content on the home page comprises of responsive card elements that contain a background image and information detailing to the user what is available on the site.
+The hero image is a background video that auto plays on site load muted. It is fully responsive on mobile and desktop and fills the viable area. The video has a filter to enable the site logo and text to be positioned on top and stand out. The remaining content on the home page comprises of responsive card elements that contain a background image and information detailing to the user what is available on the site.
 
 #### Hero Video Desktop
 ![Hero video Desktop](/src/assets/readme/hvdesk.png)
@@ -113,11 +111,10 @@ The hero image is a background video that auto playes on site load muted. It is 
 #### Home Page Content Mobile
 ![Home Page Content](/src/assets/readme/hpcontmob.png)
 
-
 ### Register / Sign in
 
-Available in the nav bar on on mobile and desktop is the sign in / register nav links. This navigates the user to a sign in page where if they have an account, they can type in their username and password to log in. Once logging in they are redirected back to the home page and the nav bar will change to allow the user to access all the site content. If the sigin in unsuccessful, the user will be given a message detailing what the issue was with their sign in attempt. 
-The sign up section takes users to a page where they are asked to input their username, password and confirm password. The username is unique and the user will be informed if that username already exists. The password is case sensitive and has a requirement to make sure the password is comprehensive enough. If any of these creteria are not met, the user will be presented with a message informing them. Once registered the user will be directed to the sign in page. 
+Available in the nav bar on mobile and desktop is the sign in / register nav links. This navigates the user to a sign in page where if they have an account, they can type in their username and password to log in. Once logging in they are redirected back to the home page and the nav bar will change to allow the user to access all the site content. If the sign in in unsuccessful, the user will be given a message detailing what the issue was with their sign in attempt. 
+The sign up section takes users to a page where they are asked to input their username, password and confirm password. The username is unique and the user will be informed if that username already exists. The password is case sensitive and has a requirement to make sure the password is comprehensive enough. If any of these criteria are not met, the user will be presented with a message informing them. Once registered the user will be directed to the sign in page. 
 
 #### Sign in page Desktop
 ![Sign in desktop](/src/assets/readme/sidesk.png)
@@ -127,7 +124,7 @@ The sign up section takes users to a page where they are asked to input their us
 
 ### Community Page
 
-This section is avalable when the user has created an account and logged in. The Community page shows the user posts from all users registered on the site. The user is able to see and interact with the like button for each post, and click on the the comment icon to view and leave comments. The user can see the avatar photo of the user who created the post, their name, the date in which the post was created and the title and description of the photo. If a logged in user ties to like their own post, they will get a message informing them that they are unable to do thi.
+This section is available when the user has created an account and logged in. The Community page shows the user posts from all users registered on the site. The user is able to see and interact with the like button for each post, and click on the comment icon to view and leave comments. The user can see the avatar photo of the user who created the post, their name, the date in which the post was created and the title and description of the photo. If a logged in user ties to like their own post, they will get a message informing them that they are unable to do this.
 
 #### Post page and Buttons
 ![Likes Button and comment button](/src/assets/readme/likecombtns.png)
@@ -140,22 +137,22 @@ The user is also able to see a list of the top 10 most followed profiles. Each p
 ![Most popular profiles Desktop](/src/assets/readme/populardesk.png)
 ![Most popular profiles Mobile](/src/assets/readme/popularmob.png)
 
-At the top of the page the user has 3 buttons they are able to interact with. One filters all the posts so they can only see posts they have liked, Feed filters the posts so thay can only see posts from users they are following and Add Post navigates the user to the create post page.
+At the top of the page the user has 3 buttons they are able to interact with. One filters all the posts so they can only see posts they have liked, Feed filters the posts so they can only see posts from users they are following and Add Post navigates the user to the create post page.
 
 #### Filtering buttons and add post
 ![Filter buttons and add post desktop](/src/assets/readme/filterdesk.png)
 ![Filter buttons and add post desktop](/src/assets/readme/filtermob.png)
 
-There is a search field that enables users to input text and search for a key word in the post / username. There is a delay when rendering the results to minimise network requests and imporve user experience. 
+There is a search field that enables users to input text and search for a key word in the post / username. There is a delay when rendering the results to minimise network requests and improve user experience. 
 
 #### Search input
 ![Search](/src/assets/readme/search.png)
 
-Infinite scrolling has been encorporated to prevent the posts being paginated. When the post cound excedes 10 the user will be able to continue scrolling and the posts will be dynamically loaded.
+Infinite scrolling has been incorporated to prevent the posts being paginated. When the post count exceeds 10 the user will be able to continue scrolling and the posts will be dynamically loaded.
 
 ### Create a post
 
-Logged in users are able to create a post if the click on the add post button on the Community page. This navigates uers to form where they can select a photo from their device, give it a title and and comment. Database checks run on the image selected and they are unable to upload a file that is not an image, and an image over 2Mb. Once the post has been successfully created the user is redirected back to the Community page where they can see their post. 
+Logged in users are able to create a post if the click on the add post button on the Community page. This navigates users to form where they can select a photo from their device, give it a title and comment. Database checks run on the image selected and they are unable to upload a file that is not an image, and an image over 2Mb. Once the post has been successfully created the user is redirected back to the Community page where they can see their post. 
 
 ![Create Post](/src/assets/readme/uploadpost.png)
 ![Create Post Size](/src/assets/readme/filesize.png)
@@ -180,17 +177,17 @@ This page allows users to create a performance. They can add content about the e
 
 ### My Plan Page
 
-The My Plan page offeres two features for the user. Firstly the user has the opportunity to create a goal for an upcoming event. If the user currently has no goal set, a create goal button will be present at the top of the page and a description informaing users to create a goal to recieve a training plan. 
+The My Plan page offers two features for the user. Firstly the user has the opportunity to create a goal for an upcoming event. If the user currently has no goal set, a create goal button will be present at the top of the page and a description informing users to create a goal to receive a training plan. 
 
 #### Create a goal
 ![Create a goal](/src/assets/readme/creategoalbtn.png)
 
-Once the user has created a goal they will be able to see their goal they have created which includes, event date, time available to traing each week in hours and how long in weeks the training plan should be. Any additional content the user created will apear in the goal section. 
+Once the user has created a goal they will be able to see their goal they have created which includes, event date, time available to train each week in hours and how long in weeks the training plan should be. Any additional content the user created will appear in the goal section. 
 
 #### Goal display
 ![Goal created](/src/assets/readme/goalcreated.png)
 
-If the goal has been created a training plan will be generated based on the creteria of the users goal. It take into consideration the weeks available and length of plan and renders the appropriate training plan for thoes requirements. 
+If the goal has been created a training plan will be generated based on the criteria of the users goal. It take into consideration the weeks available and length of plan and renders the appropriate training plan for those requirements. 
 
 #### Training Plan 
 ![Training Plan](/src/assets/readme/trainingplan.png)
@@ -203,16 +200,16 @@ The button at the top of the page now changes to change goal giving users the fu
 
 ### Create a Goal Page
 
-On this page users are able to create a goal for an upcoming event they may be doing and from their selected creteria, a training plan will be generated for them. The users input event date, hours per week and plan length they want. They can also add any additional comments such as target time or the event details. 
-Validation on the event date ensure the user isnt doing an event within 3 weeks and no suitable training plan can be produced for that time frame. When the goal is submitted the user is redirected back to their My Plan page where they will be able to see the goal and the generated training plan. If the user clicks cancel, no data is saved and they will be returned to the My Plan page.
+On this page users are able to create a goal for an upcoming event they may be doing and from their selected criteria, a training plan will be generated for them. The users input event date, hours per week and plan length they want. They can also add any additional comments such as target time or the event details. 
+Validation on the event date ensure the user isn’t doing an event within 3 weeks and no suitable training plan can be produced for that time frame. When the goal is submitted the user is redirected back to their My Plan page where they will be able to see the goal and the generated training plan. If the user clicks cancel, no data is saved and they will be returned to the My Plan page.
 
-#### Goal Form and vlidation
+#### Goal Form and validation
 ![Create Goal Form](/src/assets/readme/creategoalform.png)
 ![Create Goal Validation](/src/assets/readme/pererrorhandle.png)
 
 ### Profile Page
 
-On the profile page the user can see their profile details including: Avatar photo, posts, followers, following, and all details created by the user. Below their details will be a list of all the posts the user has created for quick and easy access. They will also be able to see the popular profiles section as they could in the comminity page. 
+On the profile page the user can see their profile details including: Avatar photo, posts, followers, following, and all details created by the user. Below their details will be a list of all the posts the user has created for quick and easy access. They will also be able to see the popular profiles section as they could in the community page. 
 
 #### Profile Page display
 ![Profile Page Desktop](/src/assets/readme/profdesk.png)
@@ -232,7 +229,7 @@ Here the user can edit their profile details and update them. They can select th
 
 ### Change Username
 
-This option alows users to change their username. This will change their username on all elements on the site. 
+This option allows users to change their username. This will change their username on all elements on the site. 
 
 #### Change username Form
 ![Change Username Form](/src/assets/readme/unchange.png)
@@ -243,7 +240,6 @@ This option allows users to change their password.
 #### Change Password Form
 ![Change Password form](/src/assets/readme/pwchange.png)
 
-
 ### Other User Profile Page
 
 If you click on the avatar of another user, the logged in user is able to view all the details set by this user and what posts they have produced. They will also be able to follow or unfollow the user. 
@@ -253,12 +249,11 @@ If you click on the avatar of another user, the logged in user is able to view a
 
 ## Future Features
 
-1. Use a rich text editor to anyable further customisability of the rendered training plan content.
+1. Use a rich text editor to enable further customisability of the rendered training plan content.
 2. Use more advanced filtering for training plans to make them even more customisable. Such as fitness level, gender, discipline strengths or weaknesses.
-3. Integration of strave or garmin connect for users to upload their performances to trihub.
+3. Integration of Starva or Garmin connect for users to upload their performances to trihub.
 4. Break each session down into individual session and allowing the user to add a comment after each session based on their performance. 
 5. Enable the user to customise the generated training plan to further fit their requirements. 
-
 
 ## Design: 
 
@@ -330,10 +325,10 @@ Here you can find my initial ERD (Entity Relationship Diagram). This got modifie
 - [Gitpod](https://gitpod.io) streamlines your development process by providing a pre-configured, cloud-based development environment that's instantly ready for coding.
 - [Github](https://github.com/) is essential for version control, allowing you to track changes, collaborate with others (if applicable), and secure online code storage.
 - [Google Dev Tools](https://developers.google.com/web/tools) is used during testing, debugging and styling.
-- [Google Fonts](https://fonts.google.com/) is a catalog of free, open-source fonts. Used for typography.
-- [Heroku](https://www.heroku.com) ia a platform for deploying and hosting web applications.
+- [Google Fonts](https://fonts.google.com/) is a catalogue of free, open-source fonts. Used for typography.
+- [Heroku](https://www.heroku.com) is a platform for deploying and hosting web applications.
 - [Markup Validation Service](https://validator.w3.org/) is used to check code ensuring that my HTML is error-free and adheres to the latest web standards.
-- [NVDA](https://www.nvaccess.org/download/), NonVisual Desktop Access is a free and open-source, portable screen reader for Microsoft Windows.
+- [NVDA](https://www.nvaccess.org/download/), Nonvisual Desktop Access is a free and open-source, portable screen reader for Microsoft Windows.
 
 ### Testing
 
@@ -341,9 +336,7 @@ For the test results and solved issues, we refer to the [TESTING.md file](/TESTI
 
 #### Known and unresolved issues
 
-
 ### Deployment
-
 
 Version Control
 
@@ -354,9 +347,7 @@ The following git commands were used throughout development to push code to the 
 - `git commit -m “commit message”` - This command was used to commit changes to the local repository queue ready for the final step.
 - `git push` - This command was used to push all committed code to the remote repository on github.
 
-
 #### Heroku Deployment
-
 
  To deploy the project to Heroku
  
@@ -381,7 +372,7 @@ The following git commands were used throughout development to push code to the 
 - Enter a unique app name.
 - Choose your region from the dropdown menu.
 - Click the "Create app" button.
-- Scroll further down on the page, select Add Buildpack. The buildpacks will install further dependencies that are not included in the 'requirements.txt'. <br>
+- Scroll further down on the page, select Add Buildpack. The buildpacks will install further dependencies that are not included in the 'requirements.txt'.
   It's crucial to arrange the build packs correctly! First, choose Python and then Node.js. If they're not in this sequence, you can reorder them by dragging.
 
 **Deployment**
@@ -402,12 +393,9 @@ The following git commands were used throughout development to push code to the 
 For more detailed instructions and troubleshooting, visit the [official Heroku Dev Center](https://devcenter.heroku.com/).
 
 
-
 #### Local Deployment
 
-
 How to clone:
-
 
 Cloning a GitHub repository creates a local copy on your machine, allowing you to sync between the two locations. Here are the steps:
 
@@ -453,30 +441,25 @@ Throughout the development of trihub, I utilized a variety of resources to ensur
 - **Sources of inspiration and guidance in general**:
   - This resources is only available to enrolled students at The Code Institute:
     - The Code Institute Diploma in Full Stack Software Development (Advanced Front-End) Walk-through project Moments (frontend)
-  - [React](https://react.dev/learn) A goto place to learn.
+  - [React](https://react.dev/learn) A go to place to learn.
   - [Django Rest framework](https://www.django-rest-framework.org/) A got place to learn
-  - [Django & React Tutorial](https://youtu.be/JD-age0BPVo?si=vLYojx9J_rD8ZKyU), Tech with Tim, also a goto net source for inspo.
+  - [Django & React Tutorial](https://youtu.be/JD-age0BPVo?si=vLYojx9J_rD8ZKyU), Tech with Tim, also a go to net source for inspo.
 - **Testing**: Used to learn how to create test cases
   - [How to write test cases for Django Rest Framework Applications](https://rajansahu713.medium.com/mastering-the-art-of-django-test-cases-fa7b0322c9fb)
   - [Django REST framwork, Testing](https://www.django-rest-framework.org/api-guide/testing/#testingDjango)
   - [django project, testing](https://docs.djangoproject.com/en/3.2/topics/testing/)
   - [Getting started with testing in Python](https://realpython.com/python-testing/)
 
-
 #### Acknowledgements
 
-
 I would like to thank!
-
 
 - My immediate and extended family, as well as my friends, who support and cheer me on!
 - Code Institutes Tutor Support service, their help has been a source of immense relief when in total panic! Also yet another channel to gain more knowhow from.
 - My mentor []()
 
 
-
 <!-- 
-
 
 ##  Technology Used:
 ### Languages and framework:
@@ -555,7 +538,6 @@ The js code for both files passed.
 
 #### Images.js
 ![JS Validation images](/readme_imgs/js/js%20image.png)
-
 
 
 ### Python Validation
@@ -767,3 +749,5 @@ www.wikipedia.com
 ## Acknowledgements
 
 Thank you to all who supported me on this project. My family have been a great support for me especially working late into the evening after a full days teaching. This project would not have been possible without their support.  -->
+
+
