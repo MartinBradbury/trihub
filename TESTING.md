@@ -100,7 +100,7 @@ All Python files were validated with pep8 and corrected to ensure there were no 
 
 ### Lighthouse
 
-I used Lighthouse to test all pages. Performance results were quite low, but this is to be expected when loading multiple images from an API, and sending lots of requests to another API. All other scores are good.
+I used Lighthouse to test all pages. Performance results were quite low, but this is to be expected when loading multiple images from an API, and sending lots of requests to another API. All other scores are good. If time allowed I would address some of the lower scores on both mobile and desktop. I could imporve performance by changing all images to webp format and refining my css. This would be done in future development.
 
 <details>
 <summary>Desktop</summary>
@@ -136,4 +136,19 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 
 <br>
 
+## Manuel Device Testing
 
+### Desktop Testing
+I tested the website on multiple desktop computers to ensure it was compatable with different borwsers and operating systems. All testing returned the same result and the application functioned as in tended on all desktop devices. Below are the devices used for testing the desktop environamnt.
+
+- Alienware Aoura i9 (Windows 10 os / google chrome browser)
+- Lenovo Desktop i7 (Windows 10 os / microsoft edge browser)
+- Macbook air M2 (Mac OS / safari browser)
+
+### Mobile Testing
+I tested the application on multiple mobile devices. The application rendered as intended and displayed correctly. I encountered an error however when trying to sign in which resulted in the user being sent back to the sign in page without being signed in. I discovered this was caused by a lack os SSL Certification and the browser not trusing the security of my site. I can overcome this by turning off security settings in the device browser settings. This is not idea and for future development I would look to add an SSL Certificate to ensure all borwsers trust the application site. 
+
+- iphone 15 Pro (Safari)
+- iphone 14 (safari)
+- ipad Pro 12.9 (safari)
+- Google Pixel (chrome)
