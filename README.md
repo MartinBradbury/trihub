@@ -2,7 +2,7 @@
 
 (Developer: Martin Bradbury)
 
-![AmIResponsive Image](/src/assets/responsive.png)
+![AmIResponsive Image](/src/assets/readme/responsive.png)
 
 ## Live website
 
@@ -87,31 +87,31 @@ Performance tracking is at the heart of TriHub. Users can log their performances
 A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon that is functional on tablets too up to and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are dependant on if the user is logged in or not. When the user is not logged in the links available are: 'Home' - Which takes you to the homepage, 'Sign in' - Navigates to the sign in page and 'Sign up' - which navigates to the sign up page. When a user is logged in the links available are: 'Home' - Navigates tot he home page, 'Community' - Navigates to the community post page, 'Performance' - Navigates to the performance page, 'My Plan' - Navigates to the goal setting and training plan page, 'Sign Out' - Enables the use to be able to sign out, 'Avatar Image' - Default or uploaded image of the user that navigates to the profile page. 
 
 #### Desktop Navigation
-![Desktop navbar]()
+![Desktop navbar](/src/assets/readme/dtnav.png)
 
 #### Mobile Navigation
-![Mobile burger navigation button]()
-![Mobile dropdown navigation menu]()
+![Mobile burger navigation button](/src/assets/readme/mobnavburger.png)
+![Mobile dropdown navigation menu](/src/assets/readme/mobnavmenu.png)
 
 #### Avatar when signed in
-![Default Profile Picture]()
-![Uploaded Profile Picture]()
+![Default Profile Picture](/src/assets/readme/avatarnopic.png)
+![Uploaded Profile Picture](/src/assets/readme/avatarpic.png)
 
 ### Hero video / Home Page Content
 
 The hero image is a background video that auto playes on site load muted. It is fully responsive on mobile and desktop and fills the viable area. The video has a filter to enable the site logo and text to be positioned on top and stand out. The remaining content on the home page comprises of responsive card elements that contain a background image and information detailing to the user what is available on the site.
 
 #### Hero Video Desktop
-![Hero video Desktop](/readme_imgs/Carousel/carouseld.png)
+![Hero video Desktop](/src/assets/readme/hvdesk.png)
 
 #### Hero Video Mobile
-![Hero video mobile](/readme_imgs/Carousel/carouselm.png)
+![Hero video mobile](/src/assets/readme/hvmob.png)
 
 #### Home Page Content Desktop
-![Home Page Content]()
+![Home Page Content](/src/assets/readme/hpcont.png)
 
 #### Home Page Content Mobile
-![Home Page Content]()
+![Home Page Content](/src/assets/readme/hpcontmob.png)
 
 
 ### Register / Sign in
@@ -120,40 +120,36 @@ Available in the nav bar on on mobile and desktop is the sign in / register nav 
 The sign up section takes users to a page where they are asked to input their username, password and confirm password. The username is unique and the user will be informed if that username already exists. The password is case sensitive and has a requirement to make sure the password is comprehensive enough. If any of these creteria are not met, the user will be presented with a message informing them. Once registered the user will be directed to the sign in page. 
 
 #### Sign in page Desktop
-![Sign in desktop Navigation]()
-![Sign in desktop]()
+![Sign in desktop](/src/assets/readme/sidesk.png)
 
 #### Sign in page Mobile
-![Sign in mobile dropdown]()
-![Sign in mobile]()
+![Sign in mobile](/src/assets/readme/simob.png)
 
 ### Community Page
 
 This section is avalable when the user has created an account and logged in. The Community page shows the user posts from all users registered on the site. The user is able to see and interact with the like button for each post, and click on the the comment icon to view and leave comments. The user can see the avatar photo of the user who created the post, their name, the date in which the post was created and the title and description of the photo. If a logged in user ties to like their own post, they will get a message informing them that they are unable to do thi.
 
 #### Post page and Buttons
-![Likes Button]()
-![Cannot like own post]()
-![Comments Button]()
-![Post]
+![Likes Button and comment button](/src/assets/readme/likecombtns.png)
+![Cannot like own post](/src/assets/readme/cannotlike.png)
+![Post](/src/assets/readme/postpage.png)
 
 The user is also able to see a list of the top 10 most followed profiles. Each profile will have a button next to it on desktop enabling the user to follow or unfollow the user if already following. If the logged in users profile is in the top 10, no button will appear for them to stop them being able to follow themselves. On mobile the user can see the top 4 most followed profiles. No follow button is available from this screen but by clicking on the avatar they will navigate to the users profile. 
 
 #### Popular profiles
-![Most popular profiles Desktop]()
-![Most popular profiles Mobile]()
+![Most popular profiles Desktop](/src/assets/readme/populardesk.png)
+![Most popular profiles Mobile](/src/assets/readme/popularmob.png)
 
 At the top of the page the user has 3 buttons they are able to interact with. One filters all the posts so they can only see posts they have liked, Feed filters the posts so thay can only see posts from users they are following and Add Post navigates the user to the create post page.
 
 #### Filtering buttons and add post
-![Liked]()
-![Feed]()
-![Add post]()
+![Filter buttons and add post desktop](/src/assets/readme/filterdesk.png)
+![Filter buttons and add post desktop](/src/assets/readme/filtermob.png)
 
 There is a search field that enables users to input text and search for a key word in the post / username. There is a delay when rendering the results to minimise network requests and imporve user experience. 
 
 #### Search input
-![Search]()
+![Search](/src/assets/readme/search.png)
 
 Infinite scrolling has been encorporated to prevent the posts being paginated. When the post cound excedes 10 the user will be able to continue scrolling and the posts will be dynamically loaded.
 
@@ -161,50 +157,49 @@ Infinite scrolling has been encorporated to prevent the posts being paginated. W
 
 Logged in users are able to create a post if the click on the add post button on the Community page. This navigates uers to form where they can select a photo from their device, give it a title and and comment. Database checks run on the image selected and they are unable to upload a file that is not an image, and an image over 2Mb. Once the post has been successfully created the user is redirected back to the Community page where they can see their post. 
 
-![Create Post]()
-![Create Post Size]()
+![Create Post](/src/assets/readme/uploadpost.png)
+![Create Post Size](/src/assets/readme/filesize.png)
 
 ### Performances Page
 
 The performances page lists all the performances uploaded by users. The performance lists the event, their time, any comments and the user that created the performance. There is a search field at the top of the performances enabling users to search based on username or event, infinite scrolling is present on the performances and if the performance was created by the logged in user, they will have the option to delete the performance. At the bottom of the performances is a button enabling users to create a performance. 
 
 #### Performance features
-![Performance List]()
-![Performance Search]()
-![Performance Edit button]()
-![Performance Delete option]()
-![Create Performance]()
+![Performance List](/src/assets/readme/perlist.png)
+![Performance Search](/src/assets/readme/persearch.png)
+![Performance Delete option](/src/assets/readme/perdelete.png)
+![Create Performance](/src/assets/readme/percreate.png)
 
 ### Create a Performance
 
 This page allows users to create a performance. They can add content about the event, the date the completed the event, which event it was and their performance time. The completed date will only allow a date of today or before to stop users creating a performance in the future that has not happened yet. Once the performance is created, the user will be directed back to the performance page where their performance will not be visible. The cancel button navigates the user back to the performance page.
 
 #### Performance form and error handling
-![Create Performance]()
-![Create Performance Error handling]()
+![Create Performance](/src/assets/readme/percreatform.png)
+![Create Performance Error handling](/src/assets/readme/pererrorhandle.png)
 
 ### My Plan Page
 
 The My Plan page offeres two features for the user. Firstly the user has the opportunity to create a goal for an upcoming event. If the user currently has no goal set, a create goal button will be present at the top of the page and a description informaing users to create a goal to recieve a training plan. 
 
 #### Create a goal
-![Create a goal]()
+![Create a goal](/src/assets/readme/creategoalbtn.png)
 
 Once the user has created a goal they will be able to see their goal they have created which includes, event date, time available to traing each week in hours and how long in weeks the training plan should be. Any additional content the user created will apear in the goal section. 
 
 #### Goal display
-![Goal created]()
+![Goal created](/src/assets/readme/goalcreated.png)
 
 If the goal has been created a training plan will be generated based on the creteria of the users goal. It take into consideration the weeks available and length of plan and renders the appropriate training plan for thoes requirements. 
 
 #### Training Plan 
-![Training Plan]()
+![Training Plan](/src/assets/readme/trainingplan.png)
 
 The button at the top of the page now changes to change goal giving users the functionality to change their goal should they want to at any point. If the user does want to change their goal a prompt will appear informing them that changing their goal will reset their current training plan. 
 
 #### Change Goal + Alert
-![Change Goal]()
-![Change Goal message]()
+![Change Goal](/src/assets/readme/changegoal.png)
+![Change Goal message](/src/assets/readme/changewarning.png)
 
 ### Create a Goal Page
 
@@ -212,41 +207,41 @@ On this page users are able to create a goal for an upcoming event they may be d
 Validation on the event date ensure the user isnt doing an event within 3 weeks and no suitable training plan can be produced for that time frame. When the goal is submitted the user is redirected back to their My Plan page where they will be able to see the goal and the generated training plan. If the user clicks cancel, no data is saved and they will be returned to the My Plan page.
 
 #### Goal Form and vlidation
-![Create Goal Form]()
-![Create Goal Validation]()
+![Create Goal Form](/src/assets/readme/creategoalform.png)
+![Create Goal Validation](/src/assets/readme/pererrorhandle.png)
 
 ### Profile Page
 
 On the profile page the user can see their profile details including: Avatar photo, posts, followers, following, and all details created by the user. Below their details will be a list of all the posts the user has created for quick and easy access. They will also be able to see the popular profiles section as they could in the comminity page. 
 
 #### Profile Page display
-![Profile Page Desktop]()
-![Profile Page Mobile]()
+![Profile Page Desktop](/src/assets/readme/profdesk.png)
+![Profile Page Mobile](/src/assets/readme/profmob.png)
 
 The user is also able to edit their profile details, change username and change password.
 
 #### Edit profile dropdown
-![Edit Profile details]()
+![Edit Profile details](/src/assets/readme/profedit.png)
 
 ### Edit Profile Page
 
 Here the user can edit their profile details and update them. They can select their avatar image, update first and last name, add an email address, date of birth, fitness level and gender. The user is also able to create a bio for other users to see. If the user saves the updated details they will be redirected to their profile page, if they click cancel, no info is changed and they will be redirected to profile page. 
 
 #### Edit Profile Form
-![Edit Profile Form]()
+![Edit Profile Form](/src/assets/readme/profeditform.png)
 
 ### Change Username
 
 This option alows users to change their username. This will change their username on all elements on the site. 
 
 #### Change username Form
-![Change Username Form]()
+![Change Username Form](/src/assets/readme/unchange.png)
 
 ### Change Password
 
 This option allows users to change their password. 
 #### Change Password Form
-![Change Password form]()
+![Change Password form](/src/assets/readme/pwchange.png)
 
 
 ### Other User Profile Page
@@ -254,7 +249,7 @@ This option allows users to change their password.
 If you click on the avatar of another user, the logged in user is able to view all the details set by this user and what posts they have produced. They will also be able to follow or unfollow the user. 
 
 #### Other users Profile
-![Other user profile]()
+![Other user profile](/src/assets/readme/ouprof.png)
 
 ## Future Features
 
@@ -269,9 +264,9 @@ If you click on the avatar of another user, the logged in user is able to view a
 
 The design of the website was a simple contrast of a black background in certain features or white, and white or orange text. The orange text and buttons are a feature across the whole site. 
 
-### Background: 
-### Orange Button:
-### Orange Text:
+### Background:  #ffffff 
+### Orange Button: #ed4300
+### Orange Text: #ed4300
 
 ## Wireframes:
 
