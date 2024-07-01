@@ -278,6 +278,52 @@ Logged in users are able to create a post if the click on the add post button on
 ![Create Post]()
 ![Create Post Size]()
 
+### Performances Page
+
+The performances page lists all the performances uploaded by users. The performance lists the event, their time, any comments and the user that created the performance. There is a search field at the top of the performances enabling users to search based on username or event, infinite scrolling is present on the performances and if the performance was created by the logged in user, they will have the option to delete the performance. At the bottom of the performances is a button enabling users to create a performance. 
+
+#### Performance features
+![Performance List]()
+![Performance Search]()
+![Performance Edit button]()
+![Performance Delete option]()
+![Create Performance]()
+
+### Create a Performance
+
+This page allows users to create a performance. They can add content about the event, the date the completed the event, which event it was and their performance time. The completed date will only allow a date of today or before to stop users creating a performance in the future that has not happened yet. Once the performance is created, the user will be directed back to the performance page where their performance will not be visible. The cancel button navigates the user back to the performance page.
+
+#### Performance form and error handling
+![Create Performance]()
+![Create Performance Error handling]()
+
+### My Plan Page
+
+The My Plan page offeres two features for the user. Firstly the user has the opportunity to create a goal for an upcoming event. If the user currently has no goal set, a create goal button will be present at the top of the page and a description informaing users to create a goal to recieve a training plan. 
+
+#### Create a goal
+![Create a goal]()
+
+Once the user has created a goal they will be able to see their goal they have created which includes, event date, time available to traing each week in hours and how long in weeks the training plan should be. Any additional content the user created will apear in the goal section. 
+
+#### Goal display
+![Goal created]()
+
+If the goal has been created a training plan will be generated based on the creteria of the users goal. It take into consideration the weeks available and length of plan and renders the appropriate training plan for thoes requirements. 
+
+#### Training Plan 
+![Training Plan]()
+
+The button at the top of the page now changes to change goal giving users the functionality to change their goal should they want to at any point. If the user does want to change their goal a prompt will appear informing them that changing their goal will reset their current training plan. 
+
+#### Change Goal + Alert
+![Change Goal]()
+![Change Goal message]()
+
+### Create a Goal Page
+
+
+
 
 <!-- ### About me content
 
