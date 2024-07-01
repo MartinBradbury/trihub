@@ -112,7 +112,7 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 | Community    | 69          | 90            | 78             | 100 |
 | Performances | 99          | 90            | 78             | 100 |
 | My Plan      | 91          | 95            | 78             | 100 |
-| Profile      | 97          | 90            | 78             | 100  |
+| Profile      | 97          | 90            | 78             | 100 |
 | Sign In      | 98          | 95            | 96             | 100 |
 
 </details>
@@ -124,12 +124,13 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 
 | Page         | Performance | Accessibility | Best Practices | SEO |
 | ------------ | ----------- | ------------- | -------------- | --- |
-| Home         | 63          | 100           | 78             | 100 |
-| Post Detail  | 50          | 100           | 78             | 100 |
-| Post Form    | 83          | 92            | 78             | 92  |
-| Profile page | 75          | 100           | 79             | 92  |
-| Login        | 85          | 95            | 96             | 100 |
-| Register     | 88          | 95            | 74             | 100 |
+| Home         | 90          | 98            | 96             | 100 |
+| Community    | 64          | 90            | 79             | 100 |
+| Performances | 85          | 90            | 79             | 100 |
+| My Plan      | 73          | 95            | 79             | 100 |
+| Profile      | 84          | 95            | 79             | 100 |
+| Sign In      | 89          | 95            | 96             | 100 |
+
 
 </details>
 
