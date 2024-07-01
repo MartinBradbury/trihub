@@ -86,7 +86,7 @@ function App() {
             path="/feed"
             render={() => (
               <CommunityPosts
-                message="No results found. Adjust the search keyword or follow a user."
+                message="You have not followed a user yet or the user has no posts."
                 filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
@@ -96,7 +96,7 @@ function App() {
             path="/liked"
             render={() => (
               <CommunityPosts
-                message="no results found. Adjust the search keyword or like a post."
+                message="You have not liked any posts yet. Like a post to see it here."
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
               />
             )}
