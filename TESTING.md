@@ -393,7 +393,7 @@ I tested the application on multiple mobile devices. The application rendered as
 <br>
 
 <details>
-<summary>The manual and automatic test cases are represented in a different view, more API-centric. Below is the detailed breakdown:</summary>
+<summary>The automatic test cases are represented below with a more API-centric view. Below is the detailed breakdown:</summary>
 <br>
 
 ### DRF API
@@ -561,7 +561,7 @@ The tests were carried out on the goals component, performance component, posts 
 <br>
 
 
-## Issues
+<summary>Issues</summary>
 
 ### Known and unresolved issues
 
