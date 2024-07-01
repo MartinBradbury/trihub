@@ -558,38 +558,25 @@ The tests were carried out on the goals component, performance component, posts 
 
 </detail>
 
-<br>
+</br>
 
 <details>
 <summary>Issues</summary>
 
 ### Known and unresolved issues
 
+- Mobile devices are unable to access the site content due to the requirement of an SSL Certification. Upon attepmting to sign in, the user is redirected to the signin page without signing in. 
+- Once desktop device tested was unable to create a performance due the the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
+- When viewing a another user profile, when the follow and unfollow button is clicked, the counter does not always update without the manual page refresh.
+- Users are not able to add seconds munually to their performances. Seconds get automatically added as 00 after the performance is created.
+
+
 ### NPM Audit
-- **Disclaimer on npm Audit Issues**: </br>
+- **Disclaimer on npm Audit Issues**:
 As students, we're not expected to fix the following npm audit errors identified in this project. The listed issues may involve breaking changes, which are beyond the scope of our current work. Here are the identified vulnerabilities:
 
-- **ansi-html** (<0.0.8): High severity - Uncontrolled Resource Consumption.
-- **axios** (0.8.1 - 0.27.2): Moderate severity - Cross-Site Request Forgery Vulnerability.
-- **braces** (<3.0.3): High severity - Uncontrolled Resource Consumption.
-- **browserslist** (4.0.0 - 4.16.4): Moderate severity - Regular Expression Denial of Service.
-- **ejs** (<=3.1.9): Critical severity - Template injection vulnerability.
-- **glob-parent** (<5.1.2): High severity - Regular Expression Denial of Service.
-- **immer** (7.0.0 - 9.0.5): Critical severity - Prototype Pollution.
-- **ip**: High severity - Server-Side Request Forgery.
-- **loader-utils** (2.0.0 - 2.0.3): Critical severity - Prototype Pollution.
-- **lodash.template**: High severity - Command Injection.
-- **minimatch** (<3.0.5): High severity - Regular Expression Denial of Service.
-- **node-forge** (<=1.2.1): High severity - Prototype Pollution.
-- **nth-check** (<2.0.1): High severity - Inefficient Regular Expression Complexity.
-- **postcss** (<8.4.31): Moderate severity - Line return parsing error.
-- **semver** (7.0.0 - 7.5.1): Moderate severity - Regular Expression Denial of Service.
-- **shell-quote** (<=1.7.2): Critical severity - Improper Neutralization of Special Elements.
-- **webpack-dev-middleware** (<=5.3.3): High severity - Path traversal.
+There are a total of 137 vulnerabilities (1 low, 80 moderate, 48 high, 8 critical).
 
-There are a total of 138 vulnerabilities (1 low, 80 moderate, 49 high, 8 critical).
-
-### fixed issues
 
 </details>
 
