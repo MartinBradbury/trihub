@@ -98,3 +98,41 @@ All Python files were validated with pep8 and corrected to ensure there were no 
 
 
 
+### Lighthouse
+
+I used Lighthouse to test all pages. Performance results were quite low, but this is to be expected when loading multiple images from an API, and sending lots of requests to another API. All other scores are good.
+
+<details>
+<summary>Desktop</summary>
+<br>
+
+| Page         | Performance | Accessibility | Best Practices | SEO |
+| ------------ | ----------- | ------------- | -------------- | --- |
+| Home         | 64          | 100           | 78             | 100 |
+| Post Detail  | 59          | 100           | 78             | 100 |
+| Post Form    | 99          | 100           | 78             | 100 |
+| Profile page | 84          | 100           | 96             | 100 |
+| Login        | 98          | 90            | 96             | 92  |
+| Register     | 98          | 95            | 96             | 100 |
+
+</details>
+<br>
+
+<details>
+<summary>Mobile</summary>
+<br>
+
+| Page         | Performance | Accessibility | Best Practices | SEO |
+| ------------ | ----------- | ------------- | -------------- | --- |
+| Home         | 63          | 100           | 78             | 100 |
+| Post Detail  | 50          | 100           | 78             | 100 |
+| Post Form    | 83          | 92            | 78             | 92  |
+| Profile page | 75          | 100           | 79             | 92  |
+| Login        | 85          | 95            | 96             | 100 |
+| Register     | 88          | 95            | 74             | 100 |
+
+</details>
+
+<br>
+
+

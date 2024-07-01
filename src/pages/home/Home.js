@@ -28,7 +28,7 @@ const Home = () => {
         <Row>
           <Col xs={12} sm={12} md={6} lg={12}>
             <Card className={styles.card}>
-              <Card.Img src={bgimg1} className={styles.img} />
+              <Card.Img src={bgimg1} className={styles.img} alt="Triathletes"/>
               <Card.Body className={styles.overlay}>
                 <Card.Title>
                   <h3>Join a social community</h3>
@@ -39,7 +39,7 @@ const Home = () => {
           </Col>
           <Col xs={12} sm={12} md={6} lg={12}>
             <Card className={styles.card}>
-              <Card.Img src={bgimg2} className="card-img-top" />
+              <Card.Img src={bgimg2} className="card-img-top" alt="Triathletes on bikes" />
               <Card.Body className={styles.overlay}>
                 <Card.Title>
                   <h3>Set Your Goals</h3>
@@ -50,7 +50,7 @@ const Home = () => {
           </Col>
           <Col xs={12} sm={12} md={6} lg={12}>
             <Card className={styles.card}>
-              <Card.Img src={bgimg3} className="card-img-top" />
+              <Card.Img src={bgimg3} className="card-img-top" atl="Bikes Racked"/>
               <Card.Body className={styles.overlay}>
                 <Card.Title>
                   <h3>Custom Training Plans</h3>
@@ -61,7 +61,7 @@ const Home = () => {
           </Col>
           <Col xs={12} sm={12} md={6} lg={12}>
             <Card className={styles.card}>
-              <Card.Img src={bgimg4} className="card-img-top" />
+              <Card.Img src={bgimg4} className="card-img-top" atl="Triathlete swimming"/>
               <Card.Body className={styles.overlay}>
                 <Card.Title>
                   <h3>Share your progress</h3>

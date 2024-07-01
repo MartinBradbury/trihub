@@ -18,8 +18,8 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PerformanceList from "./pages/performances/PerformanceList";
-import UserPlan from "./pages/Plans/UserPlan";
-import GoalsCreateForm from "./pages/Plans/GoalsCreateForm";
+import UserPlan from "./pages/plans/UserPlan";
+import GoalsCreateForm from "./pages/plans/GoalsCreateForm";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 
