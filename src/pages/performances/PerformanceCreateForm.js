@@ -22,7 +22,6 @@ const PerformanceCreateForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const history = useHistory();
-  const [setShowConfirmModal] = useState(false);
 
   const [performanceData, setPerformanceData] = useState({
     event: 1,
@@ -86,12 +85,6 @@ const PerformanceCreateForm = () => {
     }
   };
 
-  const handleCloseConfirmModal = () => setShowConfirmModal(false);
-  const handleConfirmNavigation = () => {
-    window.location.href = "/performances";
-    handleCloseConfirmModal();
-  };
-
   const textFields = (
     <>
       <Form.Group>
@@ -149,7 +142,7 @@ const PerformanceCreateForm = () => {
       >
         cancel
       </Button>
-      <Button onClick={handleConfirmNavigation} className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
         save
       </Button>
     </>

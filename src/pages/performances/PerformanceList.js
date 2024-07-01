@@ -36,6 +36,18 @@ function PerformanceList({ message = "" }) {
 
   return (
     <Row className="h-100">
+      <Container className={Styles.ButtonSpace}>
+        <div className="d-flex justify-content-center align-items-center">
+          <a href="performance/create">
+            <button
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center} ${btnStyles.Text}`}
+              type="submit"
+            >
+              Add Performance
+            </button>
+          </a>
+        </div>
+      </Container>
       <Col className="py-2 p-0 p-lg-2" lg={12}>
         <i className={`fas fa-search ${Styles.SearchIcon}`} />
         <Form
@@ -79,18 +91,6 @@ function PerformanceList({ message = "" }) {
           </Container>
         )}
       </Col>
-      <Container className={Styles.ButtonSpace}>
-        <div className="d-flex justify-content-center align-items-center">
-          <a href="performance/create">
-            <button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Center} ${btnStyles.Text}`}
-              type="submit"
-            >
-              Add Performance
-            </button>
-          </a>
-        </div>
-      </Container>
     </Row>
   );
 }
