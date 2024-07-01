@@ -7,6 +7,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useRedirect } from "../../hooks/UseRedirect";
 
 const Post = (props) => {
   const {
@@ -78,6 +79,7 @@ const Post = (props) => {
   };
 
   const currentUser = useCurrentUser();
+  useRedirect("loggedOut");
 
   const is_owner = currentUser?.username === owner;
 

@@ -14,11 +14,13 @@ import NoResults from "../../assets/no-results.png";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { useRedirect } from "../../hooks/UseRedirect";
 
 function PerformanceList({ message = "" }) {
   const [performances, setPerformances] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const [query, setQuery] = useState("");
+  useRedirect("loggedOut");
 
   useEffect(() => {
     const fetchPerformances = async () => {

@@ -8,12 +8,14 @@ import Styles from "../../styles/Goals.module.css";
 import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import { Modal, Button } from "react-bootstrap";
+import { useRedirect } from "../../hooks/UseRedirect";
 
 const UserPlan = () => {
   const [isLoading, setIsLoading] = useState(true);
   const currentUser = useCurrentUser();
   const [hasGoals, setHasGoals] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  useRedirect("loggedOut");
 
   useEffect(() => {
     const fetchGoalsAndPlans = async () => {
