@@ -29,7 +29,7 @@ A detailed breakdown of the project's user stories categorized into various epic
 | As a user I can view the details of a single post so that I can learn more about it | Implement a post detail page that fetches and displays a single post's data from the API | |
 | As a logged in user I can like a post so that I can show my support for the posts that interest me | Add a like button to posts that sends a like request to the API and updates the like count on the UI | |
 
-**EPIC - The Posts Page**
+**EPIC - The Community Page**
 | Goals | How are they achieved? | Comment |
 | --- | --- |--- |
 | As a logged in user I can view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content | Fetch and display posts from the API in descending order of creation date | |
@@ -60,6 +60,22 @@ A detailed breakdown of the project's user stories categorized into various epic
 | As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them | List all posts by the user on their profile page | |
 | As a logged in user I can edit my profile so that I can change my profile picture and bio | Add an edit profile button that opens a form for updating the profile picture and bio | |
 | As a logged in user I can update my username and password so that I can change my display name and keep my profile secure | Provide options for changing username and password in the user settings | |
+
+**EPIC - The Performance Page**
+| Goals | How are they achieved? | Comment |
+| --- | --- |--- |
+| As a user I can view other users performances so that I can see their times and event details | Listing performances on the performances page that display performance information. | |
+| As a user I can create new performances that will be added to the performance page. | Create performance page to enable users to add their performance. | |
+| As a user I want to be able to delete my performance. | I am able to click the delete button on my own performance to remove it. | |
+| As a user I am able to search for performances based on the user or the event | Use the search feature to filter the performances by the required creteria. | |
+
+**EPIC - My Plan Page**
+| Goals | How are they achieved? | Comment |
+| --- | --- |--- |
+| As a user I am able to create a goal which will generate a training plan for me | A button allowing users to create a goal and generate a training plan | |
+| As a user I want to select the creteria of my plan based on weeks available and hours available. | Goal creation offers options for weeks of plan and hours available. | |
+| As a user I want to be able to see my training plan and goal. | I am able to see the training plan and goal after creation on the My Plan page. | |
+| As a user I want to be able to change my plan or goal. | Change goal button enabling users to change their plan or goal. | |
 
 </details>
 <br>
