@@ -152,3 +152,318 @@ I tested the application on multiple mobile devices. The application rendered as
 - iphone 14 (safari)
 - ipad Pro 12.9 (safari)
 - Google Pixel (chrome)
+
+### Executed manual test cases and results
+
+<details>
+
+<summary>Navigation</summary>
+
+<br>
+
+| Feature         | Action      | Expected Outcome                                        | Result | Comment |
+| --------------  | ----------- | ------------------------------------------------------- | ------ | ------- |
+| Navbar Logo     | Hover/Focus | Indicate focus                                          | Pass   |         |
+| Navbar Logo     | Click       | Redirect to home                                        | Pass   |         |
+| Navbar toggler  | Display     | Visible on small screens only                           | Pass   |         |
+| Navbar toggler  | Click       | Opens dropdown with navigation links                    | Pass   |         |
+| Community Link  | Display     | Only display when user is signed in                     | Pass   |         |
+| Community Link  | Click       | Open community page                                     | Pass   |         |
+| Performance Link| Display     | Only display when user is signed in                     | Pass   |         |
+| Performance Link| Click       | Open liked posts feed page                              | Pass   |         |
+| Navbar Links    | Display     | Links display in header on screens above a certain size | Pass   |         |
+| My Plan Link    | Display     | Only displays when the user is signed in                | Pass   |         |
+| My Plan Link    | Click       | Opens my Plan page                                      | Pass   |         |
+| Profile Link    | Display     | Only display when user is signed in                     | Pass   |         |
+| Profile Link    | Click       | Open profile page                                       | Pass   |         |
+| Register Link   | Display     | Only display when user is not signed in                 | Pass   |         |
+| Register Link   | Click       | Open signup page                                        | Pass   |         |
+| sign in Link    | Display     | Only display when user is not signed in                 | Pass   |         |
+| sign in Link    | Click       | Open sign in page                                       | Pass   |         |
+| sign out Link   | Display     | Only display when user is signed in                     | Pass   |         |
+| sign out Link   | Click       | Log the user out                                        | Pass   |         |
+
+</details>
+
+<br>
+
+<details>
+
+<summary>Home</summary>
+
+<br>
+
+| Feature         | Action      | Expected Outcome                                        | Result | Comment |
+| --------------  | ----------- | ------------------------------------------------------- | ------ | ------- |
+| bg Video        | plays       | Background video plays on page load                     | Pass   |         |
+| bg Video        | Muted       | Background video plays muted on page load               | Pass   |         |
+| bg Video        | Loops       | Background video loops when complete                    | Pass   |         |
+
+</details>
+
+<br>
+
+<details>
+
+<summary>Community Page</summary>
+
+<br>
+
+| Feature         | Action  | Expected Outcome                                                 | Result | Comment |
+| --------------- | ------- | ---------------------------------------------------------------- | ------ | ------- |
+| Post            | Display | Post displays title, author, image, content, and date of posting | Pass   |         |
+| Post            | Display | Post displays the number of likes and comments                   | Pass   |         |
+| Avatar          | Display | Post owner's avatar is present on the post                       | Pass   |         |
+| Avatar          | Click   | Clicking an avatar opens the associated profile page             | Pass   |         |
+| Edit Button     | Display | Display if logged in as the author of the post                   | Pass   |         |
+| Edit Button     | Click   | Open the post editing page                                       | Pass   |         |
+| Delete Button   | Display | Display if logged in as the author of the post                   | Pass   |         |
+| Delete Button   | Click   | Delete the post                                                  | Pass   |         |
+| Like Icon       | Click   | Like/Unlike the post                                             | Pass   |         |
+| Like Counter    | Display | Display the correct number of likes received by the post         | Pass   |         |
+| Comment Icon    | Click   | Open the post's comment section                                  | Pass   |         |
+| Comment Counter | Display | Display the correct number of comments on the post               | Pass   |         |
+
+
+</details>
+
+<br>
+
+<details>
+
+<summary>Comments</summary>
+
+<br>
+
+| Feature       | Action  | Expected Outcome                                                 | Result | Comment |
+| ------------- | ------- | ---------------------------------------------------------------- | ------ | ------- |
+| Comment Form  | Display | Display when a user is signed in                                 | Pass   |         |
+| Comment Form  | Submit  | Submit the form and add the comment to the post                  | Pass   |         |
+| Comments      | Display | Comments appear in descending order in an infinite scroll format | Pass   |         |
+| Comments      | Display | Comments display the owner's username and avatar                 | Pass   |         |
+| Comments      | Click   | Clicking the avatar opens the associated profile                 | Pass   |         |
+| Edit Button   | Display | Display if logged in as the author of the post                   | Pass   |         |
+| Edit Button   | Click   | Open the comment form                                            | Pass   |         |
+| Delete Button | Display | Display if logged in as the author of the post                   | Pass   |         |
+| Delete Button | Click   | Delete the comment                                               | Pass   |         |
+
+</details>
+
+<br>
+
+<details>
+
+<summary>PostCreateForm & PostEditForm</summary>
+
+<br>
+
+| Feature        | Action  | Expected Outcome                                        | Result | Comment |
+| -------------- | ------- | ------------------------------------------------------- | ------ | ------- |
+| Upload Button  | Display | The upload Button appears                               | Pass   |         |
+| Upload Button  | Click   | Opens a file selector window                            | Pass   |         |
+| Title Input    | Display | The title input has a label making its purpose clear    | Pass   |         |
+| Title Input    | Input   | The user can type in the Title field                    | Pass   |         |
+| Content Input  | Display | The content input has a label making its purpose clear  | Pass   |         |
+| Content Input  | Input   | The user can type in the content field                  | Pass   |         |
+| Category Input | Display | The category input has a label making its purpose clear | Pass   |         |
+| Category Input | Click   | The user can select category the menu                   | Pass   |         |
+| Cancel Button  | Click   | Close the form without any changes                      | Pass   |         |
+| Submit Button  | Click   | Submit the form and create/update the post              | Pass   |         |
+| Submit Button  | Click   | Close the form and redirect the user to the post feed   | Pass   |         |
+
+</details>
+
+<br>
+
+<details>
+
+<summary>ProfilePage</summary>
+
+<br>
+
+| Feature                  | Action  | Expected Outcome                                                 | Result | Comment |
+| ------------------------ | ------- | ---------------------------------------------------------------- | ------ | ------- |
+| Avatar                   | Display | The user's avatar appears on the top of the page                 | Pass   |         |
+| Username                 | Display | The user's username appears on the top of the page               | Pass   |         |
+| User Stats               | Display | The number of posts, followers, and followed users are displayed | Pass   |         |
+| Options Button           | Display | The option button appears if signed-in as the profile owner      | Pass   |         |
+| Options Button           | Click   | Clicking opens the profile options menu                          | Pass   |         |
+| Options Menu             | Display | Display options for editing the profile, username and password   | Pass   |         |
+| "Edit profile" Button    | Click   | Open the profile editing form                                    | Pass   |         |
+| "Change username" Button | Click   | Open the username editing form                                   | Pass   |         |
+| "Change password" Button | Click   | Open the password editing form                                   | Pass   |         |
+| User Posts               | Display | The profile owner's posts are displayed under the profile        | Pass   |         |
+| User Posts               | Display | The profile post feed has an infinite scroll layout              | Pass   |         |
+
+
+</details>
+
+<br>
+
+<details>
+
+<summary>PopularProfile</summary>
+
+<br>
+
+| Feature                | Action  | Expected Outcome                                                                    | Result | Comment |
+| ---------------------- | ------- | ----------------------------------------------------------------------------------- | ------ | ------- |
+| Popular Profiles       | Display | The "popular profiles" section displays across the site                             | Pass   |         |
+| Popular Profiles       | Display | The list updates to reflect the number of followers for each profile                | Pass   |         |
+| Popular Profiles       | Display | The list moves to the top and center on smaller screens                             | Pass   |         |
+| Popular Profiles       | Display | No "popular profiles" section appears on profile pages on smaller screens           | Pass   |         |
+| Username               | Display | User avatars appear for each profile                                                | Pass   |         |
+| Username               | Click   | Open the associated profile page                                                    | Pass   |         |
+| Avatar                 | Display | User avatars appear on larger screens                                               | Pass   |         |
+| Avatar                 | Click   | Open the associated profile page                                                    | Pass   |         |
+| Follow/Unfollow Button | Display | A follow/unfollow button appears next to each profile on large screens if signed in | Pass   |         |
+| Follow/Unfollow Button | Click   | Clicking the button follows/unfollows the user                                      | Pass   |         |
+| Follow/Unfollow Button | Click   | Clicking the button updates the button and its sibling buttons on other components  | Pass   |         |
+
+</details>
+
+<br>
+
+<details>
+
+<summary>Sing In & Sign Up</summary>
+
+<br>
+
+| Feature                | Action  | Expected Outcome                                    | Result | Comment |
+| ---------------------- | ------- | --------------------------------------------------- | ------ | ------- |
+| Username Input         | Display | A label and placeholder make the purpose clear      | Pass   |         |
+| Username Input         | Input   | The user can input a username                       | Pass   |         |
+| Password Input         | Display | A label and placeholder make the purpose clear      | Pass   |         |
+| Password Input         | Input   | The user can input a username                       | Pass   |         |
+| Confirm Password Input | Display | A label and placeholder make the purpose clear      | Pass   |         |
+| Confirm Password Input | Input   | The user can input a password                       | Pass   |         |
+| Sign Up Button         | Click   | Validate the form before submission                 | Pass   |         |
+| Sign Up Button         | Click   | Notify the user about any invalid data              | Pass   |         |
+| Sign Up Button         | Click   | Submit the form and create the new user and profile | Pass   |         |
+| Sign In Button         | Click   | Validate the form before submission                 | Pass   |         |
+| Sign In Button         | Click   | Notify the user about any invalid data              | Pass   |         |
+| Sign In Button         | Click   | Submit the form and create the new user and profile | Pass   |         |
+</details>
+
+<br>
+
+<details>
+
+<summary>Performances</summary>
+
+<br>
+
+| Feature       | Action  | Expected Outcome                                                 | Result | Comment |
+| ------------- | ------- | ---------------------------------------------------------------- | ------ | ------- |
+| Performances  | Display | Display when a user is signed in                                 | Pass   |         |
+| Performances  | Submit  | Submit a performance and add to performance list                 | Pass   |         |
+| Search        | Display | Search bar appears at the top of the page                        | Pass   |         |
+| Search        | input   | Users can search for event or user                               | Pass   |         |
+| Edit Button   | Display | Display if logged in as the author of the performance            | Pass   |         |
+| Edit Button   | Click   | Open the dropdown to expose the delete button                    | Pass   |         |
+| Delete Button | Click   | Delete the performance                                           | Pass   |         |
+
+</details>
+
+<br>
+
+<details>
+
+<summary>My Plan</summary>
+
+<br>
+
+| Feature         | Action    | Expected Outcome                                                 | Result | Comment |
+| -------------   | -------   | ---------------------------------------------------------------- | ------ | ------- |
+| Goals btn       | Display   | Create goal button is present if user has no goal                | Pass   |         |
+| Goals btn       | Submit    | Clicking the create goals btn navigates to create goal page      | Pass   |         |
+| Goal Form       | Display   | Create gaol form renders correctly when button clicked           | Pass   |         |
+| Goal Form       | input     | Users can input their goal data in fields provided               | Pass   |         |
+| Goal Form       | Error     | Error handling of goal date needing to be greater than 3 weeks   | Pass   |         |
+| Change Goal btn | Display   | Change goal btn is present if user already has a goal            | Pass   |         |
+| Change Goal btn | Click     | Warning message displayed when btn clicked before goal create    | Pass   |         |
+| Goal            | Display   | Goal displays when user has created a goal                       | Pass   |         |
+| Training Plan   | Display   | Training plan displays if user has created a goal                | Pass   |         |
+| Training Plan   | Display   | Training plan is specific to the users goal                      | Pass   |         |
+
+
+</details>
+
+<details>
+<summary>The manual and automatic test cases are represented in a different view, more API-centric. Below is the detailed breakdown:</summary>
+<br>
+
+### DRF API
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- | --- |
+| Refresh token | POST | Refreshes the auth token to keep the user signed in | Pass | |
+| Sign-out view | POST | Destroys the token and signs the user out | Pass | |
+
+### Profiles
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Profile List | GET | Show a list of all profiles as JSON objects | Pass | |
+| Profile List | POST | Create a new profile if valid | Pass | |
+| Profile List | POST | Automatically make a profile when creating a user | Pass | |
+| Profile Detail | GET | Return a specific profile if given a valid id | Pass | |
+| Profile Detail | POST | Create a new profile if valid | Pass | |
+| Profile Detail | PUT | Update the profile if valid | Pass | |
+| Profile Detail | DELETE | Destroy the profile and its owner instance if valid | Pass | |
+| Related instances | DELETE | Destroying a profile destroys all content related to its owner | Pass | |
+| Serializer | Annotation | Annotate the number of posts, followers, and followed users of a profile | Pass | |
+
+### Community
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Post List | GET | Show a list of all posts as JSON objects | Pass | |
+| Post List | POST | Create a new post if valid | Pass | |
+| Post Detail | GET | Return a specific post if given a valid id | Pass | |
+| Post Detail | PUT | Update the post if valid | Pass | |
+| Post Detail | DELETE | Destroy the post instance if valid | Pass | |
+
+### Comments
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Comment List | GET | Show a list of all comments as JSON objects | Pass | |
+| Comment List | POST | Create a new comment if valid | Pass | |
+| Comment Detail | GET | Return a specific comment if given a valid id | Pass | |
+| Comment Detail | PUT | Update the comment if valid | Pass | |
+| Comment Detail | DELETE | Destroy the comment if valid | Pass | |
+
+### Performance
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Performance List | GET | Show a list of all posts as JSON objects | Pass | |
+| Performance List | POST | Create a new performance if valid | Pass | |
+| Performance Detail | DELETE | Destroy the performance instance if valid | Pass | |
+
+### Followers
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Follower List | GET | Show a list of all followers as JSON objects | Pass | |
+| Follower List | POST | Create a new follower if valid | Pass | |
+| Follower Detail | GET | Return a specific follower if given a valid id | Pass | |
+| Follower Detail | PUT | Update the follower if valid | Pass | |
+| Follower Detail | DELETE | Destroy the follower if valid | Pass | |
+| Unique Together | No duplicates | The model prevents creating duplicate follow instances with the same owner and target user |Pass | |
+
+### Likes
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Like List | GET | Show a list of all likes as JSON objects | Pass | |
+| Like List | POST | Create a new like if valid | Pass | |
+| Like Detail | GET | Return a specific like if given a valid id | Pass | |
+| Like Detail | PUT | Update the like if valid | Pass | |
+| Like Detail | DELETE | Destroy the like if valid | Pass | |
+| Unique Together | No duplicates | The model prevents creating duplicate like instances with the same owner and target post | Pass | |
+| Like List | View | User1 can see the list of users they have Liked/unliked | Pass |
+
+### My Plan
+| Feature | Action | Expected Outcome | Pass/Fail | Comment |
+| --- | --- | --- | --- |--- |
+| Goal | GET | Show the goal of the logged in user | Pass | |
+| Goal create | POST | Create a new goal if valid | Pass | |
+| Goal edit | PUT | Update the goal if the user is valid | Pass | |
+| Training Plan  | GET | Show the training plan specific to users goal | Pass | |
+| Training Change  | GET | Change the training plan if the user changes their goal | Pass | |
