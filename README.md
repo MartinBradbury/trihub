@@ -243,10 +243,11 @@ The sign up section takes users to a page where they are asked to input their us
 
 ### Community Page
 
-This section is avalable when the user has created an account and logged in. The Community page shows the user posts from all users registered on the site. The user is able to see and interact with the like button for each post, and click on the the comment icon to view and leave comments. The user can see the avatar photo of the user who created the post, their name, the date in which the post was created and the title and description of the photo
+This section is avalable when the user has created an account and logged in. The Community page shows the user posts from all users registered on the site. The user is able to see and interact with the like button for each post, and click on the the comment icon to view and leave comments. The user can see the avatar photo of the user who created the post, their name, the date in which the post was created and the title and description of the photo. If a logged in user ties to like their own post, they will get a message informing them that they are unable to do thi.
 
 #### Post page and Buttons
 ![Likes Button]()
+![Cannot like own post]()
 ![Comments Button]()
 ![Post]
 
@@ -270,7 +271,12 @@ There is a search field that enables users to input text and search for a key wo
 
 Infinite scrolling has been encorporated to prevent the posts being paginated. When the post cound excedes 10 the user will be able to continue scrolling and the posts will be dynamically loaded.
 
+### Create a post
 
+Logged in users are able to create a post if the click on the add post button on the Community page. This navigates uers to form where they can select a photo from their device, give it a title and and comment. Database checks run on the image selected and they are unable to upload a file that is not an image, and an image over 2Mb. Once the post has been successfully created the user is redirected back to the Community page where they can see their post. 
+
+![Create Post]()
+![Create Post Size]()
 
 
 <!-- ### About me content
