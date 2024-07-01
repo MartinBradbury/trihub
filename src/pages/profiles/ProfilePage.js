@@ -90,25 +90,20 @@ function ProfilePage() {
             <Card.Body>
               <Card.Title>Profile Details</Card.Title>
               <Card.Text className="mb-3">
-                <strong>First Name:</strong> {profile?.first_name}
+                <strong>First Name:</strong> {profile?.first_name || "N/A"}
               </Card.Text>
               <Card.Text className="mb-3">
-                <strong>Last Name:</strong> {profile?.last_name}
+                <strong>Last Name:</strong> {profile?.last_name || "N/A"}
               </Card.Text>
               <Card.Text className="mb-3">
-                <strong>Fitness Level:</strong> {profile?.fitness_level}
+                <strong>Fitness Level:</strong>{" "}
+                {profile?.fitness_level || "N/A"}
               </Card.Text>
               <Card.Text className="mb-3">
-                <strong>Gender:</strong> {profile?.gender}
+                <strong>Gender:</strong> {profile?.gender || "N/A"}
               </Card.Text>
               <Card.Text className="mb-3">
-                <strong>Updated At:</strong> {profile?.updated_at}
-              </Card.Text>
-              <Card.Text className="mb-3">
-                <strong>Created At:</strong> {profile?.created_at}
-              </Card.Text>
-              <Card.Text className="mb-3">
-                <strong>Email:</strong> {profile?.email}
+                <strong>Email:</strong> {profile?.email || "N/A"}
               </Card.Text>
             </Card.Body>
           </Card>
@@ -147,7 +142,7 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s posts</p>
+      <p className="text-center">My posts</p>
       <hr />
       {profilePosts.results.length ? (
         <InfiniteScroll
