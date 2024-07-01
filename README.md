@@ -241,6 +241,38 @@ The sign up section takes users to a page where they are asked to input their us
 ![Sign in mobile dropdown]()
 ![Sign in mobile]()
 
+### Community Page
+
+This section is avalable when the user has created an account and logged in. The Community page shows the user posts from all users registered on the site. The user is able to see and interact with the like button for each post, and click on the the comment icon to view and leave comments. The user can see the avatar photo of the user who created the post, their name, the date in which the post was created and the title and description of the photo
+
+#### Post page and Buttons
+![Likes Button]()
+![Comments Button]()
+![Post]
+
+The user is also able to see a list of the top 10 most followed profiles. Each profile will have a button next to it on desktop enabling the user to follow or unfollow the user if already following. If the logged in users profile is in the top 10, no button will appear for them to stop them being able to follow themselves. On mobile the user can see the top 4 most followed profiles. No follow button is available from this screen but by clicking on the avatar they will navigate to the users profile. 
+
+#### Popular profiles
+![Most popular profiles Desktop]()
+![Most popular profiles Mobile]()
+
+At the top of the page the user has 3 buttons they are able to interact with. One filters all the posts so they can only see posts they have liked, Feed filters the posts so thay can only see posts from users they are following and Add Post navigates the user to the create post page.
+
+#### Filtering buttons and add post
+![Liked]()
+![Feed]()
+![Add post]()
+
+There is a search field that enables users to input text and search for a key word in the post / username. There is a delay when rendering the results to minimise network requests and imporve user experience. 
+
+#### Search input
+![Search]()
+
+Infinite scrolling has been encorporated to prevent the posts being paginated. When the post cound excedes 10 the user will be able to continue scrolling and the posts will be dynamically loaded.
+
+
+
+
 <!-- ### About me content
 
 This section informs the user about my journey and my goals. It sets the tone for what the website is about and what they can expect. This section has a contact me button which links to a contact for page and a return to top of page button to save the user scrolling up.
