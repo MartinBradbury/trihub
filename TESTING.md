@@ -560,7 +560,7 @@ The tests were carried out on the goals component, performance component, posts 
 
 <br>
 
-
+<details>
 <summary>Issues</summary>
 
 ### Known and unresolved issues
@@ -590,4 +590,6 @@ As students, we're not expected to fix the following npm audit errors identified
 There are a total of 138 vulnerabilities (1 low, 80 moderate, 49 high, 8 critical).
 
 ### fixed issues
+
+</details>
 
