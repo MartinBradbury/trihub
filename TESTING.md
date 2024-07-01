@@ -79,3 +79,22 @@ A detailed breakdown of the project's user stories categorized into various epic
 
 </details>
 <br>
+
+## Validator Testing
+
+### JSX
+
+I have used jsx-Prettier and EsLint throughout the development to check that my JSX and Javascript meets the standards for clean code. All code returned no errors.
+
+### CSS
+
+CSS was tested with W3c CSS Validator. All rests came back with no errors. [W3C CSS Validator](http://jigsaw.w3.org/css-validator/validator)
+![CSS Validation](/src/assets/readme/cssvalidation.png)
+
+### Python
+
+All Python files were validated with pep8 and corrected to ensure there were no errors found.
+
+
+
+

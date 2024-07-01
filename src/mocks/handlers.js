@@ -1,5 +1,5 @@
-const baseURL = "https://trihub-api-0d6dd53f4e6b.herokuapp.com/";
 import { rest } from "msw";
+const baseURL = "https://trihub-api-0d6dd53f4e6b.herokuapp.com/";
 
 export const handlers = [
   rest.get(`${baseURL} dj-rest-auth/user/`, (req, res, ctx) => {

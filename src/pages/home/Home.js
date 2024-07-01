@@ -5,7 +5,7 @@ import bgimg1 from "../../assets/triathlon.jpg";
 import bgimg2 from "../../assets/triathlonbike.jpg";
 import bgimg3 from "../../assets/bicycles.jpg";
 import bgimg4 from "../../assets/triathleteswim.jpg";
-import Footer from "../../components/Footer";
+
 
 const Home = () => {
   return (
