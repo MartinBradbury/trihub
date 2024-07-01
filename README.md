@@ -160,87 +160,88 @@ Performance tracking is at the heart of TriHub. Users can log their performances
 - Access to Latest Information and Resources: Users expect the platform to keep them informed about industry trends, training articles, nutrition advice, and performance enhancement tips. This ensures they remain up-to-date with the latest knowledge and practices in the sport.
 - Accessibility for All Abilities: Users, regardless of their experience level or physical condition, expect the platform to be welcoming and inclusive. This includes offering guidance for newcomers and ensuring that advanced features are accessible to those seeking more specialized training and support.
 
-<!-- 
+
 
 ## Epics and User Stories
 
 1.  Epic: User Registration:
-    -   User Story 1: As a new user, I want to register on the website so that I can share my experiences and contribute to the community.
-    -   User Story 2: As a registered user, I want to be able to upload my images, write about my experiences and like / comment on posts.
+    -   User Story 1: As a new user, I want to register on the website so that I can access the site content, share my experiences and contribute to the community.
+    -   User Story 2: As a registered user, I want to be able to upload my images, write about my experiences, like / comment on posts, create performances, set a goal and recieve a custom training plan based on my requirements.
 
-2.  Epic: Route Planning and Sharing:
-    -   User Story 1: As a user, I want to view detailed interactive maps of the routes the site admin has taken while completing the Wainwrights. Descriptions about the route including difficulty as well as videos to add a more visual representation of the route. I want to be able to download and use the route.
-    -   User Story 2: As a user, I want to share my own photos and experiences with the community, so that others can see my journey.
+2.  Epic: Performances:
+    -   User Story 1: As a user, I want to view other performances by users and be able to sort the performances by event or user.
+    -   User Story 2: As a user, I want to be able to create a performance and delete one of my own performances.
 
 3.  Epic: Community Interaction:
-    -   User Story 1: As a user, I want to contact the website owner directly or leave messages on their routes and photos.
+    -   User Story 1: As a user, I want to be able to produce posts and upload photos to share my experiences.
     -   User Story 2: As a user, I want to interact with other community members through comments and forums, so that I can share my experiences and learn from others.
-    -   User Story 3: As a user, I want to be able to delete my account and all the posts / images I have left on the website. 
+    -   User Story 3: As a user, I want to be able to delete my posts and all comments associated with it. 
 
-4.  Epic: Educational Content and Resources:
-    -   User Story 1: As a user, I want to access educational content about the Lake District and the Wainwrights the site owner has completed, so that I can deepen my understanding and appreciation of the area.
-    -   User Story 2: As a user, I want to find resources for planning my walks, such as interactive maps of the site owners routes with all relevant information needed about the routes taken so that I can explore the Lake District more efficiently.
+4.  Epic: Training Plans:
+    -   User Story 1: As a user, I want to be able to access custom training plans based on my creteria specified in my goal.
+    -   User Story 2: As a user, I want to be able to change my training plan by updateing my requirements in the goal section
 
-5.  Epic: Promotion of the Lake District:
-    -   User Story 1: As a user, I want to discover new walks and destinations in the Lake District, so that I can plan my next adventure.
-    -   User Story 2: As a user, I want to share my experiences and images of the Lake District with others, so that I can promote the area and inspire more people to visit.
+5.  Epic: Promotion Triathlon:
+    -   User Story 1: As a user, I want to be able to interact with other triathletes of all abilities and share my experiences. 
+    -   User Story 2: As a user, I want to be able to seek support from other triathletes, build my knowledge and share my experiences of the sport.
 
 ##  As site Admin:
 
 6.  Epic: Database and Admin Setup:
-    -   Full backend CRUD on Routes, Images and comments.
-    -   Approve posts, images and comments.
-    -   Create route posts so users are able to see the routes I have taken.
-    -   I can flag potential posts and images that are sensitive.
-    -   I can respond to contact requests and mark as read.
+    -   Full backend CRUD on Events, Posts, Comments, Goals and performances.
+    -   CRUD Training plans that users have available to them.
+    -   CRUD Events that users are able to select from when loggin a performance.
+    -   CRUD user accounts and details. 
 
-7.  Epic: Routes and Images pages:
-    -   Read other users comments and view their uploaded photos.
-    -   Edit comments I have made, route blogs made and images uploaded.
-    -   Delete my route posts, comments and images.
 
 ##  Features:
 
 ### Nav bar
 
-A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon is functional on tablets too up to and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are: 'About' - Which takes you to the homepage, 'Routes' - Navigates to the routes page, 'Gallery' - which navigates to the photo gallery page, 'Logout' - if already logged in, 'Register' - Navigates to signup page and 'Login' - Which enables an existing user to login. The title is also clickable and navigates to the about page. The Nav bar also indicated to the user if they are signed in or not and remain sticky to the top of the window.
+A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon that is functional on tablets too up to and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are dependant on if the user is logged in or not. When the user is not logged in the links available are: 'Home' - Which takes you to the homepage, 'Sign in' - Navigates to the sign in page and 'Sign up' - which navigates to the sign up page. When a user is logged in the links available are: 'Home' - Navigates tot he home page, 'Community' - Navigates to the community post page, 'Performance' - Navigates to the performance page, 'My Plan' - Navigates to the goal setting and training plan page, 'Sign Out' - Enables the use to be able to sign out, 'Avatar Image' - Default or uploaded image of the user that navigates to the profile page. 
 
 #### Desktop Navigation
-![Desktop navbar](/readme_imgs/navbar/navbarD.png)
+![Desktop navbar]()
 
 #### Mobile Navigation
-![Mobile burger navigation button](/readme_imgs/navbar/navbarmburger.png)
-![Mobile dropdown navigation menu](/readme_imgs/navbar/navbarmdrop.png)
+![Mobile burger navigation button]()
+![Mobile dropdown navigation menu]()
 
-#### Signed in status
-![Not signed in](/readme_imgs/navbar/navbarnotlogged.png)
-![Signed in](/readme_imgs/navbar/navbarlogged.png)
+#### Avatar when signed in
+![Default Profile Picture]()
+![Uploaded Profile Picture]()
 
-### Hero image Carousel
+### Hero video / Home Page Content
 
-The hero image is a carousel of 3 images the site admin has the opportunity to change at any point in Django admin. The carousel can rotates each image on all devices or can be manually invoked by clicking the left or right arrow.
+The hero image is a background video that auto playes on site load muted. It is fully responsive on mobile and desktop and fills the viable area. The video has a filter to enable the site logo and text to be positioned on top and stand out. The remaining content on the home page comprises of responsive card elements that contain a background image and information detailing to the user what is available on the site.
 
-#### Carousel Desktop
-![Carousel images Desktop](/readme_imgs/Carousel/carouseld.png)
+#### Hero Video Desktop
+![Hero video Desktop](/readme_imgs/Carousel/carouseld.png)
 
-#### Carousel Mobile
-![Carousel images mobile](/readme_imgs/Carousel/carouselm.png)
+#### Hero Video Mobile
+![Hero video mobile](/readme_imgs/Carousel/carouselm.png)
 
-#### Admin control of carousel images
-![Admin Control of Carousel](/readme_imgs/Carousel/Carouseladmin.png)
+#### Home Page Content Desktop
+![Home Page Content]()
 
-### About me cards
+#### Home Page Content Mobile
+![Home Page Content]()
 
-The mid section of the homepage (about page) comprises of 3 cards with a heading a description. These cards inform the user what they will find in each of these sections and help to draw their attention using imagery of what they are likely to find in each section. The whole card is clickable and links to the corresponding page in the website.
 
-#### About cards Desktop
-![About card links desktop](/readme_imgs/aboutcards/aboutcardsd.png)
+### Register / Sign in
 
-#### About cards Mobile
-![About card links mobile](/readme_imgs/aboutcards/aboutcardm.png)
-![About card links mobile](/readme_imgs/aboutcards/aboutcardm2.png)
+Available in the nav bar on on mobile and desktop is the sign in / register nav links. This navigates the user to a sign in page where if they have an account, they can type in their username and password to log in. Once logging in they are redirected back to the home page and the nav bar will change to allow the user to access all the site content. If the sigin in unsuccessful, the user will be given a message detailing what the issue was with their sign in attempt. 
+The sign up section takes users to a page where they are asked to input their username, password and confirm password. The username is unique and the user will be informed if that username already exists. The password is case sensitive and has a requirement to make sure the password is comprehensive enough. If any of these creteria are not met, the user will be presented with a message informing them. Once registered the user will be directed to the sign in page. 
 
-### About me content
+#### Sign in page Desktop
+![Sign in desktop Navigation]()
+![Sign in desktop]()
+
+#### Sign in page Mobile
+![Sign in mobile dropdown]()
+![Sign in mobile]()
+
+<!-- ### About me content
 
 This section informs the user about my journey and my goals. It sets the tone for what the website is about and what they can expect. This section has a contact me button which links to a contact for page and a return to top of page button to save the user scrolling up.
 
