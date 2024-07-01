@@ -94,6 +94,10 @@ CSS was tested with W3c CSS Validator. All rests came back with no errors. [W3C 
 ### Python
 
 All Python files were validated with pep8 and corrected to ensure there were no errors found.
+![Linter no errors](/src/assets/readme/linternoerrors.png)
+
+Profile serializer generated a line too long error. I was unable to break the line without breaking the code function.
+![Profile servializer error](/src/assets/readme/Profilesserializererr.png)
 
 
 

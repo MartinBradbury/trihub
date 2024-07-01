@@ -337,7 +337,7 @@ Here you can find my initial ERD (Entity Relationship Diagram). This got modifie
 
 ### Testing
 
-For the test results and solved issues, we refer to the [TESTING.md file]()
+For the test results and solved issues, we refer to the [TESTING.md file](/TESTING.md)
 
 #### Known and unresolved issues
 
