@@ -473,7 +473,9 @@ I tested the application on multiple mobile devices. The application rendered as
 
 ### Custom Automated Testing
 
-In addition to the manuel testing, I created some automated tests to test my code. these tests check the modals, views and serializers used on the backend.
+In addition to the manuel testing, I created some automated tests to test my custom code. These tests check the modals, views and serializers used on the backend.
+The tests were carried out on the goals component, performance component, posts component and training plan component. 
+23 automated tests were carried out, all which were set to fail initially and then corrected to pass. All 23 tests carried out passed.
 
 #### Preparation and setup
 
@@ -490,4 +492,40 @@ In addition to the manuel testing, I created some automated tests to test my cod
 - This method is called after each test method to clean up the test environment.
 - Logs out the user.
 - Deletes all User and Post instances to ensure a clean state for the next test.
+
+![Automated testing on api](/src/assets/readme/automatedtest.png)
+
+#### Executed automatic test cases and results
+
+<details>
+<summary>Goals</summary>
+
+| Test | Description  | Expected Outcome  | Result | Comment |
+|------|------------- | ------            | ------- |--------|
+| Can list goal authenticated | test_can_list_goals_authenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+| Cannot create goal unauthenticated | test_cannot_create_goals_unauthenticated(self): | The test was successfull with a status code of 403 FORBIDDEN.    | PASS   |         |
+| Can create goal if authenticated | test_user_can_create_goals_when_authenticated(self): | The test was successfull with a new goal created.    | PASS   |         |
+ 
+ </detail>
+
+<br>
+
+<details>
+
+<summary>Performances</summary>
+
+| Test | Description  | Expected Outcome  | Result | Comment |
+|------|------------- | ------            | ------- |--------|
+| Can list events unauthenticated | test_can_list_events_unauthenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+| Can list events authenticated | test_can_list_events_authenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+| Specific user can create event | test_specific_user_can_create_Events(self): | The test was successfull with a new event created.    | PASS   |         |
+| Can list performances unauthenticated | test_can_list_userperformances_unauthenticated(self): | The test was successfull with a 200 OK.    | PASS   |         |
+| Can list performances authenticated | test_can_list_userperformances_authenticated(self): | The test was successfull with a 200 OK.    | PASS   |         |
+| Can create performance authenticated | test_user_can_create_performance(self): | The test was successfull new performance created    | PASS   |         |
+| Cannot create performance if not authenticated | test_non_auth_cannot_create_peformance(self): | The test was successfull with a 403 FORBIDDEN.    | PASS   |         |
+| Cannot create performance in future | test_user_cannot_create_performance_in_future(self): | The test was successfull with a 400 BAD_REQUEST.    | PASS   |         |
+ 
+
+
+ 
 
