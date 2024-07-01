@@ -156,7 +156,7 @@ const PerformanceCreateForm = () => {
         <Form onSubmit={handleSubmit}>
           <Row>
             <Col className="py-2 p-0 p-md-2 text-center" lg={12}>
-              <img src={logo} alt="Logo" className="w-100" />
+              <img src={logo} alt="Triathletes on bikes" className="w-100" />
               <Container className={appStyles.Content}>{textFields}</Container>
             </Col>
             <Col
