@@ -114,7 +114,7 @@ function SignInForm() {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
       >
-        <Image className={styles.Image} src={img} />
+        <Image className={styles.Image} src={img} alt="Triathletes running to the sea" />
       </Col>
     </Row>
   );

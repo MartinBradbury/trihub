@@ -112,8 +112,8 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 | Community    | 69          | 90            | 78             | 100 |
 | Performances | 99          | 90            | 78             | 100 |
 | My Plan      | 91          | 95            | 78             | 100 |
-| Profile      | 98          | 90            | 96             | 92  |
-| Register     | 98          | 95            | 96             | 100 |
+| Profile      | 97          | 90            | 78             | 100  |
+| Sign In      | 98          | 95            | 96             | 100 |
 
 </details>
 <br>
