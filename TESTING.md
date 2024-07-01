@@ -505,8 +505,8 @@ The tests were carried out on the goals component, performance component, posts 
 | Can list goal authenticated | test_can_list_goals_authenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
 | Cannot create goal unauthenticated | test_cannot_create_goals_unauthenticated(self): | The test was successfull with a status code of 403 FORBIDDEN.    | PASS   |         |
 | Can create goal if authenticated | test_user_can_create_goals_when_authenticated(self): | The test was successfull with a new goal created.    | PASS   |         |
- 
- </detail>
+
+</detail>
 
 <br>
 
@@ -524,8 +524,68 @@ The tests were carried out on the goals component, performance component, posts 
 | Can create performance authenticated | test_user_can_create_performance(self): | The test was successfull new performance created    | PASS   |         |
 | Cannot create performance if not authenticated | test_non_auth_cannot_create_peformance(self): | The test was successfull with a 403 FORBIDDEN.    | PASS   |         |
 | Cannot create performance in future | test_user_cannot_create_performance_in_future(self): | The test was successfull with a 400 BAD_REQUEST.    | PASS   |         |
- 
+
+</detail>
+
+<br>
+
+<details>
+
+<summary>Posts</summary>
+
+| Test | Description  | Expected Outcome  | Result | Comment |
+|------|------------- | ------            | ------- |--------|
+| Can list posts authenticated | test_can_list_posts(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+| Logged in user can create posts | test_logged_in_user_can_create_post(self): | The test was successfull with a status code of 201 CREATED.    | PASS   |         |
+| Loggedout user cannot create posts | test_loggedout_user_cannot_create_post(self): | The test was successfull with 403 FORBIDDEN    | PASS   |         |
+| Can retrieve post with valid ID | test_can_retrieve_post_using_valid_id(self): | The test was successfull with a 200 OK.    | PASS   |         |
+| Cannot retrieve post with invalid ID | test_cannot_retrieve_post_using_invalid_id(self): | The test was successfull with a 404 NOT FOUND.    | PASS   |         |
+| User can update own post | test_user_can_update_own_post(self): | The test was successfull with a 200 OK   | PASS   |         |
+| User cannot update another users posts | test_user_cant_update_another_users_post(self): | The test was successfull with a 403 FORBIDDEN.    | PASS   |         |
+
+</detail>
+
+<br>
+
+<details>
+
+<summary>Training Plans</summary>
+
+| Test | Description  | Expected Outcome  | Result | Comment |
+|------|------------- | ------            | ------- |--------|
+| Can list training plans unauthenticated | test_can_list_trainingplans_unauthenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+| Can list training plans authenticated | test_can_list_trainingplans_authenticated(self): | The test was successfull with a status code of 200 OK.    | PASS   |         |
+
+</detail>
 
 
- 
+## Issues
+
+### Known and unresolved issues
+
+### NPM Audit
+- **Disclaimer on npm Audit Issues**: </br>
+As students, we're not expected to fix the following npm audit errors identified in this project. The listed issues may involve breaking changes, which are beyond the scope of our current work. Here are the identified vulnerabilities:
+
+- **ansi-html** (<0.0.8): High severity - Uncontrolled Resource Consumption.
+- **axios** (0.8.1 - 0.27.2): Moderate severity - Cross-Site Request Forgery Vulnerability.
+- **braces** (<3.0.3): High severity - Uncontrolled Resource Consumption.
+- **browserslist** (4.0.0 - 4.16.4): Moderate severity - Regular Expression Denial of Service.
+- **ejs** (<=3.1.9): Critical severity - Template injection vulnerability.
+- **glob-parent** (<5.1.2): High severity - Regular Expression Denial of Service.
+- **immer** (7.0.0 - 9.0.5): Critical severity - Prototype Pollution.
+- **ip**: High severity - Server-Side Request Forgery.
+- **loader-utils** (2.0.0 - 2.0.3): Critical severity - Prototype Pollution.
+- **lodash.template**: High severity - Command Injection.
+- **minimatch** (<3.0.5): High severity - Regular Expression Denial of Service.
+- **node-forge** (<=1.2.1): High severity - Prototype Pollution.
+- **nth-check** (<2.0.1): High severity - Inefficient Regular Expression Complexity.
+- **postcss** (<8.4.31): Moderate severity - Line return parsing error.
+- **semver** (7.0.0 - 7.5.1): Moderate severity - Regular Expression Denial of Service.
+- **shell-quote** (<=1.7.2): Critical severity - Improper Neutralization of Special Elements.
+- **webpack-dev-middleware** (<=5.3.3): High severity - Path traversal.
+
+There are a total of 138 vulnerabilities (1 low, 80 moderate, 49 high, 8 critical).
+
+### fixed issues
 
