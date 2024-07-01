@@ -389,60 +389,213 @@ The design of the website was a simple contrast of a black background in certain
 
 ## Wireframes:
 
+The overall structure of the website was kept from initial inception of wireframes to the result of the website on submission for assessment. Slight alterations were made to the layout of the home page and performance page. These alterations were made to improve the feel of the website and UX. All initial wireframes can be seen below and were created using Adobe Xd. 
+
+### Home Page
+![Home Page Desktop]()
+![Home Page Mobile]()
+
+### Community page
+![Community Page Desktop]()
+![Community Page Mobile]()
+
+### Performance page
+![Performance Page Desktop]()
+![Performance Page Mobile]()
+
+### My Plan page
+![My Plan Page Desktop]()
+![My Plan Page Mobile]()
+
+### Profile Page
+![Profile Page Desktop]()
+![Profile Page Mobile]()
+
+## Database Schema:
+
+Here you can find my initial ERD (Entity Relationship Diagram). This got modified slightly as my project developed and I realised I had the opportunity to develop more features and fields to my databases.
+
+![ERD]()
+
+### Technologies Used
+
+#### Language
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) is used to structure the content of the application.
+- [CSS](https://en.wikipedia.org/wiki/CSS) is applied to style the application, enhancing the user interface..
+- [JavaScript](https://sv.wikipedia.org/wiki/Javascript) adds interactivity to web pages, improving the user experience.
+- [JSX](https://legacy.reactjs.org/docs/faq-build.html#gatsby-focus-wrapper) & [Intro JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
+
+#### Frameworks, libraries and dependencies
+
+- [Axios](https://axios-http.com/) - A promise-based HTTP client for both the browser and Node.js, Axios plays a key role in facilitating smooth communication between the frontend and backend. It was chosen for its ability to simplify HTTP requests to the REST API, eliminating the need to manually configure HTTP headers. Additionally, Axios supports 'interceptors', which are used to request a refresh token in the event of an HTTP 401 error. This feature enhances the user experience by keeping authenticated users signed in for up to 24 hours, rather than requiring them to sign in again after five minutes.
+- [CSS Validator 0.11.0]() - A tool used to validate CSS code. It ensures that all CSS written for the project adheres to standard syntax rules and best practices. Using this validator helps in maintaining clean and error-free stylesheets, which is essential for consistent and predictable rendering across different browsers.
+- [jwt-decode 3.1.2](https://www.npmjs.com/package/jwt-decode) - Used for decoding JSON web tokens, this tool has been essential for maintaining secure user authentication between the frontend and backend.
+- [Multiselect React Dropdown 2.0.25]() - This component is used to provide a multi-select dropdown functionality in React applications. It allows users to select multiple options from a dropdown menu, enhancing the user interface by making it more interactive and user-friendly. This component is particularly useful for forms and filtering data where multiple selections are needed. It was chosen mostly because it is fun to try out. The functionality was proven, and very handy but unfortunately a bug in our code base is stopping us from showcasing it to users. It is going to be used for the Hashtag feature.
+- [React 17.0.2](https://legacy.reactjs.org/docs/getting-started.html) - A JavaScript library for building user interfaces. An older version was chosen to stay inline with all other dependencies used as part of the Moments walkthrough which provided a base that this project was then modelled on.
+- [React bootstrap 1.6.6](https://react-bootstrap.github.io/) - A frontend framework built for react that provides common components. React bootstrap was chosen to help speed up the development of this project and allow time to focused elsewhere.
+- [React Router 5.3.4](https://github.com/remix-run/react-router) - This fully-featured routing library for React allowed for seamless site navigation, greatly enhancing the user experience.
+- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - Implemented to enable the loading of additional data sets upon scrolling, especially when data surpasses pagination limits.
+
+#### Tools and services
+
+- [Am I Responsive?](http://ami.responsivedesign.is/) is used to show the website image on a range of devices.
+- [Balsamiq](https://balsamiq.com/) is used to create wireframes.
+- [CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) is used to check code ensuring that my CSS is error-free and adheres to the latest web standards.
+- [DevTools](https://developer.chrome.com/docs/devtools) to help in edit pages on-the-fly and diagnose problems quickly.
+- [Favicon.io](https://favicon.io/) is used to create favicon.
+- [Font Awesome](https://fontawesome.com/) is used for the iconography on the website.
+- [Git](https://git-scm.com/) is used for version control.
+- [Gitpod](https://gitpod.io) streamlines your development process by providing a pre-configured, cloud-based development environment that's instantly ready for coding.
+- [Github](https://github.com/) is essential for version control, allowing you to track changes, collaborate with others (if applicable), and secure online code storage.
+- [Google Dev Tools](https://developers.google.com/web/tools) is used during testing, debugging and styling.
+- [Google Fonts](https://fonts.google.com/) is a catalog of free, open-source fonts. Used for typography.
+- [Heroku](https://www.heroku.com) ia a platform for deploying and hosting web applications.
+- [Markup Validation Service](https://validator.w3.org/) is used to check code ensuring that my HTML is error-free and adheres to the latest web standards.
+- [NVDA](https://www.nvaccess.org/download/), NonVisual Desktop Access is a free and open-source, portable screen reader for Microsoft Windows.
+
+### Testing
+
+For the test results and solved issues, we refer to the [TESTING.md file]()
+
+#### Known and unresolved issues
+
+
+### Deployment
+
+
+Version Control
+
+The site was created using the Gitpod editor and pushed to github to the remote repository ‘trihub’.
+The following git commands were used throughout development to push code to the remote repo:
+
+- `git add <file>` - This command was used to add the file(s) to the staging area before they are committed.
+- `git commit -m “commit message”` - This command was used to commit changes to the local repository queue ready for the final step.
+- `git push` - This command was used to push all committed code to the remote repository on github.
+
+
+#### Heroku Deployment
+
+
+ To deploy the project to Heroku
+ 
+
+**Preparing the Application**
+
+- Create and add the 'Procfile' to your application's root directory `echo web: node index.js > Procfile`. Heroku relies on this file to determine how to run your application, ensuring the correct setup of your web server. Use commands like web: `gunicorn PROJ_NAME.wsgi` in the 'Procfile' to instruct Heroku on starting your web server with Gunicorn
+- Ensure you have a requirements.txt file listing all project dependencies.
+- Set up necessary configuration variables in Heroku setting tab > Config Vars (eg. SECRET_KEY, DATABASE_URL, etc.).
+- In your app's 'settings.py' add Heroku to ALLOWED_HOSTS
+
+**Initial set-up**
+
+- Sign up for a [Heroku](https://heroku.com/) account at Heroku's website.
+- Download and install the Heroku Command Line Interface (CLI) to interact with Heroku from your local machine.
+- Or use Heroku Web interface.
+
+**Create Heroku App**
+
+- Sign in or sign up to [Heroku](https://heroku.com/).
+- Click the button that says "Create new app."
+- Enter a unique app name.
+- Choose your region from the dropdown menu.
+- Click the "Create app" button.
+- Scroll further down on the page, select Add Buildpack. The buildpacks will install further dependencies that are not included in the 'requirements.txt'. <br>
+  It's crucial to arrange the build packs correctly! First, choose Python and then Node.js. If they're not in this sequence, you can reorder them by dragging.
+
+**Deployment**
+
+- Deploy by either push your code to Heroku or by connecting your GitHub repository to Heroku or using the Heroku CLI to deploy your application.
+- (if applicable) Run database migrations using the Heroku CLI.
+- For deploying this project, we're using GitHub as our method. After choosing GitHub, make sure to confirm the connection. Then, search for your repository name and once Heroku finds your repository - click "connect"
+- Scroll down to the section "Automatic Deploys".
+- Click "Enable automatic deploys" or choose "Deploy branch" and manually deploy.
+- Click "Deploy branch" wait for the app to be built. Once this is done, a message should appear letting us know that the app was successfully deployed.
+- Click the button "View" to see the app.
+
+**Final Steps**
+
+- Enable the Web Dyno, make sure the web dyno is up and running after deployment.
+- Open your application from the Heroku dashboard or using the CLI command heroku open.
+
+For more detailed instructions and troubleshooting, visit the [official Heroku Dev Center](https://devcenter.heroku.com/).
+
+
+
+#### Local Deployment
+
+
+How to clone:
+
+
+Cloning a GitHub repository creates a local copy on your machine, allowing you to sync between the two locations. Here are the steps:
+
+- Navigate to the GitHub Repository you want to clone to use locally.
+- Click on the code drop down button.
+- Click on HTTPS.
+- Copy the repository link to the clipboard.
+- Open your IDE of choice (git must be installed for the next steps). 
+- Navigate to the directory where you want the clone to be created.
+- Type `git clone`, and then paste the URL you copied previously. Press Enter to create your local clone.
+
+Install Dependencies:
+
+`npm install`
+
+Run Application:
+
+`npm start`
+
+How to Fork
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. In order to protect the main branch while you work on something new, essential when working as part of a team or when you want to experiment with a new feature, you will need to fork a branch.
+
+- Log in (or sign up) to Github.
+- Go to the selected repository.
+- Click the Fork button in the top right corner and select create a fork.
+- One can change the name of the fork and add description
+- Choose to copy only the main branch or all branches to the new fork.
+- Click Create a Fork. A repository should appear in your GitHub
+
+### Credits
+
+#### Content
+
+List of content
+
+Throughout the development of trihub, I utilized a variety of resources to ensure the platform is robust, user-friendly, and engaging. Below is a list of documentation that have been instrumental in crafting the features and functionality of trihub:
+
+- [Favicon, credited to](https://www.flaticon.com/free-icons/photography") Photography icons created by Vactor area- Flaticon
+- Logo used was created at [Looka](https://looka.com/dashboard)
+- [React Multiselect dropdown](https://www.npmjs.com/package/multiselect-react-dropdown), this library is used for handling hashtags. It helps keep the codebase cleaner and more maintainable.
+- **Bootstrap**: Used for styling and responsive design, making the site accessible on a variety of devices - [Bootstrap documentation](https://getbootstrap.com/).
+- **Sources of inspiration and guidance in general**:
+  - This resources is only available to enrolled students at The Code Institute:
+    - The Code Institute Diploma in Full Stack Software Development (Advanced Front-End) Walk-through project Moments (frontend)
+  - [React](https://react.dev/learn) A goto place to learn.
+  - [Django Rest framework](https://www.django-rest-framework.org/) A got place to learn
+  - [Django & React Tutorial](https://youtu.be/JD-age0BPVo?si=vLYojx9J_rD8ZKyU), Tech with Tim, also a goto net source for inspo.
+- **Testing**: Used to learn how to create test cases
+  - [How to write test cases for Django Rest Framework Applications](https://rajansahu713.medium.com/mastering-the-art-of-django-test-cases-fa7b0322c9fb)
+  - [Django REST framwork, Testing](https://www.django-rest-framework.org/api-guide/testing/#testingDjango)
+  - [django project, testing](https://docs.djangoproject.com/en/3.2/topics/testing/)
+  - [Getting started with testing in Python](https://realpython.com/python-testing/)
+
+
+#### Acknowledgements
+
+
+I would like to thank!
+
+
+- My immediate and extended family, as well as my friends, who support and cheer me on!
+- Code Institutes Tutor Support service, their help has been a source of immense relief when in total panic! Also yet another channel to gain more knowhow from.
+- My mentor []()
+
 
 
 <!-- 
 
-
-##  Wireframes:
-
-The overall structure of the website was kept from initial inception of wireframes to the result of the website on submission for assessment. Slight alterations were made to the layout of the about page and wainwrights page. These alterations were made to improve the feel of the website and UX. All initial wireframes can be seen below and were created using Adobe Xd. 
-
-### About page
-
-#### Desktop
-![About Desktop](/readme_imgs/wireframes/aboutd.png)
-
-#### Mobile
-![About Mobile](/readme_imgs/wireframes/aboutm.png)
-
-### Gallery page
-
-#### Desktop
-![Gallery Desktop](/readme_imgs/wireframes/gallery.png)
-
-#### Mobile
-![Gallery Mobile](/readme_imgs/wireframes/gallerym.png)
-
-### Routes page
-
-#### Desktop
-![Routes Desktop](/readme_imgs/wireframes/Routes.png)
-
-#### Mobile
-![Routes Mobile](/readme_imgs/wireframes/Routesm.png)
-
-### Routes detail
-
-#### Desktop
-![Routes detail Desktop](/readme_imgs/wireframes/Routedetail.png)
-
-#### Mobile
-![Routes detail Mobile](/readme_imgs/wireframes/routesdetailm.png)
-
-### Gallery Detail
-
-#### Desktop
-![Gallery Detail Desktop](/readme_imgs/wireframes/imagedetail.png)
-
-#### Mobile
-![Gallery Detail Mobile](/readme_imgs/wireframes/gallerydetailm.png)
-
-##  Database Schema:
-
-Here you can find my initial ERD (Entity Relationship Diagram). This got modified significantly as my project developed and I realised I had the opportunity to develop more features and fields to my databases.
-
-![ERD](/readme_imgs/ER%20Diagram.jpeg)
 
 ##  Technology Used:
 ### Languages and framework:
