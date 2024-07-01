@@ -322,7 +322,45 @@ The button at the top of the page now changes to change goal giving users the fu
 
 ### Create a Goal Page
 
+On this page users are able to create a goal for an upcoming event they may be doing and from their selected creteria, a training plan will be generated for them. The users input event date, hours per week and plan length they want. They can also add any additional comments such as target time or the event details. 
+Validation on the event date ensure the user isnt doing an event within 3 weeks and no suitable training plan can be produced for that time frame. When the goal is submitted the user is redirected back to their My Plan page where they will be able to see the goal and the generated training plan. If the user clicks cancel, no data is saved and they will be returned to the My Plan page.
 
+#### Goal Form and vlidation
+![Create Goal Form]()
+![Create Goal Validation]()
+
+### Profile Page
+
+On the profile page the user can see their profile details including: Avatar photo, posts, followers, following, and all details created by the user. Below their details will be a list of all the posts the user has created for quick and easy access. They will also be able to see the popular profiles section as they could in the comminity page. 
+
+#### Profile Page display
+![Profile Page Desktop]()
+![Profile Page Mobile]()
+
+The user is also able to edit their profile details, change username and change password.
+
+#### Edit profile dropdown
+![Edit Profile details]()
+
+### Edit Profile Page
+
+Here the user can edit their profile details and update them. They can select their avatar image, update first and last name, add an email address, date of birth, fitness level and gender. The user is also able to create a bio for other users to see. If the user saves the updated details they will be redirected to their profile page, if they click cancel, no info is changed and they will be redirected to profile page. 
+
+#### Edit Profile Form
+![Edit Profile Form]()
+
+### Change Username
+
+This option alows users to change their username. This will change their username on all elements on the site. 
+
+#### Change username Form
+![Change Username Form]()
+
+### Change Password
+
+This option allows users to change their password. 
+#### Change Password Form
+![Change Password form]()
 
 
 <!-- ### About me content
