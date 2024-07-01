@@ -108,11 +108,11 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 
 | Page         | Performance | Accessibility | Best Practices | SEO |
 | ------------ | ----------- | ------------- | -------------- | --- |
-| Home         | 64          | 100           | 78             | 100 |
-| Post Detail  | 59          | 100           | 78             | 100 |
-| Post Form    | 99          | 100           | 78             | 100 |
-| Profile page | 84          | 100           | 96             | 100 |
-| Login        | 98          | 90            | 96             | 92  |
+| Home         | 98          | 92            | 78             | 100 |
+| Community    | 69          | 90            | 78             | 100 |
+| Performances | 99          | 90            | 78             | 100 |
+| My Plan      | 91          | 95            | 78             | 100 |
+| Profile      | 98          | 90            | 96             | 92  |
 | Register     | 98          | 95            | 96             | 100 |
 
 </details>
