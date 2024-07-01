@@ -363,227 +363,24 @@ This option allows users to change their password.
 ![Change Password form]()
 
 
-<!-- ### About me content
+### Other User Profile Page
 
-This section informs the user about my journey and my goals. It sets the tone for what the website is about and what they can expect. This section has a contact me button which links to a contact for page and a return to top of page button to save the user scrolling up.
+If you click on the avatar of another user, the logged in user is able to view all the details set by this user and what posts they have produced. They will also be able to follow or unfollow the user. 
 
-#### About me desktop
-![About me desktop](/readme_imgs/aboutme/aboutmed.png)
+#### Other users Profile
+![Other user profile]()
 
-#### About me Mobile
-![About me mobile](/readme_imgs/aboutme/aboutmem.png)
+## Future Features
 
-#### Contact me button
-![Contact me button](/readme_imgs/aboutme/contact.png)
+1. Use a rich text editor to anyable further customisability of the rendered training plan content.
+2. Use more advanced filtering for training plans to make them even more customisable. Such as fitness level, gender, discipline strengths or weaknesses.
+3. Integration of strave or garmin connect for users to upload their performances to trihub.
+4. Break each session down into individual session and allowing the user to add a comment after each session based on their performance. 
+5. Enable the user to customise the generated training plan to further fit their requirements. 
 
-#### Return to top button
-![Return to top](/readme_imgs/aboutme/uparrow.png)
+<!-- 
 
-### Social media footer
 
-The footer has links to social media where users are able to interact with me further. All the buttons are clickable and open the social media in a new window or tab.
-
-#### Social media footer desktop
-![Social media footer desktop](/readme_imgs/footer/sociald.png)
-
-#### Social media footer mobile
-![Social media footer mobile](/readme_imgs/footer/socialm.png)
-
-### Contact me
-
-This section offers the user the opportunity to send me a message directly. All fields are required for the user to send me a message and the user is informed when the message has been sent successfully with a Django message. These features work on all device sizes and are fully responsive. 
-
-#### Contact me desktop
-![Contact me Desktop](/readme_imgs/contact/contactfd.png)
-![Contact me Desktop must complete field](/readme_imgs/contact/contactfdcomplete.png)
-![Contact me Desktop django message](/readme_imgs/contact/contactfdmessage.png)
-
-#### Contact me mobile
-![Contact me Mobile](/readme_imgs/contact/contactfm.png)
-
-### Routes page
-
-The routes page is created by the admin and displays the different routes I have completed. Each route is displayed in a clickable card which takes them to the specific page for that route. The route card has a image of the route taken, the heading for the route and a snippet of the description of the route. It also has the date the route was posted and by who. On desktop the route cards are displayed in pairs with a max of 4 cards per page. On mobile devices the route cards will be displayed in a column with a max of 4 per page and the most recent on top. Pagination is used on both mobile and desktop to navigate between pages of the route cards and the most recent route will be displayed first. 
-
-#### Route cards Desktop
-![Route card Desktop](/readme_imgs/route/routed.png)
-
-#### Route cards Mobile
-![Route card Mobile](/readme_imgs/route/routem.png)
-
-#### Pagination Desktop
-![Pagination Desktop](/readme_imgs/route/paginationd.png)
-
-#### Pagination Mobile
-![Pagination Desktop](/readme_imgs/route/paginationm.png)
-
-### Route detail page
-
-When the user selects a route and clicks on the card they are taken to the routes detail page. This page highlights the route title at the top and below on desktop has a fully interactive os map which has been imported from Outdoor active with the route I have taken. This map can be zoomed and tracked around to the users desire. On mobile and overlaying the map on desktop there is a brief summary of the route statistics on the map with a button offering the user to learn more. (Not there is an interactive map on mobile when the user clicks the learn more).
-
-#### Interactive map
-![Interactive map](/readme_imgs/Routedetail/mapd.png)
-
-#### Interactive map zoomed
-![Interactive map zoomed](/readme_imgs/Routedetail/mapdz.png)
-
-Once clicked a pop up will appear with all the details and statistics of the hike. It will give the user a larger interactive map, a 3D generated video of the route taken and statistics. It will also give the user the opportunity to download the GPX, KML, FIT file of my route so they are able to navigate from it from any navigation device they may have. This pop up can be operated by clicking the cross on the top right corner. 
-
-#### Learn more page
-![Learn More](/readme_imgs/Routedetail/mapdetail.png)
-
-#### deeper statistics
-![statistics](/readme_imgs/Routedetail/mapstats.png)
-
-#### Download navigation files
-![Download file](/readme_imgs/Routedetail/mapdownlaod.png)
-![Download file](/readme_imgs/Routedetail/mapdownload2.png)
-
-#### Close popup
-![Close popup](/readme_imgs/Routedetail/mapdexit.png)
-
-#### Difficulty rating
-
-Back on the route detail page there is a difficulty rating where font awesome icons have been used and a score is given for the difficulty. 
-![Difficulty Rating](/readme_imgs/Routedetail/routedifficulty.png)
-
-#### Like button and counter
-
-There is a like button and like counter. The like button can only be interacted with if the user is logged in. 
-![Like button](/readme_imgs/Routedetail/like%20button.png)
-![Like button liked](/readme_imgs/Routedetail/likebuttonliked.png)
-![Like button must be logged in](/readme_imgs/Routedetail/likebuttonneedlogin.png)
-
-#### Hike description
-There is a description of my experiences on this particular hike. 
-![Hike Description](/readme_imgs/Routedetail/routedescription.png)
-
-#### 3D Hike Video
-
-There is an embedded youtube video of a 3D representation of my hike. 
-![3D Hike Video](/readme_imgs/Routedetail/3dvideo.png)
-![3D Hike Video](/readme_imgs/Routedetail/3dvideoplaying.png)
-
-#### Comment form
-
-There is a comment form where the user is able to leave a message about this particular route. The user must be logged in to comment. 
-![Comment form](/readme_imgs/Routedetail/commentform.png)
-![Comment message accepted](/readme_imgs/Routedetail/commentwaiting.png)
-![Comment must be logged in](/readme_imgs/Routedetail/commentformneedlogin.png)
-
-When commented the user will receive a message saying their comment is awaiting approval and they will see a faded message. They are able to edit this message and / or delete the message. When the select edit the original message will appear in the body and the button will change to update. Django messages will inform the user when these tasks have been completed successfully. 
-
-![Comment Edit](/readme_imgs/Routedetail/Commenteditbody.png)
-![Comment Edit message](/readme_imgs/Routedetail/editcomment.png)
-![Comment Delete popup](/readme_imgs/Routedetail/deletecomment.png)
-![Comment Delete message](/readme_imgs/Routedetail/deleted%20message.png)
-
-#### Message counter and Approved messages
-
-There is a message counter that shows how many messages there are on this route of which have been approved. Approved messages appear in black text and detail the author and time posted. 
-![Comment Counter and approved](/readme_imgs/Routedetail/commentcounterapproved.png)
-
-### Gallery
-
-The gallery section displays images uploaded by the site admin or the users. The images appear in cards with a preview of the image at the top of the card and the heading and comment below it. The cards also display when the image was posted and by who. The image cards are clickable to reveal more detail. On desktop the cards are displayed in pairs with a maximum of 4 per page. On mobile the images are displayed in a column with a max of 4 per page. The page has pagination to navigate between the gallery pages. 
-
-#### Image cards Desktop
-![Image gallery desktop](/readme_imgs/gallery/galleryd.png)
-
-#### Image cards Mobile
-![Image gallery mobile](/readme_imgs/gallery/gallerym.png)
-
-#### Pagination
-![Pagination](/readme_imgs/gallery/gallerypagi.png)
-
-#### Gallery image detail
-
-On clicking on the image card the user will be taken to the specific picture page. On desktop the image will be larger and in more detail. Just like on the route page, logged in users will be able to like the image, see the like counter and also comment on the image. On mobile devices the user will be able to like and comment on the image but it will not display larger due to screen size. 
-
-#### Larger Image
-![Larger Image](/readme_imgs/gallery/gallerylarge.png)
-
-#### Like button
-![Like button](/readme_imgs/gallery/likebuttongallery.png)
-
-#### Comment Section
-![Comment section](/readme_imgs/gallery/commentgallery.png)
-
-#### Upload a photo
-
-On the gallery page logged in users are able to upload photos. The upload photo uses a JavaScript widget from cloudinary which presents users with many ways to upload the photo. The widget also takes care of image formatting but only allows users to upload photos less than 10mb. The users have to then give the photo a title and brief description which will be displayed on the gallery card and detail. These are required fields. Once submitted the users are presented with a message informing them they the image has been submitted and waiting approval. 
-
-#### Upload image form
-![Upload Image](/readme_imgs/gallery/uploadformd.png)
-
-#### Upload image widget
-Desktop:
-![upload widget desktop](/readme_imgs/gallery/widget.png)
-
-Mobile:
-![upload widget mobile](/readme_imgs/gallery/widgetm.png)
-
-#### Image uploading
-![Uploading image](/readme_imgs/gallery/widgetupload.png)
-
-#### Image input fields
-![Upload input field](/readme_imgs/gallery/uploadinput.png)
-
-#### Image message success
-![Upload Success](/readme_imgs/gallery/uploadsuccess.png)
-
-### Wainwrights
-
-The wainwrights page is a simple page that just details all the Wainwrights I have completed. It comprises of cards 4 per row on desktop and stacked vertically on mobile. Each card has the image of the Wainright and a description of the Wainright with its height. The card also identifies if I have completed this Wainwright or not. These cards are not clickable. 
-
-#### Wainwrights Desktop
-![Wainwrights desktop](/readme_imgs/wainwrights/wainwrightsd.png)
-
-#### Wainwrights Mobile
-![Wainwrights mobile](/readme_imgs/wainwrights/wainwrightsm.png)
-
-### Login, Logout, Register
-
-The user login, logout and register page and styled for the purpose of the website but have all the same functionality that Django Auth brings. Users are required to create an account with a password that meets the minimum requirements. All fields need to be completed with the exception of the email field. The Logout form logs the user out of that session. The login for asks for the users username and password. After successfully logging in, logging out or registering the users are taken to the about page.
-
-#### Login Desktop
-![Login Page desktop](/readme_imgs/user/logind.png)
-
-#### Login Mobile
-![Login Page mobile](/readme_imgs/user/loginm.png)
-
-#### Logout Desktop
-![Logout Desktop](/readme_imgs/user/logoutd.png)
-
-#### Log out Mobile
-![log out mobile](/readme_imgs/user/logoutm.png)
-
-#### Register Desktop
-![Register Desktop](/readme_imgs/user/registerd.png)
-
-#### Register mobile
-![Register mobile](/readme_imgs/user/registerm.png)
-
-### Admin Control
-
-The Django Admin control enables the admin to approve images, and comments as well as creating routes and updating the carousel images on the about page easily. Filter methods have been added to easily see posts and actions have been added to enable to admin to approve or delete multiple posts quickly and easily. 
-
-#### Admin Control
-![Admin Control](/readme_imgs/admin/admin%20control.png)
-
-#### Admin filters
-![Admin filters](/readme_imgs/admin/adminfilters.png)
-
-#### Admin actions
-![Admin Actions](/readme_imgs/admin/adminactions.png)
-
-##  Future Features:
-
-1.  Enable users to post their own routes that people can comment on.
-2.  Allow users to reply to specific comments in the comments section rather than them just appearing in a list.
-3.  Utilize the flagged function I put into the database so if the user deletes their account, all posts are deleted that are flagged for sensitive information but any other comments remain but only the username is removed. This will enable consistency when following convocations. 
-4.  All the wainwrights will be detailed in the wainwrights section with a key at the top of the page to go directly to the wainwright. 
-5.  The wainwright cards are clickable to reveal more information, map grid ref and interactive map.
 
 ##  Design:
 
