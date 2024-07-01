@@ -45,7 +45,7 @@ function PerformanceList({ message = "" }) {
           <Form.Control
             type="text"
             className="mr-sm-2"
-            placeholder="Search Performances by user"
+            placeholder="Search Performances by user or event"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
           />

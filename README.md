@@ -378,25 +378,21 @@ If you click on the avatar of another user, the logged in user is able to view a
 4. Break each session down into individual session and allowing the user to add a comment after each session based on their performance. 
 5. Enable the user to customise the generated training plan to further fit their requirements. 
 
+
+## Design: 
+
+The design of the website was a simple contrast of a black background in certain features or white, and white or orange text. The orange text and buttons are a feature across the whole site. 
+
+### Background: 
+### Orange Button:
+### Orange Text:
+
+## Wireframes:
+
+
+
 <!-- 
 
-
-
-##  Design:
-
-The design of the website was simple contrast of a dark black background and lighter white text. This enabled the cards to stand out. 
-
-### White Text: rgba(255, 255, 255, 0.692);
-![Text colour](/readme_imgs/Color/text.png)
-
-### Black: Black
-![Background](/readme_imgs/Color/black.png)
-
-### Hover: rgba(255, 255, 255, 0.2);
-![Hover Colour](/readme_imgs/Color/hover.png)
-
-### Card Background colour: rgba(255, 255, 255, 0.879);
-![Card background](/readme_imgs/Color/card.png)
 
 ##  Wireframes:
 
