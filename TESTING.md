@@ -390,6 +390,8 @@ I tested the application on multiple mobile devices. The application rendered as
 
 </details>
 
+<br>
+
 <details>
 <summary>The manual and automatic test cases are represented in a different view, more API-centric. Below is the detailed breakdown:</summary>
 <br>
@@ -467,3 +469,25 @@ I tested the application on multiple mobile devices. The application rendered as
 | Goal edit | PUT | Update the goal if the user is valid | Pass | |
 | Training Plan  | GET | Show the training plan specific to users goal | Pass | |
 | Training Change  | GET | Change the training plan if the user changes their goal | Pass | |
+
+
+### Custom Automated Testing
+
+In addition to the manuel testing, I created some automated tests to test my code. these tests check the modals, views and serializers used on the backend.
+
+#### Preparation and setup
+
+**setUp Method**:
+
+- This method is called before each individual test method to set up the necessary state.
+- It creates a user with the username 'adam' and the password 'pass'.
+- Logs in the created user.
+- Creates a post associated with the logged-in user.
+- Prepares the initial test environment.
+
+**tearDown Method**:
+
+- This method is called after each test method to clean up the test environment.
+- Logs out the user.
+- Deletes all User and Post instances to ensure a clean state for the next test.
+
