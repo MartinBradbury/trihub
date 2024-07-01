@@ -50,7 +50,7 @@ const Home = () => {
           </Col>
           <Col xs={12} sm={12} md={6} lg={12}>
             <Card className={styles.card}>
-              <Card.Img src={bgimg3} className="card-img-top" atl="Bikes Racked"/>
+              <Card.Img src={bgimg3} className="card-img-top" alt="Bikes Racked"/>
               <Card.Body className={styles.overlay}>
                 <Card.Title>
                   <h3>Custom Training Plans</h3>
@@ -61,7 +61,7 @@ const Home = () => {
           </Col>
           <Col xs={12} sm={12} md={6} lg={12}>
             <Card className={styles.card}>
-              <Card.Img src={bgimg4} className="card-img-top" atl="Triathlete swimming"/>
+              <Card.Img src={bgimg4} className="card-img-top" alt="Triathlete swimming"/>
               <Card.Body className={styles.overlay}>
                 <Card.Title>
                   <h3>Share your progress</h3>
