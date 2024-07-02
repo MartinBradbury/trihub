@@ -82,6 +82,31 @@ TriHub is a comprehensive platform dedicated to the triathlon community. It aims
     -   CRUD Events that users are able to select from when logging a performance.
     -   CRUD user accounts and details. 
 
+## Design: 
+
+The website's design employs a straightforward color scheme featuring either a black background with white or orange text, or vice versa. Throughout the entire site, orange text and buttons serve as a recurring element.
+
+### Background:  #ffffff 
+### Orange Button: #ed4300
+### Orange Text: #ed4300
+
+## Wireframes:
+
+From the initial design phase with wireframes through to the final version submitted for evaluation, the website's overall architecture remained consistent. Minor changes were introduced to the layout of the homepage and performance page to enhance the website's aesthetic and user experience. All the original wireframes, crafted using Adobe XD, are displayed below.
+
+### Home Page
+![Home Wireframe](/src/assets/readme/Home.png)
+
+### Community page
+![Community Wireframe](/src/assets/readme/Community.png)
+
+
+### Performance page
+![Performance Wireframe](/src/assets/readme/Performance.png)
+
+### My Plan page
+![My Plan Wireframe](/src/assets/readme/MyPlan.png)
+
 ##  Features:
 
 ### Nav bar
@@ -261,32 +286,6 @@ If you click on the avatar of another user, the logged in user is able to view a
 3. Facilitate integration with platforms like Starva or Garmin Connect, enabling users to share their performance data with trihub.
 4. Segment each workout into discrete sessions, permitting users to leave comments post-session based on their performance.
 5. Allow users to tailor the automated training plan to better align with their specific needs.
-
-## Design: 
-
-The website's design employs a straightforward color scheme featuring either a black background with white or orange text, or vice versa. Throughout the entire site, orange text and buttons serve as a recurring element.
-
-### Background:  #ffffff 
-### Orange Button: #ed4300
-### Orange Text: #ed4300
-
-## Wireframes:
-
-From the initial design phase with wireframes through to the final version submitted for evaluation, the website's overall architecture remained consistent. Minor changes were introduced to the layout of the homepage and performance page to enhance the website's aesthetic and user experience. All the original wireframes, crafted using Adobe XD, are displayed below.
-
-### Home Page
-![Home Wireframe](/src/assets/readme/Home.png)
-
-### Community page
-![Community Wireframe](/src/assets/readme/Community.png)
-
-
-### Performance page
-![Performance Wireframe](/src/assets/readme/Performance.png)
-
-### My Plan page
-![My Plan Wireframe](/src/assets/readme/MyPlan.png)
-
 
 ## Database Schema:
 
