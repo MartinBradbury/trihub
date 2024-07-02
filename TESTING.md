@@ -1,10 +1,10 @@
 ## Introduction
 
-This document encompasses the verification of the DRF-API backend and the React frontend.
+This document encompasses the verification and testing of the trihub(DRF api) backend and the React frontend.
 
 ## User Story Testing
 
-A detailed breakdown of the project's user stories categorized into various epics. Each epic outlines specific goals and how they are achieved, providing insights into the development process.
+A thorough dissection of the project's user stories, organized under distinct epics, offers a comprehensive overview of the development journey. Each epic delineates particular objectives and the methodologies employed to achieve them, offering valuable insights into the project's evolution.
 
 
 ### US and Epics
@@ -84,7 +84,7 @@ A detailed breakdown of the project's user stories categorized into various epic
 
 ### JSX
 
-I have used jsx-Prettier and EsLint throughout the development to check that my JSX and Javascript meets the standards for clean code. All code returned no errors.
+Throughout the development process, I employed jsx-Prettier and EsLint to ensure that my JSX and JavaScript adhered to the guidelines for clean coding practices. The analysis confirmed that all code complied with these standards, with no errors detected.
 
 ### CSS
 
@@ -103,7 +103,7 @@ Profile serializer generated a line too long error. I was unable to break the li
 
 ### Lighthouse
 
-I used Lighthouse to test all pages. Performance results were quite low, but this is to be expected when loading multiple images from an API, and sending lots of requests to another API. All other scores are good. If time allowed I would address some of the lower scores on both mobile and desktop. I could improve performance by changing all images to webp format and refining my css. This would be done in future development.
+Utilizing Lighthouse, I evaluated all pages of the website. The performance metrics were notably low, primarily due to the necessity of loading numerous images from an API and initiating a significant number of requests to another API. However, other scoring categories were satisfactory. Given sufficient time, I would address the lower scores observed on both mobile and desktop platforms. Enhancing performance could be achieved by converting all images to the WebP format and optimizing CSS. These improvements are planned for future development efforts.
 
 <details>
 <summary>Desktop</summary>
@@ -141,14 +141,14 @@ I used Lighthouse to test all pages. Performance results were quite low, but thi
 ## Manuel Device Testing
 
 ### Desktop Testing
-I tested the website on multiple desktop computers to ensure it was compatible with different browsers and operating systems. All testing returned the same result and the application functioned as in tended on all desktop devices. Below are the devices used for testing the desktop environment.
+To verify compatibility across various environments, I performed tests on multiple desktop computers, covering a range of browsers and operating systems. Consistent results indicated that the application operated as designed across all desktop devices. Please find listed below the specifications of the desktops used for this testing.
 
 - Alienware Aoura i9 (Windows 10 os / google chrome browser)
 - Lenovo Desktop i7 (Windows 10 os / microsoft edge browser)
 - Macbook air M2 (Mac OS / safari browser)
 
 ### Mobile Testing
-I tested the application on multiple mobile devices. The application rendered as intended and displayed correctly. I encountered an error however when trying to sign in which resulted in the user being sent back to the sign in page without being signed in. I discovered this was caused by a lack of SSL Certification and the browser not trusting the security of my site. I can overcome this by turning off security settings in the device browser settings. This is not idea and for future development I would look to add an SSL Certificate to ensure all browsers trust the application site. 
+I conducted testing on various mobile devices, and the application performed as expected, displaying correctly. Nonetheless, I encountered an issue during the sign-in process, which led to the user being redirected to the sign-in page without actually signing in. Investigation revealed that this problem stemmed from the absence of an SSL Certificate, causing the browser to distrust the site's security. While bypassing these security settings on the device could resolve the issue temporarily, this approach is not ideal. For future development, I aim to implement an SSL Certificate to ensure that all browsers recognize and trust the application's site.
 
 - iphone 15 Pro (Safari)
 - iphone 14 (safari)
@@ -260,17 +260,17 @@ I tested the application on multiple mobile devices. The application rendered as
 
 | Feature        | Action  | Expected Outcome                                        | Result | Comment |
 | -------------- | ------- | ------------------------------------------------------- | ------ | ------- |
-| Upload Button  | Display | The upload Button appears                               | Pass   |         |
-| Upload Button  | Click   | Opens a file selector window                            | Pass   |         |
-| Title Input    | Display | The title input has a label making its purpose clear    | Pass   |         |
+| Upload Button  | Display | The upload button is visibly presen                     | Pass   |         |
+| Upload Button  | Click   | Initiates a file selection dialog                       | Pass   |         |
+| Title Input    | Display | The title input field clearly indicates its purpose     | Pass   |         |
 | Title Input    | Input   | The user can type in the Title field                    | Pass   |         |
 | Content Input  | Display | The content input has a label making its purpose clear  | Pass   |         |
 | Content Input  | Input   | The user can type in the content field                  | Pass   |         |
 | Category Input | Display | The category input has a label making its purpose clear | Pass   |         |
-| Category Input | Click   | The user can select category the menu                   | Pass   |         |
+| Category Input | Click   | Permits the user to select a category from a dropdown   | Pass   |         |
 | Cancel Button  | Click   | Close the form without any changes                      | Pass   |         |
-| Submit Button  | Click   | Submit the form and create/update the post              | Pass   |         |
-| Submit Button  | Click   | Close the form and redirect the user to the post feed   | Pass   |         |
+| Submit Button  | Click   | Submits the form, creating or updating the post         | Pass   |         |
+| Submit Button  | Click   | Closes the form and redirects the user to the post feed | Pass   |         |
 
 </details>
 
@@ -392,7 +392,7 @@ I tested the application on multiple mobile devices. The application rendered as
 <br>
 
 
-## The automatic test cases are represented below with a more API-centric view. Below is the detailed breakdown:
+## The automatic test cases are depicted below, focusing on an API-centric perspective. Following is a detailed analysis:
 
 
 ### DRF API
@@ -471,9 +471,7 @@ I tested the application on multiple mobile devices. The application rendered as
 
 ### Custom Automated Testing
 
-In addition to the manual testing, I created some automated tests to test my custom code. These tests check the modals, views and serializers used on the backend.
-The tests were carried out on the goals component, performance component, posts component and training plan component. 
-23 automated tests were carried out, all which were set to fail initially and then corrected to pass. All 23 tests carried out passed.
+Beyond manual testing, I developed automated tests specifically for my custom code. These tests focus on the modals, views, and serializers implemented on the backend. The testing covered the goals component, performance component, posts component, and training plan component. A total of 23 automated tests were executed, starting with a failure status and subsequently adjusted to pass. All 23 tests concluded with successful outcomes.
 
 #### Preparation and setup
 
@@ -551,9 +549,31 @@ The tests were carried out on the goals component, performance component, posts 
 
 ### NPM Audit
 - **Disclaimer on npm Audit Issues**:
-As students, we're not expected to fix the following npm audit errors identified in this project. The listed issues may involve breaking changes, which are beyond the scope of our current work. Here are the identified vulnerabilities:
+Given our status as students, we are not tasked with resolving the npm audit errors highlighted in this project. These issues might pertain to breaking changes that exceed the boundaries of our current assignments. Below are the vulnerabilities that have been identified:
 
 There are a total of 137 vulnerabilities (1 low, 80 moderate, 48 high, 8 critical).
 
+### NPM Audit Critical, High, Moderate
 
+#### Critical Vulnerabilities
+- ejs: Template injection vulnerability and lack of pollution protection.
+- immer: Prototype Pollution.
+- loader-utils: Prototype pollution and Regular Expression Denial of Service (ReDoS).
+- shell-quote: Improper handling of input leading to command injection.
 
+#### High Severity Vulnerabilities
+- ansi-html: Uncontrolled Resource Consumption.
+- axios: Cross-Site Request Forgery (CSRF).
+- braces: Uncontrolled resource consumption.
+- chokidar: Various dependencies affected by braces and micromatch vulnerabilities.
+- ip: SSRF improper categorization in isPublic.
+- lodash.template: Command Injection.
+- micromatch: Dependency of braces and various other packages.
+- minimatch: ReDoS vulnerability.
+- node-forge: Prototype Pollution, URL parsing issues, and cryptographic signature verification issues.
+- nth-check: Inefficient Regular Expression Complexity.
+- postcss: Line return parsing error.
+- semver: Vulnerable to Regular Expression Denial of Service.
+
+#### Moderate Severity Vulnerabilities
+- browserslist: Regular Expression Denial of Service.
