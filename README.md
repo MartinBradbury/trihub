@@ -275,24 +275,18 @@ The website's design employs a straightforward color scheme featuring either a b
 From the initial design phase with wireframes through to the final version submitted for evaluation, the website's overall architecture remained consistent. Minor changes were introduced to the layout of the homepage and performance page to enhance the website's aesthetic and user experience. All the original wireframes, crafted using Adobe XD, are displayed below.
 
 ### Home Page
-![Home Page Desktop]()
-![Home Page Mobile]()
+![Home Wireframe](/src/assets/readme/Home.png)
 
 ### Community page
-![Community Page Desktop]()
-![Community Page Mobile]()
+![Community Wireframe](/src/assets/readme/Community.png)
+
 
 ### Performance page
-![Performance Page Desktop]()
-![Performance Page Mobile]()
+![Performance Wireframe](/src/assets/readme/Performance.png)
 
 ### My Plan page
-![My Plan Page Desktop]()
-![My Plan Page Mobile]()
+![My Plan Wireframe](/src/assets/readme/MyPlan.png)
 
-### Profile Page
-![Profile Page Desktop]()
-![Profile Page Mobile]()
 
 ## Database Schema:
 
