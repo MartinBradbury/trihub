@@ -495,8 +495,8 @@ The tests were carried out on the goals component, performance component, posts 
 
 #### Executed automatic test cases and results
 
-<details>
-<summary>Goals</summary>
+
+#### Goals
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
@@ -504,13 +504,8 @@ The tests were carried out on the goals component, performance component, posts 
 | Cannot create goal unauthenticated | test_cannot_create_goals_unauthenticated(self): | The test was successfull with a status code of 403 FORBIDDEN.    | PASS   |         |
 | Can create goal if authenticated | test_user_can_create_goals_when_authenticated(self): | The test was successfull with a new goal created.    | PASS   |         |
 
-</detail>
 
-<br>
-
-<details>
-
-<summary>Performances</summary>
+#### Performances
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
@@ -523,13 +518,8 @@ The tests were carried out on the goals component, performance component, posts 
 | Cannot create performance if not authenticated | test_non_auth_cannot_create_peformance(self): | The test was successful with a 403 FORBIDDEN.    | PASS   |         |
 | Cannot create performance in future | test_user_cannot_create_performance_in_future(self): | The test was successful with a 400 BAD_REQUEST.    | PASS   |         |
 
-</detail>
 
-<br>
-
-<details>
-
-<summary>Posts</summary>
+#### Posts
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
@@ -541,22 +531,13 @@ The tests were carried out on the goals component, performance component, posts 
 | User can update own post | test_user_can_update_own_post(self): | The test was successful with a 200 OK   | PASS   |         |
 | User cannot update another users posts | test_user_cant_update_another_users_post(self): | The test was successful with a 403 FORBIDDEN.    | PASS   |         |
 
-</detail>
 
-<br>
-
-<details>
-
-<summary>Training Plans</summary>
+#### Training Plans
 
 | Test | Description  | Expected Outcome  | Result | Comment |
 |------|------------- | ------            | ------- |--------|
 | Can list training plans unauthenticated | test_can_list_trainingplans_unauthenticated(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
 | Can list training plans authenticated | test_can_list_trainingplans_authenticated(self): | The test was successful with a status code of 200 OK.    | PASS   |         |
-
-</detail>
-
-</br>
 
 
 ## Issues
