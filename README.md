@@ -8,43 +8,47 @@
 
 Link to live website: [trihub](https://trihub-e2e28f386783.herokuapp.com/)
 
-## Purpose of the project
+## Project Overview
 
-The purpose of TriHub is to make the ultimate destination for all things triathlon. TriHub is designed to bring together triathletes of all abilities, fostering a vibrant community where everyone can share, learn, and grow together. My platform offers a unique blend of features tailored to meet the diverse needs of its members, whether you're a seasoned pro or just starting your triathlon journey.
+TriHub is a comprehensive platform dedicated to the triathlon community. It aims to unite triathletes of all skill levels, providing a space for sharing, learning, and growing together. Our platform offers a mix of features designed to cater to the diverse needs of our members, from seasoned professionals to those just beginning their triathlon journey.
 
-I want TriHub to foster the power of community. My platform allows users to share images and comments, creating a space where triathletes can connect, inspire, and motivate each other. Whether you've just completed your first sprint or are gearing up for an Ironman, their voice matters here. Users can share their triumphs, challenges, and insights to build a supportive network that goes beyond the finish line.
+### Core Objectives
 
-Performance tracking is at the heart of TriHub. Users can log their performances, analyse their progress, and set new goals with my intuitive tools. Users who are looking to improve, TriHub offers customizable training plans designed to fit your schedule and ability level. Tailor your training to reach your peak performance, whether you're aiming for a personal best or simply enjoying the journey.
-
-## User experience (UX)
-
-### Key project goals
-
-- Create a Unified Community Platform: Develop a comprehensive platform that fosters a strong sense of community among triathletes of all abilities. This involves designing features that encourage interaction, such as image and comment sharing, to facilitate connections between users.
-- Implement Performance Tracking Features: Integrate robust tools for logging and analysing triathlon performances. These tools should allow users to record details of their swims, bikes, and runs, enabling them to track their progress over time and set new goals based on past achievements.
-- Offer Customizable Training Plans: Provide users with access to customizable training plans that cater to their individual schedules and abilities. These plans should be adaptable to fit into a user's existing commitments, emphasizing flexibility and personalization.
-- Enable Goal Setting and Achievement Sharing: Incorporate features that enable users to set personal goals and share their achievements within the community. This encourages motivation and competition among users, driving them to push their limits and strive for excellence.
-- Facilitate Social Interaction and Support: Design the platform to promote social interactions and support among users. This includes following other users' progress, cheering them on during races, and engaging in discussions related to triathlon training and performance.
-- Stay Updated with Industry Trends and Tips: Ensure the platform remains relevant by providing users with access to the latest training articles, nutrition advice, and performance enhancement tips. This keeps the community engaged and informed, supporting continuous learning and improvement.
-- Ensure Accessibility for All Abilities: Make sure the platform is accessible and welcoming to triathletes of all abilities, from beginners to experienced racers. This includes offering guidance for newcomers and ensuring that advanced features are available to those seeking more specialized training and support.
+- Foster a vibrant community for triathletes to share experiences, insights, and support.
+- Provide robust performance tracking tools to analyze progress and set new goals.
+- Deliver customizable training plans tailored to individual schedules and abilities.
+- Encourage social interaction and support among users.
+- Keep the community informed with the latest training tips and industry trends.
+- Ensure accessibility for triathletes of all abilities.
 
 ### Target Audience
 
-- Competitive Athletes: This group includes both amateur and professional triathletes who are actively participating in triathlon competitions. They are interested in improving their performance, tracking their progress, and accessing personalized training plans to enhance their skills across swimming, cycling, and running disciplines.
-- Casual Participants: Individuals who participate in triathlons occasionally or are considering taking up the sport fall into this category. They might be looking for a supportive community to share their experiences, get inspired by others, and perhaps find training partners or mentors.
-- Spectators and Fans: People who follow triathlon events, either locally or globally, form a significant portion of the audience. They may be interested in staying updated with the latest news, results, and stories from the triathlon world. This group could also include those who are intrigued by the sport and are considering getting involved in some capacity.
-- Newcomers to Triathlon: Beginners who are just starting their triathlon journey would benefit from educational content, beginner-friendly training plans, and a supportive community to ease their transition into the sport.
-- Industry Professionals: Companies and brands associated with triathlon equipment, clothing, and accessories, as well as coaches, trainers, and sports nutritionists, could be interested in reaching out to this audience for promotional purposes or to offer services.
+- Competitive Athletes: Seeking to improve performance and access personalized training plans.
+- Casual Participants: Interested in triathlon and looking for a supportive community.
+- Spectators and Fans: Keen to stay updated with triathlon events and stories.
+- Newcomers to Triathlon: Needing guidance and support as they begin their journey.
+- Industry Professionals: Looking to engage with the triathlon community.
 
-### User requirements and expectations
+## User experience (UX)
 
-- Extensive Community Involvement: Users seek a platform that simplifies the sharing of photos and feedback, encouraging connections among triathletes, exchanging stories, and providing mutual support.
-- Thorough Performance Monitoring: Users require functionalities to document and scrutinize their triathlon outcomes, encompassing aspects like swimming, cycling, and running. This tool should empower them to monitor advancements and pinpoint areas needing enhancement over time.
-- Tailored Training Regimens: Users anticipate having adaptable training programs that adjust according to their unique timetables and skill sets. These regimens must be versatile enough to blend smoothly with their current responsibilities.
-- Objective Setting and Triumph Display: Users wish for a platform that empowers them to define personal objectives and broadcast their accomplishments within the community. This function should inspire motivation and rivalry among members.
-- Societal Interaction and Backing: Users look forward to tracking others' progress, offering encouragement during competitions, and participating in dialogues centered around triathlon preparation and performance. This communal element is vital for cultivating a supportive environment.
-- Availability of Current Insights and Tools: Users expect the platform to keep them abreast of industry developments, educational articles, dietary advice, and strategies to boost performance. This guarantees they stay updated with the most recent insights and techniques in the sport.
-- Universal Accessibility: Regardless of their proficiency level or physical state, users expect the platform to be inviting and inclusive. This encompasses offering assistance to beginners and making advanced features available to those interested in more specialized training and support.
+### Key features
+
+- **Unified Community Platform:** Encourages interaction through image and comment sharing.
+- **Performance Tracking:** Allows users to log and analyze triathlon performances.
+- **Customizable Training Plans:** Offers plans that adapt to individual schedules and abilities.
+- **Goal Setting and Achievement Sharing:** Empowers users to set goals and share achievements.
+- **Social Interaction and Support:** Promotes engagement and support among users.
+- **Industry Updates:** Provides access to the latest training articles and tips.
+
+### User Requirements and Expectations
+
+- **Extensive Community Involvement:** Simplified sharing and feedback mechanisms.
+- **Thorough Performance Monitoring:** Detailed tools for tracking triathlon outcomes.
+- **Tailored Training Regimens:** Adaptable training programs to fit individual schedules.
+- **Objective Setting and Triumph Display:** Features for setting goals and sharing achievements.
+- **Societal Interaction and Backing:** Opportunities for social interaction and support.
+- **Availability of Current Insights and Tools:** Regular updates on industry developments and tips.
+- **Universal Accessibility:** A welcoming platform for triathletes of all abilities.
 
 
 ## Epics and User Stories
