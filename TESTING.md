@@ -99,7 +99,7 @@ All Python files were validated with pep8 and corrected to ensure there were no 
 Profile serializer generated a line too long error. I was unable to break the line without breaking the code function.
 ![Profile serializes error](/src/assets/readme/Profilesserializererr.png)
 
-Code Institute Python Linter ![CILinter](https://pep8ci.herokuapp.com/)
+Code Institute Python Linter: [CILinter](https://pep8ci.herokuapp.com/)
 
 
 
