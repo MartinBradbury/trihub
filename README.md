@@ -441,6 +441,7 @@ During the creation of trihub, I leveraged an assortment of resources to guarant
 
 - [Favicon, credited to](https://www.flaticon.com/free-icons/photography") Photography icons created by Vactor area- Flaticon
 - [React Multiselect dropdown](https://www.npmjs.com/package/multiselect-react-dropdown), this library is used for handling hashtags. It helps keep the codebase cleaner and more maintainable.
+- [Background Video](https://www.youtube.com/watch?v=MQj9wIJb7o0), This is the source of the background video used on the home page. The youtube channel that has the origional video is TeamWass and the video is used for educational purposes in the development of this project. 
 - **Bootstrap**: Used for styling and responsive design, making the site accessible on a variety of devices - [Bootstrap documentation](https://getbootstrap.com/).
 - **Sources of guidance in general**:
   - This resources is only available to enrolled students at The Code Institute:
