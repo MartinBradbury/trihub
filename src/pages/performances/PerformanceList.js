@@ -33,7 +33,12 @@ function PerformanceList({ message = "" }) {
       }
     };
     setHasLoaded(false);
-    fetchPerformances();
+    const timer = setTimeout(() => {
+      fetchPerformances();
+    }, 1000);
+    return () => {
+      clearTimeout(timer)
+    };
   }, [query]);
 
   return (
