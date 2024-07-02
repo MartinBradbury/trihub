@@ -38,13 +38,13 @@ Performance tracking is at the heart of TriHub. Users can log their performances
 
 ### User requirements and expectations
 
-- Comprehensive Community Engagement: Users expect a platform that facilitates easy sharing of images and comments, allowing them to connect with fellow triathletes, share experiences, and receive support.
-- Detailed Performance Tracking: Users need tools to log and analyse their triathlon performances, including swim, bike, and run metrics. This feature should allow them to track their progress over time and identify areas for improvement.
-- Customizable Training Plans: Users expect access to customizable training plans that adapt to their individual schedules and abilities. These plans should be flexible enough to integrate seamlessly with their existing commitments.
-- Goal Setting and Achievement Sharing: Users desire a platform that supports setting personal goals and sharing achievements within the community. This feature should foster motivation and competition among users.
-- Social Interaction and Support: Users anticipate being able to follow other users' progress, cheer them on during races, and engage in discussions related to triathlon training and performance. This social aspect is crucial for building a supportive community.
-- Access to Latest Information and Resources: Users expect the platform to keep them informed about industry trends, training articles, nutrition advice, and performance enhancement tips. This ensures they remain up-to-date with the latest knowledge and practices in the sport.
-- Accessibility for All Abilities: Users, regardless of their experience level or physical condition, expect the platform to be welcoming and inclusive. This includes offering guidance for newcomers and ensuring that advanced features are accessible to those seeking more specialized training and support.
+- Extensive Community Involvement: Users seek a platform that simplifies the sharing of photos and feedback, encouraging connections among triathletes, exchanging stories, and providing mutual support.
+- Thorough Performance Monitoring: Users require functionalities to document and scrutinize their triathlon outcomes, encompassing aspects like swimming, cycling, and running. This tool should empower them to monitor advancements and pinpoint areas needing enhancement over time.
+- Tailored Training Regimens: Users anticipate having adaptable training programs that adjust according to their unique timetables and skill sets. These regimens must be versatile enough to blend smoothly with their current responsibilities.
+- Objective Setting and Triumph Display: Users wish for a platform that empowers them to define personal objectives and broadcast their accomplishments within the community. This function should inspire motivation and rivalry among members.
+- Societal Interaction and Backing: Users look forward to tracking others' progress, offering encouragement during competitions, and participating in dialogues centered around triathlon preparation and performance. This communal element is vital for cultivating a supportive environment.
+- Availability of Current Insights and Tools: Users expect the platform to keep them abreast of industry developments, educational articles, dietary advice, and strategies to boost performance. This guarantees they stay updated with the most recent insights and techniques in the sport.
+- Universal Accessibility: Regardless of their proficiency level or physical state, users expect the platform to be inviting and inclusive. This encompasses offering assistance to beginners and making advanced features available to those interested in more specialized training and support.
 
 
 ## Epics and User Stories
@@ -159,7 +159,7 @@ Logged in users are able to create a post if the click on the add post button on
 
 ### Performances Page
 
-The performances page lists all the performances uploaded by users. The performance lists the event, their time, any comments and the user that created the performance. There is a search field at the top of the performances enabling users to search based on username or event, infinite scrolling is present on the performances and if the performance was created by the logged in user, they will have the option to delete the performance. At the bottom of the performances is a button enabling users to create a performance. 
+The Performances page displays every performance contributed by users. Each listing includes the event name, participant's time, any associated comments, and the creator's identity. A search bar located at the top allows users to filter entries by username or event name. The page supports infinite scrolling for easy navigation through performances. If the logged-in user is the creator of a performance, they will have the option to remove it. Lastly, a button positioned at the top of the page enables users to initiate the creation of a new performance.
 
 #### Performance features
 ![Performance List](/src/assets/readme/perlist.png)
@@ -169,7 +169,9 @@ The performances page lists all the performances uploaded by users. The performa
 
 ### Create a Performance
 
-This page allows users to create a performance. They can add content about the event, the date the completed the event, which event it was and their performance time. The completed date will only allow a date of today or before to stop users creating a performance in the future that has not happened yet. Once the performance is created, the user will be directed back to the performance page where their performance will not be visible. The cancel button navigates the user back to the performance page.
+This page facilitates the creation of a new performance entry. Users can input details regarding the event, including the date of completion, the specific event name, and their recorded performance time. To prevent users from entering future performances that haven't occurred, the system restricts the completed date to today or earlier dates only.
+
+Upon successfully creating the performance, users are redirected back to the performance page, where their newly entered performance will ne visible. Clicking the cancel button will take users back to the performance page without saving any changes.
 
 #### Performance form and error handling
 ![Create Performance](/src/assets/readme/percreatform.png)
@@ -200,8 +202,9 @@ The button at the top of the page now changes to change goal giving users the fu
 
 ### Create a Goal Page
 
-On this page users are able to create a goal for an upcoming event they may be doing and from their selected criteria, a training plan will be generated for them. The users input event date, hours per week and plan length they want. They can also add any additional comments such as target time or the event details. 
-Validation on the event date ensure the user isn’t doing an event within 3 weeks and no suitable training plan can be produced for that time frame. When the goal is submitted the user is redirected back to their My Plan page where they will be able to see the goal and the generated training plan. If the user clicks cancel, no data is saved and they will be returned to the My Plan page.
+On this page, users have the capability to establish a goal for an impending event and, based on their chosen parameters, a personalized training plan will be formulated for them. Users specify the event date, weekly training hours, and desired plan duration. Additionally, they can incorporate extra notes, such as targeted completion times or event specifics.
+
+A validation check on the event date ensures that users are not scheduling events within three weeks, during which a suitable training plan cannot be generated. Upon submitting the goal, users are redirected back to their "My Plan" page, where they can view both the goal and the corresponding training plan. Should the user choose to cancel, no information is retained, and they are taken back to the "My Plan" page.
 
 #### Goal Form and validation
 ![Create Goal Form](/src/assets/readme/creategoalform.png)
@@ -249,15 +252,15 @@ If you click on the avatar of another user, the logged in user is able to view a
 
 ## Future Features
 
-1. Use a rich text editor to enable further customisability of the rendered training plan content.
-2. Use more advanced filtering for training plans to make them even more customisable. Such as fitness level, gender, discipline strengths or weaknesses.
-3. Integration of Starva or Garmin connect for users to upload their performances to trihub.
-4. Break each session down into individual session and allowing the user to add a comment after each session based on their performance. 
-5. Enable the user to customise the generated training plan to further fit their requirements. 
+1. Implement a rich text editor to enhance customization options for the visual presentation of training plans.
+2. Introduce sophisticated filtering mechanisms for training plans to offer greater personalization, such as considering fitness levels, gender, and strengths or weaknesses in specific disciplines.
+3. Facilitate integration with platforms like Starva or Garmin Connect, enabling users to share their performance data with trihub.
+4. Segment each workout into discrete sessions, permitting users to leave comments post-session based on their performance.
+5. Allow users to tailor the automated training plan to better align with their specific needs.
 
 ## Design: 
 
-The design of the website was a simple contrast of a black background in certain features or white, and white or orange text. The orange text and buttons are a feature across the whole site. 
+The website's design employs a straightforward color scheme featuring either a black background with white or orange text, or vice versa. Throughout the entire site, orange text and buttons serve as a recurring element.
 
 ### Background:  #ffffff 
 ### Orange Button: #ed4300
@@ -265,7 +268,7 @@ The design of the website was a simple contrast of a black background in certain
 
 ## Wireframes:
 
-The overall structure of the website was kept from initial inception of wireframes to the result of the website on submission for assessment. Slight alterations were made to the layout of the home page and performance page. These alterations were made to improve the feel of the website and UX. All initial wireframes can be seen below and were created using Adobe Xd. 
+From the initial design phase with wireframes through to the final version submitted for evaluation, the website's overall architecture remained consistent. Minor changes were introduced to the layout of the homepage and performance page to enhance the website's aesthetic and user experience. All the original wireframes, crafted using Adobe XD, are displayed below.
 
 ### Home Page
 ![Home Page Desktop]()
@@ -289,9 +292,9 @@ The overall structure of the website was kept from initial inception of wirefram
 
 ## Database Schema:
 
-Here you can find my initial ERD (Entity Relationship Diagram). This got modified slightly as my project developed and I realised I had the opportunity to develop more features and fields to my databases.
+This is where you'll find my original Entity Relationship Diagram (ERD). It underwent some minor adjustments throughout the project's progression, particularly as I recognized opportunities to enhance the database with additional features and fields.
 
-![ERD]()
+![ERD](/src/assets/readme/trihub-apiERD.png)
 
 ### Technologies Used
 
@@ -336,10 +339,11 @@ For the test results and solved issues, we refer to the [TESTING.md file](/TESTI
 
 #### Known and unresolved issues
 
-- Mobile devices are unable to access the site content due to the requirement of an SSL Certification. Upon attempting to sign in, the user is redirected to the sign in page without signing in. 
-- Once desktop device tested was unable to create a performance due the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
-- When viewing a another user profile, when the follow and unfollow button is clicked, the counter does not always update without the manual page refresh.
-- Users are not able to add seconds manually to their performances. Seconds get automatically added as 00 after the performance is created.
+- Mobile users cannot access the website's content because it requires an SSL certificate. Attempting to log in redirects them to the login page without actually logging in.
+- A single desktop device encountered an issue creating a performance due to the presence of the AM/PM indicator in the time input field. This problem occurred on one desktop 
+  device using Google Chrome and could not be replicated on any other device.
+- When viewing someone else's profile and clicking the follow or unfollow button, the counter doesn't always update without manually refreshing the page.
+- Users cannot manually add seconds to their performances; instead, seconds are automatically set to 00 once the performance is created.
 
 ### Deployment
 
@@ -355,7 +359,6 @@ The following git commands were used throughout development to push code to the 
 #### Heroku Deployment
 
 To deploy the project to Heroku
-
 
 **Preparing the Application**
 
@@ -437,7 +440,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 List of content
 
-Throughout the development of trihub, I utilized a variety of resources to ensure the platform is robust, user-friendly, and engaging. Below is a list of documentation that have been instrumental in crafting the features and functionality of trihub:
+During the creation of trihub, I leveraged an assortment of resources to guarantee the platform's strength, ease of use, and appeal. Here follows a compilation of documentation that has played a pivotal role in shaping the features and capabilities of trihub:
 
 - [Favicon, credited to](https://www.flaticon.com/free-icons/photography") Photography icons created by Vactor area- Flaticon
 - [React Multiselect dropdown](https://www.npmjs.com/package/multiselect-react-dropdown), this library is used for handling hashtags. It helps keep the codebase cleaner and more maintainable.
@@ -456,4 +459,4 @@ Throughout the development of trihub, I utilized a variety of resources to ensur
 
 #### Acknowledgements
 
-Thank you to all who supported me on this project. My family have been a great support for me especially working late into the evening after a full days teaching. This project would not have been possible without their support.
+A heartfelt thank you extends to everyone who has been a part of this journey. My family's unwavering support has been indispensable, especially during the late-night hours following a day spent teaching. Without their steadfast backing, the realization of this project would not have been possible.

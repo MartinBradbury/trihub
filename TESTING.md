@@ -545,7 +545,7 @@ The tests were carried out on the goals component, performance component, posts 
 ### Known and unresolved issues
 
 - Mobile devices are unable to access the site content due to the requirement of an SSL Certification. Upon attempting to sign in, the user is redirected to the sign in page without signing in. 
-- Once desktop device tested was unable to create a performance due the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
+- One desktop device tested was unable to create a performance due the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
 - When viewing a another user profile, when the follow and unfollow button is clicked, the counter does not always update without the manual page refresh.
 - Users are not able to add seconds manually to their performances. Seconds get automatically added as 00 after the performance is created.
 
