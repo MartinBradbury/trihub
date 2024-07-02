@@ -336,6 +336,11 @@ For the test results and solved issues, we refer to the [TESTING.md file](/TESTI
 
 #### Known and unresolved issues
 
+- Mobile devices are unable to access the site content due to the requirement of an SSL Certification. Upon attempting to sign in, the user is redirected to the sign in page without signing in. 
+- Once desktop device tested was unable to create a performance due the field AM / PM being present in the time input field. This was only noted on one desktop device running google chrome. This error has not been able to be reproduced on any other device.
+- When viewing a another user profile, when the follow and unfollow button is clicked, the counter does not always update without the manual page refresh.
+- Users are not able to add seconds manually to their performances. Seconds get automatically added as 00 after the performance is created.
+
 ### Deployment
 
 Version Control
@@ -349,8 +354,8 @@ The following git commands were used throughout development to push code to the 
 
 #### Heroku Deployment
 
- To deploy the project to Heroku
- 
+To deploy the project to Heroku
+
 
 **Preparing the Application**
 
@@ -373,7 +378,7 @@ The following git commands were used throughout development to push code to the 
 - Choose your region from the dropdown menu.
 - Click the "Create app" button.
 - Scroll further down on the page, select Add Buildpack. The buildpacks will install further dependencies that are not included in the 'requirements.txt'.
-  It's crucial to arrange the build packs correctly! First, choose Python and then Node.js. If they're not in this sequence, you can reorder them by dragging.
+It's crucial to arrange the build packs correctly! First, choose Python and then Node.js. If they're not in this sequence, you can reorder them by dragging.
 
 **Deployment**
 
@@ -435,319 +440,20 @@ List of content
 Throughout the development of trihub, I utilized a variety of resources to ensure the platform is robust, user-friendly, and engaging. Below is a list of documentation that have been instrumental in crafting the features and functionality of trihub:
 
 - [Favicon, credited to](https://www.flaticon.com/free-icons/photography") Photography icons created by Vactor area- Flaticon
-- Logo used was created at [Looka](https://looka.com/dashboard)
 - [React Multiselect dropdown](https://www.npmjs.com/package/multiselect-react-dropdown), this library is used for handling hashtags. It helps keep the codebase cleaner and more maintainable.
 - **Bootstrap**: Used for styling and responsive design, making the site accessible on a variety of devices - [Bootstrap documentation](https://getbootstrap.com/).
-- **Sources of inspiration and guidance in general**:
+- **Sources of guidance in general**:
   - This resources is only available to enrolled students at The Code Institute:
-    - The Code Institute Diploma in Full Stack Software Development (Advanced Front-End) Walk-through project Moments (frontend)
+  - [CI Moments Walkthrough project](https://github.com/Code-Institute-Solutions/blog/tree/main/12_views_part_3/05_edit_delete) - The CI walkthrough repo was used and admended to suport the design and requirements of my project.
+  - [Cloudinary Documentation](https://cloudinary.com/) - The documentation and code in tutorial enabled me to embed the image upload widget into my project. I used the Javascript in my images.js file. 
   - [React](https://react.dev/learn) A go to place to learn.
   - [Django Rest framework](https://www.django-rest-framework.org/) A got place to learn
   - [Django & React Tutorial](https://youtu.be/JD-age0BPVo?si=vLYojx9J_rD8ZKyU), Tech with Tim, also a go to net source for inspo.
 - **Testing**: Used to learn how to create test cases
-  - [How to write test cases for Django Rest Framework Applications](https://rajansahu713.medium.com/mastering-the-art-of-django-test-cases-fa7b0322c9fb)
   - [Django REST framwork, Testing](https://www.django-rest-framework.org/api-guide/testing/#testingDjango)
   - [django project, testing](https://docs.djangoproject.com/en/3.2/topics/testing/)
   - [Getting started with testing in Python](https://realpython.com/python-testing/)
 
 #### Acknowledgements
 
-I would like to thank!
-
-- My immediate and extended family, as well as my friends, who support and cheer me on!
-- Code Institutes Tutor Support service, their help has been a source of immense relief when in total panic! Also yet another channel to gain more knowhow from.
-- My mentor []()
-
-
-<!-- 
-
-##  Technology Used:
-### Languages and framework:
-
-- [HTML5](https://developer.mozilla.org/en-US/docs/Learn/HTML "link to html mozilla documentation")
-  was used to create content and structure
-- [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS "link to css mozilla documentation")
-  was used to add custom styles
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript "link to javascript mozilla documentation") was used to dynamically reset the comment form if the reset button was clicked and to show a modal when the edit comment button was clicked
-- [Django](https://www.djangoproject.com/ "link to Django docs homepage") was the python framework used to develop the site
-
-### Database:
-
-- [PostgreSQL from ElephantSQL](https://www.elephantsql.com/ "link to elephantSQL") was used as the PostgreSQL database for this project.
-
-### Technologies and tools:
-
-- [GitPod Code](https://www.gitpod.io/ "link to Gitpod webpage") was used as the ide for this whole project.
-- [Cloudinary](https://cloudinary.com/ "link to cloudinary homepage") was used to host images.
-- [GitHub](https://github.com/ "link to github webpage") was used to store the code files, README files and assets
-- [Git](https://git-scm.com/ "link to official git website") was used as a version control software to commit and push the code to the GitHub repository
-- [Heroku](https://id.heroku.com/login "link to Heroku login") was used to deploy the project
-- [lucidcharts](https://www.lucidchart.com/pages/ "Link to lucidcharts") was used to make a diagram of the database schema and entity relationship diagrams.
-- [Prettier](https://prettier.io/ "link to official prettier website") was used as the default formatter in Gitpod IDE, for html and css files.
-- [Bootstrap](https://getbootstrap.com/ "link to official bootstrap website") was used to quickly layout, position and size critical website features
-- [Adobe Xd](https://www.adobe.com/home/ "link to official Adobe website") was used in early planning to map out wireframes
-- [Google Fonts](https://fonts.google.com/ "link to official google fonts website") was used to import fonts
-- [Font Awesome](https://fontawesome.com/ "link to official font awesome website") was used for all icons
-- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/ "Link to official chrome developer tools website") was used for lighthouse testing, debugging and consistently checking responsiveness
-- [W3C Markup Validator](https://validator.w3.org/ "link to official html validator") was used to validate all live html
-- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/ "link to official css validator") was used to validate CSS code
-- [JS Hint](https://jshint.com/ "link to official javascript validator") was used to validate JavaScript code
-- [Code Institute Python Linter](https://pep8ci.herokuapp.com/ "link to official python validator") was used to validate all python code
-- [Django Summernote](https://pypi.org/project/django-summernote/ "link to official summernote website") was used. This is a rich text editor plugin for Django
-- [Django Crispy Forms](https://pypi.org/project/django-crispy-forms/ "link to official crispy forms website") were used throughout the project to quickly create forms
-
-## Testing:
-
-### HTML Validation
-
-All HTML pages were tested with the [W3C HTML Validator](https://validator.w3.org/).
-
-#### HTML Result
-
-| page                   | validator                                                                                                                                | result |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------  | ------ |
-| about                  |  <details><summary>About Page</summary><img src="./readme_imgs/html/about.png"></details>                                                | PASS   |
-| gallery                |  <details><summary>Gallery Page</summary><img src="./readme_imgs/html/gallery.png"></details>                                            | PASS   |
-| wainwright             |  <details><summary>Wainwright Page</summary><img src="./readme_imgs/html/wainwrights.png"></details>                                     | PASS   |
-| Routes                 |  <details><summary>Routes</summary><img src="./readme_imgs/html/Routes.png"></details>                                                   | PASS   |
-| Gallery Detail         |  <details><summary>Gallery Detail</summary><img src="./readme_imgs/html/gallery detail.png"></details>                                   | PASS   |
-| Route Details          |  <details><summary>Register</summary><img src="./readme_imgs/html/routes details.png"></details>                                         | PASS   |
-| sign in page           |  <details><summary>Sign In</summary><img src="./readme_imgs/html/login.png"></details>                                                   | PASS   |
-| logout page            |  <details><summary>Sign Out</summary><img src="./readme_imgs/html/logout.png"></details>                                                 | PASS   |
-| sign up page           |  <details><summary>Register</summary><img src="./readme_imgs/html/signup.png"></details>                                                 | PASS   |
-
-### CSS Validation
-
-Custom CSS was put through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
-
-#### CSS Result
-
-![CSS validation](/readme_imgs/css/CSS%20validation.png)
-Pass
-
-### JS Validation
-
-JavaScript code in the comment.js and image.js file was put through the [JSHint Validator](https://jshint.com/).
-
-#### JS Result
-
-The js code for both files passed.
-
-#### Comment.js
-![JS validation comments](/readme_imgs/js/js%20comment.png)
-
-#### Images.js
-![JS Validation images](/readme_imgs/js/js%20image.png)
-
-
-### Python Validation
-
-All python code was put through the [CI Python Linter](https://pep8ci.herokuapp.com/).
-
-#### Python Result
-
-| File            | Validator                                                                                                                | Result |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------ | ------ |
-| About admin     |  <details><summary>About Models</summary><img src="./readme_imgs/linter/CI Linter about admin.png"></details>            | PASS   |
-| About apps      |  <details><summary>About Views</summary><img src="./readme_imgs/linter/CI Linter About Apps.png"></details>              | PASS   |
-| About model     |  <details><summary>About Forms</summary><img src="./readme_imgs/linter/CI Linter About model.png"></details>             | PASS   |
-| About urls      |  <details><summary>About urls</summary><img src="./readme_imgs/linter/CI Linter About urls.png"></details>               | PASS   |
-| About views     |  <details><summary>About Admin</summary><img src="./readme_imgs/linter/CI Linter About Views.png"></details>             | PASS   |
-| Contact admin   |  <details><summary>Blog Models</summary><img src="./readme_imgs/linter/CI Linter contact admin.png"></details>           | PASS   |
-| Contact forms   |  <details><summary>Blog Views</summary><img src="./readme_imgs/linter/CI Linter contact forms.png"></details>            | PASS   |
-| Contact models  |  <details><summary>Blog Forms</summary><img src="./readme_imgs/linter/CI Linter Contact models.png"></details>           | PASS   |
-| Contact URLs    |  <details><summary>Blog urls</summary><img src="./readme_imgs/linter/CI linter contact urls.png"></details>              | PASS   |
-| Contact Views   |  <details><summary>Blog Admin</summary><img src="./readme_imgs/linter/CI Linter contact views.png"></details>            | PASS   |
-| Gallery admin   |  <details><summary>Makeover Models</summary><img src="./readme_imgs/linter/CI Linter Gallery Admin.png"></details>       | PASS   |
-| Gallery Apps    |  <details><summary>Makeover Views</summary><img src="./readme_imgs/linter/CI Linter Gallery apps.png"></details>         | PASS   |
-| Gallery Model   |  <details><summary>Makeover Forms</summary><img src="./readme_imgs/linter/CI Linter Gallery models.png"></details>       | PASS   |
-| Gallery Urls    |  <details><summary>Makeover urls</summary><img src="./readme_imgs/linter/CI Linter gallery urls.png"></details>          | PASS   |
-| Gallery Forms   |  <details><summary>Makeover Admin</summary><img src="./readme_imgs/linter/CI Linter gallery forms.png"></details>        | PASS   |
-| Gallery View    |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter gallery views.png></details>               | PASS   |
-| Routes admin    |  <details><summary>Makeover Models</summary><img src="./readme_imgs/linter/CI Linter routes admin.png"></details>        | PASS   |
-| Routes Apps     |  <details><summary>Makeover Views</summary><img src="./readme_imgs/linter/CI Linter routes apps.png"></details>          | PASS   |
-| Routes Model    |  <details><summary>Makeover Forms</summary><img src="./readme_imgs/linter/CI Linter Routes models.png"></details>        | PASS   |
-| Routes Urls     |  <details><summary>Makeover urls</summary><img src="./readme_imgs/linter/CI Linter routes urls.png"></details>           | PASS   |
-| Routes Forms    |  <details><summary>Makeover Admin</summary><img src="./readme_imgs/linter/CI Linter routes forms.png"></details>         | PASS   |
-| Routes View     |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter routes views.png"></details>               | PASS   |
-| Settings        |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter Settings.png"></details>                   | PASS   |
-
-## Lighthouse
-
-Performance, accessibility, best practices and seo were tested using [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) in Chrome DevTools.
-
-### Lighthouse results table
-
-Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after I converted my images to webp and corrected some of the suggestions. If time allowed and with further development of the site I would include all image uploads are converted to webp format by admin and user. I encountered an detailing that Cloudinary was not secure. I updated the settings.py to overcome this by importing cloudinary and using this code that was suggested on slack cloudinary.config(secure=True,). 
-
-#### About pages
-![About Page Desktop](/readme_imgs/Lighthouse/aboutld%20(2).png)
-![About Page Mobile](/readme_imgs/Lighthouse/aboutlm%20(2).png)
-
-#### Gallery Pages
-![Gallery Page Desktop](/readme_imgs/Lighthouse/galleryld%20(2).png)
-![Gallery Page Mobile](/readme_imgs/Lighthouse/gallerylm%20(2).png)
-
-#### Gallery Detail
-![Gallery Detail Desktop](/readme_imgs/Lighthouse/galleryldd.png)
-![Gallery Detail Mobile](/readme_imgs/Lighthouse/galleryldm.png)
-
-#### Routes Page
-![Routes Page Desktop](/readme_imgs/Lighthouse/routesld%20(2).png)
-![Routes Page Mobile](/readme_imgs/Lighthouse/routeslm.png)
-
-#### Routes Detail
-![Routes Page Desktop](/readme_imgs/Lighthouse/routesldd.png)
-![Routes Page Mobile](/readme_imgs/Lighthouse/routesldm.png)
-
-### User Testing:
-
-### Notifications and feedback testing for comments on all pages
-
-| Action                                                    | Notifications and feedback for comments                | Does it work as expected? |
-| --------------------------------------------------------- | ------------------------------------------------------ | ------------------------- |
-| Logged out and looking at comments                        | It should say "log in to leave a comment"              | PASS                      |
-| Submit a comment                                          | Comment submitted and awaiting approval                | PASS                      |
-| Delete a comment                                          | Your comment has been deleted successfully!            | PASS                      |
-| Edit a comment modal                                      | User is able to edit the comment in the body           | PASS                      |
-| Comment text in box on click of edit                      | Targeted text appears in comment box                   | PASS                      |
-| When edit button is clicked                               | The word submit changes to update                      | PASS                      |
-| Change mind about editing, can click reset                | Resets update back to submit and clears comment box    | PASS                      |
-| Edit a comment successfully                               | Comment Updated! Notification appears                  | PASS                      |
-
-### Notifications and feedback testing for register, signin and signout
-
-| Action   | Notifications and feedback for signin and out | Does it work as expected? |
-| -------- | --------------------------------------------- | ------------------------- |
-| signin   | Successfully signed in as username.           | PASS                      |
-| signout  | You have signed out.                          | PASS                      |
-| register | Successfully signed in as username.           | PASS                      |
-
-### Notifications and feedback testing for routes, routes details
-
-| Action                                    | Notifications and feedback for signin and out     | Does it work as expected? |
-| ------------------------------------------| --------------------------------------------------| ------------------------- |
-| Routes button in nav and body clicked     | Successfully navigated to routes page.             | PASS                      |
-| Routes card clicked.                      | Successfully navigate to routes detail page       | PASS                      |
-| Interactive map                           | User can interact with the map, zoom etc          | PASS                      |
-| User can click the like btn               | User is able to like or unlike a route            | PASS                      |
-| User can watch the video                  | User can interact with the youtube video          | PASS                      |
-| Learn more btn                            | Clicking the learn more opens the popup           | PASS                      |
-| Download Files                            | Clicking on the file download initiates download  | PASS                      |
-
-### Notification and feedback testing for gallery, gallery detail and image upload
-
-| Action                                    | Notifications and feedback for signin and out                 | Does it work as expected? |
-| ------------------------------------------| --------------------------------------------------------------| ------------------------- |
-| Gallery button in nav and body clicked    | Successfully navigated to gallery page.                        | PASS                      |
-| Gallery image card clicked.               | Successfully navigate to gallery detail page                  | PASS                      |
-| User can click the like btn               | User is able to like or unlike a gallery image                | PASS                      |
-| Upload Image btn                          | Clicking the upload image opens the cloudinary widget         | PASS                      |
-| submit image                              | Clicking on the submit image uploads the image for approval   | PASS                      |
-
-### Notification and feedback testing for about page
-
-| Action                                    | Notifications and feedback for signin and out     | Does it work as expected? |
-| ------------------------------------------| --------------------------------------------------| ------------------------- |
-| Navigation menu links work                | Successfully navigated to desired page.            | PASS                      |
-| Card bodies clicked                       | Successfully navigate to desired page.            | PASS                      |
-| Carousel images clicked                   | Cycle through carousel images                     | PASS                      |
-| Contact me button clicked                 | Navigate to contact me form                       | PASS                      |
-| Contact form completed                    | User receives a success message                   | PASS                      |
-| Top of page button clicked                | User returns to the top of the page               | PASS                      |
-
-### Notification and feedback testing for social media links
-
-| Action                                    | Notifications and feedback for signin and out              | Does it work as expected? |
-| --------                                  | ---------------------------------------------              | ------------------------- |
-| Social media links clicked                | Successfully navigated to desired page in a new window      | PASS                      |
-
-### Notifications and feedback testing for admin panel
-
-| Action                                                | Notifications and feedback for comments                                                         | Does it work as expected? |
-| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------- |
-| When contact request is marked in admin | The request was changed successfully.                                                                         | PASS                      |
-| When a comment has been approved in admin             | The comment "Comment" was changed successfully.                                                 | PASS                      |
-| When a comment is deleted by admin                    | Successfully deleted 1 comment.                                                                 | PASS                      |
-| When more than 1 comment is deleted by admin          | Successfully deleted 2 comments.                                                                | PASS                      |
-| When a Image is confirmed in admin                    | The image was successfully published.                                                           | PASS                      |
-| When a image is deleted by admin                      | Successfully deleted 1 booking.                                                                 | PASS                      |
-| When admin deletes more than 1 image                  | Successfully deleted 2 bookings.                                                                | PASS                      |
-
-### Responsiveness
-
-All pages on the website were tested for responsiveness across multiple devices. All pages display correctly on all devices tested.
-
-### Devices used for testing, OS and Browsers
-
--   iPhone 12, 13, 14
--   Latest and Legacy Android Smartphones: Test on devices from manufacturers Samsung, Google. This includes models running the latest OS versions Android 12 & 13.
--   Latest and Legacy iOS Devices: Include the latest and legacy handsets by Apple, iPhone X, iPhone 12 Mini, iPhone 13 Pro, and iPhone 14 Plus. This ensures testing on the    latest iOS versions like iOS 15 and 16.
--   Windows OS, windows 10 and windows 11 devices were used to test the website
--   Mac OS, Mac os was tested using a MacBook air.
--   Chrome
--   Firefox
--   Safari
--   Edge
--   Opera
-
-### bugs
-
--   login success message sometimes appears when the user is logged in and navigates to the gallery page for the first time.
--   Reloading the page sends another request through to the database and duplicates the comment left. 
-
-##  Deployment:
-
-### Pre deployment
-
-- To ensure successful deployment with heroku, it's good practice to make sure that the requirements.txt file is kept up to date so as that imported python modules are configured correctly.
-- A Procfile is required to allow heroku deployment to be configured to a gunicorn web app.
-- In settings.py configure the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost'], make sure all static files and directories are configured correctly.
-- All environment variables on the env.py which gitignored on the repo must be configured correctly with the database url, cloundinary url and secret key.
-
-### Deploying with heroku
-
-After account setup, the steps were as follows:
-
-1.  Create a New App on Heroku:
-    -   Log into your Heroku account.
-    -   Click on "Create new app" and provide a unique name for your app.
-    -   Choose the region for your app (e.g., Europe).
-    -   Click "Create app".
-2.  Connect to GitHub:
-    -   In the deployment method section, select GitHub.
-    -   Search for your GitHub repository and click "Connect".
-3.  Configure Deployment Settings:
-    -   Choose between manual or automatic deployment. For automatic deployment, ensure the main branch is selected.
-    -   In the settings tab, reveal config vars and input the required hidden variables.
-4.  Set Buildpacks:
-    -   Go to the settings tab and select "Buildpacks".
-    -   Add Node.js and Python as the buildpacks for your application.
-5.  Deploy Your App:
-    -   Click "Deploy" to start the deployment process.
-    -   After the first deployment, you will receive a message indicating that your app was successfully deployed.
-    -   Use the "View" button to access your deployed application.
-This process leverages Heroku's integration with GitHub to automate the deployment of your application, making it easier to manage and update your project.
-
-The live link for this project can be found here - [Walking the Wainwrights](https://walking-the-wainwrights-7b754816f5c3.herokuapp.com/)
-
-##  Credits
-
-### Code
-
-[CI walkthrough I think therefore I blog](https://github.com/Code-Institute-Solutions/blog/tree/main/12_views_part_3/05_edit_delete) - The CI walkthrough repo was relied upon  for the comment section, edit and delete button however I created custom models to suit the theme of the website.
-
-[Cloudinary Documentation](https://cloudinary.com/) - The documentation and code in tutorial enabled me to embed the image upload widget into my project. I used the Javascript in my images.js file. 
-
-[Outdoor Active](https://www.outdooractive.com/en/) - Following instructions from outdoor active I was able to embed the routes into my own website. Outdooractive also creates the 3D maps which have been used in the website. 
-
-### Images
-
--   Images used in this project have been taken by myself primarily. Additional images were used on the wainwright cards and were taken from Wikipedia.
-www.wikipedia.com
-
-## Acknowledgements
-
-Thank you to all who supported me on this project. My family have been a great support for me especially working late into the evening after a full days teaching. This project would not have been possible without their support.  -->
-
-
+Thank you to all who supported me on this project. My family have been a great support for me especially working late into the evening after a full days teaching. This project would not have been possible without their support.

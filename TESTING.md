@@ -6,9 +6,9 @@ This document encompasses the verification of the DRF-API backend and the React 
 
 A detailed breakdown of the project's user stories categorized into various epics. Each epic outlines specific goals and how they are achieved, providing insights into the development process.
 
-<details>
-<summary>US and Epics</summary> 
-<br>
+
+### US and Epics
+
 
 **EPIC - Navigation & Authentication**
 | Goals | How are they achieved? | Comment |
