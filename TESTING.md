@@ -391,9 +391,9 @@ I tested the application on multiple mobile devices. The application rendered as
 
 <br>
 
-<details>
-<summary>The automatic test cases are represented below with a more API-centric view. Below is the detailed breakdown:</summary>
-<br>
+
+## The automatic test cases are represented below with a more API-centric view. Below is the detailed breakdown:
+
 
 ### DRF API
 | Feature | Action | Expected Outcome | Pass/Fail | Comment |
@@ -558,8 +558,8 @@ The tests were carried out on the goals component, performance component, posts 
 
 </br>
 
-<details>
-<summary>Issues</summary>
+
+## Issues
 
 ### Known and unresolved issues
 
@@ -574,6 +574,5 @@ As students, we're not expected to fix the following npm audit errors identified
 
 There are a total of 137 vulnerabilities (1 low, 80 moderate, 48 high, 8 critical).
 
-</details>
 
 
